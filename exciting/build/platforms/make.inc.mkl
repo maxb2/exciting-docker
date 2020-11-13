@@ -1,11 +1,11 @@
 # Include file for main make file specifying librarys and compiler options
-# Template for DUNE. 
+# Template for DUNE.
 
 # Compiler (F90)
 F90 = ifort
 # Compiler options (F90)
 #   Release options
-F90_OPTS = -O3 -ip -unroll -scalar_rep -qopenmp 
+F90_OPTS = -O3 -ip -unroll -scalar-rep -qopenmp 
 #   Debug options
 F90_DEBUGOPTS = -g -O0 -debug all -implicitnone -warn unused \
    -fp-stack-check -heap-arrays -ftrapuv -check pointers \
@@ -32,7 +32,7 @@ LIB_ARP =libarpack.a
 #   LAPACK  (blas,lapack,scalapack should always be system libs)
 export USE_SYS_LAPACK=true
 #     Use intel mkl
-LIB_LPK = -mkl=parallel 
+LIB_LPK = -mkl=parallel
 # Scalapack
 LIB_SCLPK = -lmkl_blacs_intelmpi_lp64 -lmkl_scalapack_lp64
 # Full mkl linkage (example not used)
@@ -41,7 +41,7 @@ LIB_MKL = ${MKLROOT}/lib/intel64/libmkl_blas95_lp64.a ${MKLROOT}/lib/intel64/lib
           -L${MKLROOT}/lib/intel64 -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core \
           -lmkl_blacs_intelmpi_lp64 -liomp5 -lpthread -lm -ldl
 
-#   FFT library 
+#   FFT library
 LIB_FFT = fftlib.a
 
 #   Tetrahedron integration library
@@ -50,7 +50,7 @@ LIB_BZINT = libbzint.a
 LIBS = $(LIB_ARP) $(LIB_LPK) $(LIB_FFT) $(LIB_BZINT)
 
 # Threaded librarys
-SMP_LIBS = $(LIBS) -mkl=parallel 
+SMP_LIBS = $(LIBS) -mkl=parallel
 
 # MPI fortran compiler
 MPIF90 = mpiifort

@@ -1,11 +1,11 @@
-F90 = ifort 
-F90_OPTS = -O3 -ip -unroll  -scalar_rep -qopenmp -DUSEOMP 
+F90 = ifort
+F90_OPTS = -O3 -ip -unroll  -scalar-rep -qopenmp -DUSEOMP 
 CPP_ON_OPTS = -cpp -DXS -DISO -DLIBXC -DIFORT
 F77 = $(F90)
 F77_OPTS = -O3
 LIB_ARP =libarpack.a
 export USE_SYS_LAPACK=true
-LIB_LPK = -mkl=parallel 
+LIB_LPK = -mkl=parallel
 LIB_FFT = fftlib.a
 LIB_BZINT = libbzint.a
 
