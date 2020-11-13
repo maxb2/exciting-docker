@@ -1,0 +1,2262 @@
+
+[[# groundstate]]
++ Element:##blue| groundstate##
+  
+   The [[span class="elementlink"]]**{{[#groundstate groundstate]}}**[[/span]] element is required for any calculation. Its attributes are parameters and methods which are used to calculate the ground-state density. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#DFTD2parameters DFTD2parameters]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#TSvdWparameters TSvdWparameters]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#spin spin]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#dfthalf dfthalf]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#Hybrid Hybrid]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#solver solver]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#OEP OEP]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#output output]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#libxc libxc]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attgroundstateCoreRelativity CoreRelativity]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateExplicitKineticEnergy ExplicitKineticEnergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatePrelimLinSteps PrelimLinSteps]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateSymmetricKineticEnergy SymmetricKineticEnergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateValenceRelativity ValenceRelativity]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateautokpt autokpt]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatebeta0 beta0]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatebetadec betadec]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatebetainc betainc]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatecfdamp cfdamp]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatechgexs chgexs]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatedeband deband]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatedipolecorrection dipolecorrection]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatedipoleposition dipoleposition]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatedlinengyfermi dlinengyfermi]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatedo do]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateenergyref energyref]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateepsband epsband]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateepschg epschg]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateepsengy epsengy]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateepsforcescf epsforcescf]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateepsocc epsocc]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateepspot epspot]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatefermilinengy fermilinengy]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatefindlinentype findlinentype]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatefracinr fracinr]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatefrozencore frozencore]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstategmaxvr gmaxvr]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateisgkmax isgkmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateldapu ldapu]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatelmaxapw lmaxapw]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatelmaxinr lmaxinr]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatelmaxmat lmaxmat]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatelmaxvr lmaxvr]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatelorecommendation lorecommendation]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatelradstep lradstep]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatemaxscl maxscl]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatemixer mixer]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatemixerswitch mixerswitch]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatemodifiedsv modifiedsv]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatemsecStoredSteps msecStoredSteps]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatenempty nempty]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatengridk ngridk]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateniterconvcheck niterconvcheck]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatenktot nktot]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatenosource nosource]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatenosym nosym]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatenprad nprad]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatenpsden npsden]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatenwrite nwrite]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateoutputlevel outputlevel]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateptnucl ptnucl]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateradialgridtype radialgridtype]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateradkpt radkpt]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatereducek reducek]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatergkmax rgkmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatescfconv scfconv]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatestype stype]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstateswidth swidth]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatesymmorph symmorph]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatetevecsv tevecsv]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatetfibs tfibs]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatetforce tforce]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatetpartcharges tpartcharges]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatevdWcorrection vdWcorrection]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatevkloff vkloff]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroundstatexctype xctype]}}**[[/span]]
+  [[# attCoreRelativity]]
+    [[# attgroundstateCoreRelativity]]
+  
+++ Attribute:  ##green|CoreRelativity##  
+    Chooses between relativistic/non-relativistic descriptions for core electrons. Pick either "dirac" or "none". 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ dirac  
+ none  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"dirac"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateCoreRelativity @CoreRelativity] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attExplicitKineticEnergy]]
+    [[# attgroundstateExplicitKineticEnergy]]
+  
+++ Attribute:  ##green|ExplicitKineticEnergy##  
+     If true, the kinetic energy expectation values are calculated explicitly and, then, they are used for calculating the total energy. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateExplicitKineticEnergy @ExplicitKineticEnergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attPrelimLinSteps]]
+    [[# attgroundstatePrelimLinSteps]]
+  
+++ Attribute:  ##green|PrelimLinSteps##  
+     After which SCF iteration is msec mixing supposed to be turned on. Until then linear mixing is applied. Used in msec mixing as choosen with [[span class="attributelink"]]**{{[#attmixer mixer]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatePrelimLinSteps @PrelimLinSteps] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attSymmetricKineticEnergy]]
+    [[# attgroundstateSymmetricKineticEnergy]]
+  
+++ Attribute:  ##green|SymmetricKineticEnergy##  
+     If {{"true"}}, the kinetic-energy matrix elements of muffin-tin functions are calculated by applying gradient to both bra and ket. Otherwise, the whole kinetic-energy operator is applied to ket only, and the surface-term correction is applied to make the hamiltonian hermitian. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateSymmetricKineticEnergy @SymmetricKineticEnergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attValenceRelativity]]
+    [[# attgroundstateValenceRelativity]]
+  
+++ Attribute:  ##green|ValenceRelativity##  
+    Relativistic Hamiltonian to use in groundstate calculations. 
+* none - solves non-relativistic Schoedinger equation (SE) 
+* zora - solves scalar-relativistic SE within zero-order regular approximation (ZORA) 
+* iora* - solves scalar-relativistic SE within infinite-order regular approximation (IORA), the small component is neglected 
+* iora - solves scalar-relativistic SE within infinite-order regular approximation (IORA), the small component is included 
+* kh* - solves scalar-relativistic SE for the large component, the small component is neglected 
+* kh - solves scalar-relativistic SE for the large component, the small component is included 
+ iora, kh* and kh are implemented only for atoms. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ zora  
+ iora*  
+ iora  
+ kh*  
+ kh  
+ none  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"zora"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateValenceRelativity @ValenceRelativity] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attautokpt]]
+    [[# attgroundstateautokpt]]
+  
+++ Attribute:  ##green|autokpt##  
+    If {{"true"}}, the set of **k**-points is determined automatically according to [[span class="attributelink"]]**{{[#attradkpt radkpt]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateautokpt @autokpt] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbeta0]]
+    [[# attgroundstatebeta0]]
+  
+++ Attribute:  ##green|beta0##  
+    Initial value for mixing parameter. Used in linear mixing as choosen with [[span class="attributelink"]]**{{[#attmixer mixer]}}**[[/span]].
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.4d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatebeta0 @beta0] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbetadec]]
+    [[# attgroundstatebetadec]]
+  
+++ Attribute:  ##green|betadec##  
+    Mixing parameter decrease. Used in linear mixing.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.6d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatebetadec @betadec] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbetainc]]
+    [[# attgroundstatebetainc]]
+  
+++ Attribute:  ##green|betainc##  
+    Mixing parameter increase. Used in linear mixing.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.1d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatebetainc @betainc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attcfdamp]]
+    [[# attgroundstatecfdamp]]
+  
+++ Attribute:  ##green|cfdamp##  
+    Damping coefficient for characteristic function.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatecfdamp @cfdamp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attchgexs]]
+    [[# attgroundstatechgexs]]
+  
+++ Attribute:  ##green|chgexs##  
+     This controls the amount of charge in the unit cell beyond that required to maintain neutrality. It can be set positive or negative depending on whether electron or hole doping is required.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatechgexs @chgexs] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdeband]]
+    [[# attgroundstatedeband]]
+  
+++ Attribute:  ##green|deband##  
+     Initial band energy step size The initial step length used when searching for the band energy, which is used as the APW linearisation energy. This is done by first searching upwards in energy until the radial wave-function at the muffin-tin radius is zero. This is the energy at the top of the band, denoted [[$ E_{\rm t} $]]. A downward search is now performed from [[$ E_{\rm t} $]] until the slope of the radial wave-function at the muffin-tin radius is zero. This energy, [[$ E_{\rm b} $]], is at the bottom of the band. The band energy is taken as [[$ (E_{\rm t}+E_{\rm b})/2 $]]. If either [[$ E_{\rm t} $]] or [[$ E_{\rm b} $]] cannot be found then the band energy is set to the default value. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0025d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatedeband @deband] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdipolecorrection]]
+    [[# attgroundstatedipolecorrection]]
+  
+++ Attribute:  ##green|dipolecorrection##  
+     If {{"true"}}, the dipole correction is applied for slabs oriented along the [[$ z $]]-direction. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatedipolecorrection @dipolecorrection] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdipoleposition]]
+    [[# attgroundstatedipoleposition]]
+  
+++ Attribute:  ##green|dipoleposition##  
+     The value of this attribute indicates the position of the jump in electrostatic potential, after the compensating potential (//i.e.//, the dipole correction) is applied. The position is given as a fractional coordinate in the vertical direction. Please note that this jump position should be located within the vacuum region enough far away from the atomic layers, otherwise the compensating potential cannot be correctly applied. It is recommended to put the jump position at the middle of the vacuum layer. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatedipoleposition @dipoleposition] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdlinengyfermi]]
+    [[# attgroundstatedlinengyfermi]]
+  
+++ Attribute:  ##green|dlinengyfermi##  
+    Energy difference between linearisation and Fermi energy.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-0.1d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatedlinengyfermi @dlinengyfermi] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdo]]
+    [[# attgroundstatedo]]
+  
+++ Attribute:  ##green|do##  
+     Decides if the ground state is calculated starting from scratch, using the densities from file, or if its calculation is skipped and only the associated input parameters are read in.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ fromscratch  
+ fromfile  
+ skip  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"fromscratch"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatedo @do] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attenergyref]]
+    [[# attgroundstateenergyref]]
+  
+++ Attribute:  ##green|energyref##  
+     Energy reference [[$ \varepsilon_\textrm{ref} $]] for the scalar-relativistic ZORA. It enters the kinetic energy expression [[$ T=\mathbf{p}\frac{c^2}{2c^2+\varepsilon-v(\mathbf{r})}\mathbf{p} $]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateenergyref @energyref] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsband]]
+    [[# attgroundstateepsband]]
+  
+++ Attribute:  ##green|epsband##  
+    Energy tolerance for search of linearisation energies.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-6"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateepsband @epsband] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepschg]]
+    [[# attgroundstateepschg]]
+  
+++ Attribute:  ##green|epschg##  
+    Convergence criterion for the maximum allowed error in the calculated total charge beyond which a warning message will be issued.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateepschg @epschg] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsengy]]
+    [[# attgroundstateepsengy]]
+  
+++ Attribute:  ##green|epsengy##  
+    Energy convergence tolerance.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-6"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateepsengy @epsengy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsforcescf]]
+    [[# attgroundstateepsforcescf]]
+  
+++ Attribute:  ##green|epsforcescf##  
+    Convergence tolerance for forces (not including IBS contribution) during the SCF run.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5.0d-5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateepsforcescf @epsforcescf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsocc]]
+    [[# attgroundstateepsocc]]
+  
+++ Attribute:  ##green|epsocc##  
+    smallest occupancy for which a state will contribute to the density.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-8"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateepsocc @epsocc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepspot]]
+    [[# attgroundstateepspot]]
+  
+++ Attribute:  ##green|epspot##  
+     If the RMS change in the effective potential and magnetic field is smaller than [[span class="attributelink"]]**{{[#attepspot epspot]}}**[[/span]], then the self-consistent loop is considered converged and exited. For structural optimization runs this results in the forces being calculated, the atomic positions updated and the loop restarted. See also [[span class="attributelink"]]**{{[#attmaxscl maxscl]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-6"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateepspot @epspot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfermilinengy]]
+    [[# attgroundstatefermilinengy]]
+  
+++ Attribute:  ##green|fermilinengy##  
+     If {{"true"}} the linearization energies marked as non-varying are set to the Fermi level plus [[span class="attributelink"]]**{{[#attdlinengyfermi dlinengyfermi]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatefermilinengy @fermilinengy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfindlinentype]]
+    [[# attgroundstatefindlinentype]]
+  
+++ Attribute:  ##green|findlinentype##  
+    Select method to determine the linearisation energies.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ Wigner_Seitz  
+ lcharge  
+ logderiv  
+ no_search  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"Wigner_Seitz"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatefindlinentype @findlinentype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfracinr]]
+    [[# attgroundstatefracinr]]
+  
+++ Attribute:  ##green|fracinr##  
+    Fraction of the muffin-tin radius up to which lmaxinr is used as the angular momentum cut-off.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.02d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatefracinr @fracinr] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfrozencore]]
+    [[# attgroundstatefrozencore]]
+  
+++ Attribute:  ##green|frozencore##  
+     When set to {{"true"}} the frozen core approximation is applied, i.e., the core states are fixed to the atomic states. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatefrozencore @frozencore] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attgmaxvr]]
+    [[# attgroundstategmaxvr]]
+  
+++ Attribute:  ##green|gmaxvr##  
+    Maximum length of |G| for expanding the interstitial density and potential.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"12.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstategmaxvr @gmaxvr] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attisgkmax]]
+    [[# attgroundstateisgkmax]]
+  
+++ Attribute:  ##green|isgkmax##  
+    Species for which the muffin-tin radius will be used for calculating gkmax.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateisgkmax @isgkmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attldapu]]
+    [[# attgroundstateldapu]]
+  
+++ Attribute:  ##green|ldapu##  
+    Type of LDA+U method to be used.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ none  
+ FullyLocalisedLimit  
+ AroundMeanField  
+ FFL-AMF-interpolation  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"none"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateldapu @ldapu] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxapw]]
+    [[# attgroundstatelmaxapw]]
+  
+++ Attribute:  ##green|lmaxapw##  
+    Angular momentum cut-off for the APW functions.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"8"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatelmaxapw @lmaxapw] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxinr]]
+    [[# attgroundstatelmaxinr]]
+  
+++ Attribute:  ##green|lmaxinr##  
+     Close to the nucleus, the density and potential is almost spherical and therefore the spherical harmonic expansion can be truncated a low angular momentum. See also [[span class="attributelink"]]**{{[#attfracinr fracinr]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatelmaxinr @lmaxinr] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxmat]]
+    [[# attgroundstatelmaxmat]]
+  
+++ Attribute:  ##green|lmaxmat##  
+    Angular momentum cut-off for the outer-most loop in the hamiltonian and overlap matrix setup.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"8"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatelmaxmat @lmaxmat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxvr]]
+    [[# attgroundstatelmaxvr]]
+  
+++ Attribute:  ##green|lmaxvr##  
+    Angular momentum cut-off for the muffin-tin density and potential.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"8"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatelmaxvr @lmaxvr] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlorecommendation]]
+    [[# attgroundstatelorecommendation]]
+  
+++ Attribute:  ##green|lorecommendation##  
+     Local orbitals may be used for improving unoccupied states. But what energy parameters to use? Set this parameter to true, and you will get a list of energies at which the radial wavefunction turns to zero on the muffin-tin sphere. These energies are calculated using atomic potential, and to make them transferable to a general system, use the average of two consecutive atomic energies. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatelorecommendation @lorecommendation] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlradstep]]
+    [[# attgroundstatelradstep]]
+  
+++ Attribute:  ##green|lradstep##  
+     Some muffin-tin functions (such as the density) are calculated on a coarse radial mesh and then interpolated onto a fine mesh. This is done for the sake of efficiency. lradstp defines the step size in going from the fine to the coarse radial mesh. If it is too large, loss of precision may occur.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatelradstep @lradstep] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmaxscl]]
+    [[# attgroundstatemaxscl]]
+  
+++ Attribute:  ##green|maxscl##  
+    Upper limit for the self-consistency loop.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"200"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatemaxscl @maxscl] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmixer]]
+    [[# attgroundstatemixer]]
+  
+++ Attribute:  ##green|mixer##  
+     Select the mixing (relaxation) scheme for the SCF loop. One has the following options: 
+  
+    **Linear mixer** ({{"lin"}}): 
+  
+   Given the input [[$ \mu^i $]] and output [[$ \nu^i $]] vectors of the [[$ i $]]th iteration, the next input vector to the ([[$ i+1 $]])th iteration is generated using an adaptive mixing scheme. The [[$ j $]]th component of the output vector is mixed with a fraction of the same component of the input vector:  
+[[math label]] 
+\mu^{i+1}_j=\beta^i_j\nu^i_j+(1-\beta^i_j)\mu^i_j, 
+[[/math]]
+ where [[$ \beta^i_j $]] is set to [[$ \beta_0 $]] at initialisation and increased by scaling with [[$ \beta_{\rm inc} $]] ([[$ >1 $]]) if [[$ f^i_j\equiv\nu^i_j-\mu^i_j $]] does not change sign between loops. If [[$ f^i_j $]] does change sign, then [[$ \beta^i_j $]] is scaled by [[$ \beta_{\rm dec} $]] ([[$ >1 $]]). 
+  
+    **Multisecant Broyden potential mixing** ({{"msec"}}) 
+  
+    **Pulay mixing** ({{"pulay"}}): 
+  
+   Pulay's mixing scheme which uses direct inversion in the iterative subspace (DIIS). See //Chem. Phys. Lett.//  **73**, 393 (1980). 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ lin  
+ msec  
+ pulay  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"msec"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatemixer @mixer] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmixerswitch]]
+    [[# attgroundstatemixerswitch]]
+  
+++ Attribute:  ##green|mixerswitch##  
+    Switch between potential (1) and density (2) mixing.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatemixerswitch @mixerswitch] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmodifiedsv]]
+    [[# attgroundstatemodifiedsv]]
+  
+++ Attribute:  ##green|modifiedsv##  
+     If {{"true"}}, the construction of the second-variational hamiltonian involves wavefunctions in the basis representation and wavefunctions are not evaluated explicitly. Otherwise, the usual second-variational procedure is used. The first of the two approaches is generally recommended, but it is not implemented for non-collinear and LDA+U calculations. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatemodifiedsv @modifiedsv] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmsecStoredSteps]]
+    [[# attgroundstatemsecStoredSteps]]
+  
+++ Attribute:  ##green|msecStoredSteps##  
+     How many potentials from previous steps to store. Used in msec mixing as choosen with [[span class="attributelink"]]**{{[#attmixer mixer]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"8"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatemsecStoredSteps @msecStoredSteps] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnempty]]
+    [[# attgroundstatenempty]]
+  
+++ Attribute:  ##green|nempty##  
+     Defines the number of eigenstates beyond that required for charge neutrality. When running metals it is not known //a priori// how many states will be below the Fermi energy for each **k**-point. Setting [[span class="attributelink"]]**{{[#attnempty nempty]}}**[[/span]] greater than zero allows the additional states to act as a buffer in such cases. Furthermore, magnetic calculations use the first-variational eigenstates as a basis for setting up the second-variational Hamiltonian, and thus [[span class="attributelink"]]**{{[#attnempty nempty]}}**[[/span]] will determine the size of this basis set. Convergence with respect to this quantity should be checked. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatenempty @nempty] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngridk]]
+    [[# attgroundstatengridk]]
+  
+++ Attribute:  ##green|ngridk##  
+    Number of k grid points along the basis vector directions. Alternatively give [[span class="attributelink"]]**{{[#attautokpt autokpt]}}**[[/span]] and [[span class="attributelink"]]**{{[#attradkpt radkpt]}}**[[/span]], or [[span class="attributelink"]]**{{[#attnktot nktot]}}**[[/span]]. In the latter cases any value given for [[span class="attributelink"]]**{{[#attngridk ngridk]}}**[[/span]] is not used. Notes: Phonon calculations using supercells adjust the k-grid according to the supercell size; if the element [[span class="elementlink"]]**{{[[[ref:xs|xs]]]}}**[[/span]] is given, the present attribute is overwritten by the value in [[span class="elementlink"]]**{{[[[ref:xs|xs]]]}}**[[/span]] for xs-related groundstate calculations; the values of the present attribute are also relevant for calculations related to the element [[span class="elementlink"]]**{{[[[ref:gw|gw]]]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1 1 1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatengridk @ngridk] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attniterconvcheck]]
+    [[# attgroundstateniterconvcheck]]
+  
+++ Attribute:  ##green|niterconvcheck##  
+    Number of self-consistency iterations over which to test convergence. For example, if [[span class="attributelink"]]**{{[#attniterconvcheck niterconvcheck]}}**[[/span]]=2, then both the second and third to last iterations are compared to the last one to check convergence. The convergence criteria used are those set up by [[span class="attributelink"]]**{{[#attscfconv scfconv]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateniterconvcheck @niterconvcheck] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnktot]]
+    [[# attgroundstatenktot]]
+  
+++ Attribute:  ##green|nktot##  
+     Used for the automatic determination of the [[$ {\mathbf k} $]]-point mesh from the total number of **k**-points. If [[span class="attributelink"]]**{{[#attnktot nktot]}}**[[/span]] is set, then the mesh will be determined in such a way that the number of **k**-points is proportional to the length of the reciprocal lattice vector in each direction and that the total number of **k**-points is less than or equal to [[span class="attributelink"]]**{{[#attnktot nktot]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatenktot @nktot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnosource]]
+    [[# attgroundstatenosource]]
+  
+++ Attribute:  ##green|nosource##  
+     When set to {{"true"}}, source fields are projected out of the exchange-correlation magnetic field. experimental feature. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatenosource @nosource] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnosym]]
+    [[# attgroundstatenosym]]
+  
+++ Attribute:  ##green|nosym##  
+     When set to {{"true"}} no symmetries, apart from the identity, are used anywhere in the code. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatenosym @nosym] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnprad]]
+    [[# attgroundstatenprad]]
+  
+++ Attribute:  ##green|nprad##  
+    (Obsolete) Order of predictor-corrector polynomial.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"4"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatenprad @nprad] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnpsden]]
+    [[# attgroundstatenpsden]]
+  
+++ Attribute:  ##green|npsden##  
+    Order of polynomial for pseudo-charge density.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"9"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatenpsden @npsden] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnwrite]]
+    [[# attgroundstatenwrite]]
+  
+++ Attribute:  ##green|nwrite##  
+     Normally, the density and potentials are written to the file STATE.OUT only after completion of the self-consistent loop. By setting nwrite to a positive integer the file will be written during the loop every nwrite iterations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatenwrite @nwrite] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attoutputlevel]]
+    [[# attgroundstateoutputlevel]]
+  
+++ Attribute:  ##green|outputlevel##  
+     Specify amount of information which is printed to files: 
+* none - no output is produced
+* low - minimal output is produced
+* normal - (default) standard information
+* high - detailed output
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ none  
+ low  
+ normal  
+ high  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"normal"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateoutputlevel @outputlevel] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attptnucl]]
+    [[# attgroundstateptnucl]]
+  
+++ Attribute:  ##green|ptnucl##  
+     The attrubute ptnucl is {{"true"}} if the nuclei are to be treated as point charges, if {{"false"}} the nuclei have a finite spherical distribution. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateptnucl @ptnucl] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attradialgridtype]]
+    [[# attgroundstateradialgridtype]]
+  
+++ Attribute:  ##green|radialgridtype##  
+     The parameter defines a functional form how radial-grid points are distributed. Choose from "cubic", "exponential" and "expocubic". "cubic" is the most suitable one for a majority of calculations, but switch to "expocubic" if you set the innermost grid point very close to a nucleus. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"cubic"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateradialgridtype @radialgridtype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attradkpt]]
+    [[# attgroundstateradkpt]]
+  
+++ Attribute:  ##green|radkpt##  
+     Used for the automatic determination of the **k**-point mesh. If [[span class="attributelink"]]**{{[#attautokpt autokpt]}}**[[/span]] is set to {{"true"}} then the mesh sizes will be determined by [[$ n_i=\lambda/|{ \bf A}_i|+1 $]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"40.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateradkpt @radkpt] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attreducek]]
+    [[# attgroundstatereducek]]
+  
+++ Attribute:  ##green|reducek##  
+     If the attribute [[span class="attributelink"]]**{{[#attreducek reducek]}}**[[/span]] is {{"true"}} the [[$  \bf{k}  $]]-point set is reduced with the crystal symmetries. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatereducek @reducek] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrgkmax]]
+    [[# attgroundstatergkmax]]
+  
+++ Attribute:  ##green|rgkmax##  
+     The parameter [[span class="attributelink"]]**{{[#attrgkmax rgkmax]}}**[[/span]] implicitly determines the number of basis functions and is one of the crucial parameters for the accuracy of the calculation. It represents the product of two quantities: [[$ R_{MT,\, Min} $]], the smallest of all muffin-tin radii, and [[$ |{ \bf G}+{ \bf k}|_{max} $]], the maximum length for the [[$ { \bf G}+{ \bf k} $]] vectors. Because each [[$ { \bf G}+{ \bf k} $]] vector represents one basis function, [[span class="attributelink"]]**{{[#attrgkmax rgkmax]}}**[[/span]] gives the number of basis functions used for solving the Kohn-Sham equations. Typical values of [[span class="attributelink"]]**{{[#attrgkmax rgkmax]}}**[[/span]] are between 6 and 9. However, for systems with very short bond-lengths, significantly smaller values may be sufficient. This may especially be the case for materials containing carbon, where [[span class="attributelink"]]**{{[#attrgkmax rgkmax]}}**[[/span]] may be 4.5-5, or hydrogen, where even values between 3 and 4 may be sufficient. In any case, a convergence check is indispensible for a proper choice of this parameter for your system! 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"7.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatergkmax @rgkmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscfconv]]
+    [[# attgroundstatescfconv]]
+  
+++ Attribute:  ##green|scfconv##  
+     Specify the SCF convergence criteria 
+* "energy" - only the total energy of the system is used as a convergence criterion. If the calculation of the atomic forces is required (e.g., in the optimization of the atomic positions) the non-IBS contribution to the atomic forces is added as a further convergence criterion.
+* "potential" - only the Kohn-Sham potential is used as a convergence criterion. If atomic forces are required the convergence criterion is extended to include non-IBS forces. 
+* "multiple" - total energy, Kohn-Sham potential, and total electronic charge of the system are used as convergence criteria. If atomic forces are required the convergence criterion is extended to include non-IBS forces.
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"multiple"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatescfconv @scfconv] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstype]]
+    [[# attgroundstatestype]]
+  
+++ Attribute:  ##green|stype##  
+     A smooth approximation to the Dirac delta function is needed to compute the occupancies of the Kohn-Sham states. The attribute [[span class="attributelink"]]**{{[#attswidth swidth]}}**[[/span]] determines the width of the approximate delta function. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ Gaussian  
+ Methfessel-Paxton 1  
+ Methfessel-Paxton 2  
+ Fermi Dirac  
+ Square-wave impulse  
+ libbzint  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"Gaussian"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatestype @stype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attswidth]]
+    [[# attgroundstateswidth]]
+  
+++ Attribute:  ##green|swidth##  
+    Width of the smooth approximation to the Dirac delta function (must be greater than zero).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.001d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstateswidth @swidth] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsymmorph]]
+    [[# attgroundstatesymmorph]]
+  
+++ Attribute:  ##green|symmorph##  
+     When set to {{"true"}} only symmorphic space-group operations are to be considered, i.e. only symmetries without non-primitive translations are used anywhere in the code. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatesymmorph @symmorph] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttevecsv]]
+    [[# attgroundstatetevecsv]]
+  
+++ Attribute:  ##green|tevecsv##  
+     The attribute tevecsv is {{"true"}} if second-variational eigenvectors are calculated. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatetevecsv @tevecsv] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttfibs]]
+    [[# attgroundstatetfibs]]
+  
+++ Attribute:  ##green|tfibs##  
+     Because calculation of the incomplete basis set (IBS) correction to the force is fairly time- consuming, it can be switched off by setting tfibs to {{"false"}} This correction can then be included only when necessary, i.e. when the atoms are close to equilibrium in a structural relaxation run. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatetfibs @tfibs] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttforce]]
+    [[# attgroundstatetforce]]
+  
+++ Attribute:  ##green|tforce##  
+    Decides if the force should be calculated at the end of the self-consistent cycle.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatetforce @tforce] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttpartcharges]]
+    [[# attgroundstatetpartcharges]]
+  
+++ Attribute:  ##green|tpartcharges##  
+     The attribute tpartcharges is {{"true"}} if partial charges for each state j, atom alpha and for each lm combination are calculated. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatetpartcharges @tpartcharges] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvdWcorrection]]
+    [[# attgroundstatevdWcorrection]]
+  
+++ Attribute:  ##green|vdWcorrection##  
+     Adds dispersion (van-der-Waals) correction to total energy after the last SCF iteration. If forces are calculated, an appropriate dispersion correction is applied. Available methods are 
+* {{"DFTD2"}}: This is the **DFT-D2** method by Stefan Grimme which is introduced in //Semiempirical GGA-type density functional constructed with a long-range dispersion correction//, J. Comput. Chem. **27**, 1787-1799 (2006).
+* {{"TSvdW"}}: This is the **TS-vdW** method by Alexandre Tkatchenko and Matthias Scheffler introduced in //Accurate molecular van-der-Waals interactions from ground-state electron density and free-atom reference data//, Phys. Rev. Lett. **102**, 073005 (2009).
+ Parameters corresponding to each method can be specified using the subelements [[span class="elementlink"]]**{{[#DFTD2parameters DFTD2parameters]}}**[[/span]] and [[span class="elementlink"]]**{{[#TSvdWparameters TSvdWparameters]}}**[[/span]] inside the element [[span class="elementlink"]]**{{[#groundstate groundstate]}}**[[/span]]. It is also possible to decouple these van-der-Waals corrections from a complete ground-state calculation. In this case, you can use the subelements [[span class="elementlink"]]**{{[[[ref:DFTD2|DFTD2]]]}}**[[/span]] and [[span class="elementlink"]]**{{[[[ref:TSvdW|TSvdW]]]}}**[[/span]] inside the element [[span class="elementlink"]]**{{[[[ref:properties|properties]]]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ none  
+ DFTD2  
+ TSvdW  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"none"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatevdWcorrection @vdWcorrection] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvkloff]]
+    [[# attgroundstatevkloff]]
+  
+++ Attribute:  ##green|vkloff##  
+    The [[$ {\mathbf k} $]]-point offset vector in lattice coordinates.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatevkloff @vkloff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxctype]]
+    [[# attgroundstatexctype]]
+  
+++ Attribute:  ##green|xctype##  
+     Type of exchange-correlation functional to be used 
+*  No exchange-correlation funtional ( [[$ E_{\rm xc}\equiv 0 $]] ) 
+*  LDA, Perdew-Zunger/Ceperley-Alder, //Phys. Rev. B//  **23**, 5048 (1981) 
+*  LSDA, Perdew-Wang/Ceperley-Alder, //Phys. Rev. B//  **45**, 13244 (1992) 
+*  LDA, X-alpha approximation, J. C. Slater, //Phys. Rev.//  **81**, 385 (1951) 
+*  LSDA, von Barth-Hedin, //J. Phys. C//  **5**, 1629 (1972) 
+*  GGA, Perdew-Burke-Ernzerhof (PBE), //Phys. Rev. Lett.//  **77**, 3865 (1996) 
+*  GGA, Revised PBE, Zhang-Yang, //Phys. Rev. Lett.//  **80**, 890 (1998) 
+*  GGA, PBEsol, arXiv:0707.2088v1 (2007) 
+*  GGA, asymptotically corrected PBE (acPBE), arXiv:1409.4834 (2014) 
+*  GGA, Wu-Cohen exchange (WC06) with PBE correlation, //Phys. Rev. B//  **73**, 235116 (2006) 
+*  GGA, Armiento-Mattsson (AM05) spin-unpolarised functional, //Phys. Rev. B//  **72**, 085108 (2005) 
+*  EXX, Exact Exchange, //Phys. Rev. Lett.//  **95**, 136402 (2005) 
+*  Hybrid, PBE0, //J. Chem. Phys.//  **110**, 5029 (1999)
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ LDA_PZ  
+ LDA_PW  
+ LDA_XALPHA  
+ LDA_vBH  
+ GGA_PBE  
+ GGA_PBE_R  
+ GGA_PBE_SOL  
+ GGA_WC  
+ GGA_AM05  
+ GGA_AC_PBE  
+ HYB_PBE0  
+ HYB_LDA0  
+ EXX  
+ none  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"GGA_PBE"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#attgroundstatexctype @xctype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# DFTD2parameters]]
++ Element:##blue| DFTD2parameters##
+  
+   This element allows to customize parameters when either the option {{"DFTD2"}} of the attribute [[span class="attributelink"]]**{{[#attvdWcorrection vdWcorrection]}}**[[/span]] is chosen, or the subelement [[span class="elementlink"]]**{{[[[ref:DFTD2|DFTD2]]]}}**[[/span]] of the element [[span class="elementlink"]]**{{[[[ref:properties|properties]]]}}**[[/span]] is specified. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#DFTD2parameters DFTD2parameters] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attDFTD2parameterscutoff cutoff]}}**[[/span]], [[span class="attributelink"]]**{{[#attDFTD2parametersd d]}}**[[/span]], [[span class="attributelink"]]**{{[#attDFTD2parameterss6 s6]}}**[[/span]], [[span class="attributelink"]]**{{[#attDFTD2parameterssr6 sr6]}}**[[/span]]
+  [[# attcutoff]]
+    [[# attDFTD2parameterscutoff]]
+  
+++ Attribute:  ##green|cutoff##  
+     Cutoff distance of interatomic interactions for the method {{"DFTD2"}}. In the sum over all pairwise interactions, only pairs of atoms are considered which are closer to each other than the value of the {{cutoff}} attribute.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"95.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#DFTD2parameters DFTD2parameters]/[#attDFTD2parameterscutoff @cutoff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attd]]
+    [[# attDFTD2parametersd]]
+  
+++ Attribute:  ##green|d##  
+     This damping constant determines the steepnes of the damping function for the method {{"DFTD2"}}.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"20.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#DFTD2parameters DFTD2parameters]/[#attDFTD2parametersd @d] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atts6]]
+    [[# attDFTD2parameterss6]]
+  
+++ Attribute:  ##green|s6##  
+     Global scaling factor for all [[$ C_6 $]]-dispersion coefficients for the method {{"DFTD2"}}. This factor depends on the exchange-correlation functional in use. The default value suits PBE calculations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.75d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#DFTD2parameters DFTD2parameters]/[#attDFTD2parameterss6 @s6] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsr6]]
+    [[# attDFTD2parameterssr6]]
+  
+++ Attribute:  ##green|sr6##  
+     Scaling factor for van-der-Waals radii for the method {{"DFTD2"}}. This factor depends on the exchange-correlation functional in use. The default value suits PBE calculations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.1d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#DFTD2parameters DFTD2parameters]/[#attDFTD2parameterssr6 @sr6] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# TSvdWparameters]]
++ Element:##blue| TSvdWparameters##
+  
+   This element allows to customize parameters when either the option {{"TSvdW"}} of the attribute [[span class="attributelink"]]**{{[#attvdWcorrection vdWcorrection]}}**[[/span]] is chosen, or the subelement [[span class="elementlink"]]**{{[[[ref:TSvdW|TSvdW]]]}}**[[/span]] of the element [[span class="elementlink"]]**{{[[[ref:properties|properties]]]}}**[[/span]] is specified. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#TSvdWparameters TSvdWparameters] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attTSvdWparameterscutoff cutoff]}}**[[/span]], [[span class="attributelink"]]**{{[#attTSvdWparametersd d]}}**[[/span]], [[span class="attributelink"]]**{{[#attTSvdWparametersnr nr]}}**[[/span]], [[span class="attributelink"]]**{{[#attTSvdWparametersnsph nsph]}}**[[/span]], [[span class="attributelink"]]**{{[#attTSvdWparameterss6 s6]}}**[[/span]], [[span class="attributelink"]]**{{[#attTSvdWparameterssr6 sr6]}}**[[/span]]
+  [[# attcutoff]]
+    [[# attTSvdWparameterscutoff]]
+  
+++ Attribute:  ##green|cutoff##  
+     Cutoff distance of interatomic interactions for the method {{"TSvdW"}}. In the sum over all pairwise interactions, only pairs of atoms are considered which are closer to each other than the value of the {{cutoff}} attribute.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"95.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#TSvdWparameters TSvdWparameters]/[#attTSvdWparameterscutoff @cutoff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attd]]
+    [[# attTSvdWparametersd]]
+  
+++ Attribute:  ##green|d##  
+     This damping constant determines the steepnes of the damping function for the method {{"TSvdW"}}.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"20.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#TSvdWparameters TSvdWparameters]/[#attTSvdWparametersd @d] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnr]]
+    [[# attTSvdWparametersnr]]
+  
+++ Attribute:  ##green|nr##  
+     Number of radial grid points for the Gauss-Chebyshev quadrature.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"120"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#TSvdWparameters TSvdWparameters]/[#attTSvdWparametersnr @nr] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnsph]]
+    [[# attTSvdWparametersnsph]]
+  
+++ Attribute:  ##green|nsph##  
+     Number of Lebedev grid points. The **only** possible values are: {{"1"}}, {{"6"}}, {{"14"}}, {{"26"}}, {{"38"}}, {{"50"}}, {{"74"}}, {{"86"}}, {{"110"}}, {{"146"}}, {{"170"}}, {{"194"}}, {{"230"}}, {{"266"}}, {{"302"}}, {{"350"}}, {{"434"}}, {{"590"}}, {{"770"}}, {{"974"}}, {{"1202"}}, {{"1454"}}, {{"1730"}}, {{"2030"}}, {{"2354"}}, {{"2702"}}, {{"3074"}}, {{"3740"}}, {{"3890"}}, {{"4334"}}, {{"4802"}}, {{"5294"}}, {{"5810"}}.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"590"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#TSvdWparameters TSvdWparameters]/[#attTSvdWparametersnsph @nsph] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atts6]]
+    [[# attTSvdWparameterss6]]
+  
+++ Attribute:  ##green|s6##  
+     Global scaling factor for all [[$ C_6 $]]-dispersion coefficients for the method {{"TSvdW"}}.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#TSvdWparameters TSvdWparameters]/[#attTSvdWparameterss6 @s6] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsr6]]
+    [[# attTSvdWparameterssr6]]
+  
+++ Attribute:  ##green|sr6##  
+     Scaling factor for van-der-Waals radii for the method {{"TSvdW"}}. This factor depends on the exchange-correlation functional in use. The default value suits PBE calculations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.94d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#TSvdWparameters TSvdWparameters]/[#attTSvdWparameterssr6 @sr6] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# spin]]
++ Element:##blue| spin##
+  
+   If the [[span class="elementlink"]]**{{[#spin spin]}}**[[/span]] element is present, calculation is done with spin polarization. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attspinbfieldc bfieldc]}}**[[/span]], [[span class="attributelink"]]**{{[#attspinfixspin fixspin]}}**[[/span]], [[span class="attributelink"]]**{{[#attspinmomfix momfix]}}**[[/span]], [[span class="attributelink"]]**{{[#attspinreducebf reducebf]}}**[[/span]], [[span class="attributelink"]]**{{[#attspinspinorb spinorb]}}**[[/span]], [[span class="attributelink"]]**{{[#attspinspinsprl spinsprl]}}**[[/span]], [[span class="attributelink"]]**{{[#attspintaufsm taufsm]}}**[[/span]], [[span class="attributelink"]]**{{[#attspinvqlss vqlss]}}**[[/span]]
+  [[# attbfieldc]]
+    [[# attspinbfieldc]]
+  
+++ Attribute:  ##green|bfieldc##  
+     Allows to apply a constant [[$ { \bf B}_{\tt ext} $]] field. This is an external constant magnetic field applied throughout the entire unit cell and enters the second-variational Hamiltonian as 
+[[math label]] 
+\frac{g_e\,\alpha}{4}\;\vec{\sigma}\cdot{\bf B}_{\tt ext}\,,
+[[/math]]
+ where [[$ g_e $]] is the electron [[$ g $]]-factor ([[$ g_e $]]=2.0023193043718). The external magnetic field is normally used to break spin symmetry for spin-polarised calculations and considered to be infinitesimal with no direct contribution to the total energy. In cases where the magnetic field is finite (for example when computing magnetic response) the external [[$ { \bf B} $]]-field energy reported in {{**//INFO.OUT//**}} (when the attribute [[span class="attributelink"]]**{{[#attoutputlevel outputlevel]}}**[[/span]] is set to{{"high"}}) should be added to the total energy by hand. This external magnetic field is applied hroughout the entire unit cell. To apply magnetic fields in particular muffin-tins use the [[span class="attributelink"]]**{{[#attbfcmt bfcmt]}}**[[/span]] vectors in the [[span class="elementlink"]]**{{[[[ref:atom|atom]]]}}**[[/span]] elements. Collinear calculations are more efficient if the field is applied in the [[$ z $]]-direction.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0 "}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin]/[#attspinbfieldc @bfieldc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfixspin]]
+    [[# attspinfixspin]]
+  
+++ Attribute:  ##green|fixspin##  
+    
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ none  
+ total FSM  
+ localmt FSM  
+ both  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"none"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin]/[#attspinfixspin @fixspin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmomfix]]
+    [[# attspinmomfix]]
+  
+++ Attribute:  ##green|momfix##  
+     The desired total moment for a fixed spin moment ({{FSM}}) calculation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin]/[#attspinmomfix @momfix] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attreducebf]]
+    [[# attspinreducebf]]
+  
+++ Attribute:  ##green|reducebf##  
+     After each iteration the external magnetic fields are multiplied with reducebf. This allows for a large external magnetic field at the start of the self-consistent loop to break spin symmetry, while at the end of the loop the field will be effectively zero, i.e. infinitesimal. See [[span class="attributelink"]]**{{[#attbfieldc bfieldc]}}**[[/span]] and atom element.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin]/[#attspinreducebf @reducebf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attspinorb]]
+    [[# attspinspinorb]]
+  
+++ Attribute:  ##green|spinorb##  
+     If [[span class="attributelink"]]**{{[#attspinorb spinorb]}}**[[/span]] is {{"true"}}, then a [[$ \boldsymbol \sigma\cdot{ \bf L} $]] term is added to the second-variational Hamiltonian.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin]/[#attspinspinorb @spinorb] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attspinsprl]]
+    [[# attspinspinsprl]]
+  
+++ Attribute:  ##green|spinsprl##  
+     Set to {{"true"}} if a spin-spiral calculation is required. Experimental feature for the calculation of spin-spiral states. See [[span class="attributelink"]]**{{[#attvqlss vqlss]}}**[[/span]] for details.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin]/[#attspinspinsprl @spinsprl] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttaufsm]]
+    [[# attspintaufsm]]
+  
+++ Attribute:  ##green|taufsm##  
+     The effective magnetic field required for fixing the spin moment to a given value, is updated according to  
+[[math label]] 
+ 
+		  {\bf B}_{\tt FSM}^{i+1}={\bf B}_{\tt FSM}^i+\tau_{\tt FSM}\left(
+                  \boldsymbol{\mu}^i-\boldsymbol{\mu}_{\tt FSM}\right)\,, 
+		
+[[/math]]
+ for iteration [[$ i $]]. It must be positive.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.01d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin]/[#attspintaufsm @taufsm] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvqlss]]
+    [[# attspinvqlss]]
+  
+++ Attribute:  ##green|vqlss##  
+     This attribute allows to specify the [[$ { \bf q} $]]-vector of the spin-spiral state in lattice coordinates. Spin-spirals arise from spinor states assumed to be of the form 
+[[math label]] 
+ 
+		  \Psi^{ \bf q}_{ \bf k}({ \bf r})= 
+		  \left(\begin{array}{c} 
+		  U^{{ \bf q}\uparrow}_{ \bf k}({ \bf r})\;e^{i({ \bf k+q/2})\cdot{ \bf r}} \\
+		  \phantom{o} \\
+                  U^{{ \bf q}\downarrow}_{ \bf k}({ \bf r})\;e^{i({ \bf k-q/2})\cdot{ \bf r}} \\ 
+                  \end{array} \right)\,. 
+		
+[[/math]]
+ These spin-spirals are determined using a second-variational approach, and give rise to a magnetization density of the form  
+[[math label]] 
+ 
+		  {\bf m}^{ \bf q}({ \bf r})=\left[m_x({\bf r})\,\cos({ \bf q \cdot r}),\;
+                  m_y({\bf r})\,\sin({ \bf q \cdot r}),\; m_z({\bf r})\right]\,, 
+		
+[[/math]]
+ where [[$ m_x $]], [[$ m_y $]], and [[$ m_z $]] have the periodicity of the lattice. See also [[span class="attributelink"]]**{{[#attspinsprl spinsprl]}}**[[/span]].
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#spin spin]/[#attspinvqlss @vqlss] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# dfthalf]]
++ Element:##blue| dfthalf##
+  
+  The presence of this element triggers **DFT-1/2** calculations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#dfthalf dfthalf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attdfthalfprintVSfile printVSfile]}}**[[/span]]
+  [[# attprintVSfile]]
+    [[# attdfthalfprintVSfile]]
+  
+++ Attribute:  ##green|printVSfile##  
+     When set to {{"true"}}, the self-energy correction potential [[$ V_S({\bf r}) $]] (as defined in the **DFT-1/2** method) is calculated for each constituent atomic species and written into the files {{VS_S*.OUT}}, where {{*}} ranges from **1** to the number of atomic species. The exciting run quits after the printing. In this case, a serial calculation is suggested. It is useful to visualize the self-energy potential, or for debugging purposes.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#dfthalf dfthalf]/[#attdfthalfprintVSfile @printVSfile] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# Hybrid]]
++ Element:##blue| Hybrid##
+  
+  Options for hybrid functionals.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#Hybrid Hybrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attHybridexchangetype exchangetype]}}**[[/span]], [[span class="attributelink"]]**{{[#attHybridexcoeff excoeff]}}**[[/span]], [[span class="attributelink"]]**{{[#attHybridmaxscl maxscl]}}**[[/span]]
+  [[# attexchangetype]]
+    [[# attHybridexchangetype]]
+  
+++ Attribute:  ##green|exchangetype##  
+     Type of exchange (Hartree Fock or OEP) to be used for the exact exchange. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ HF  
+ OEP  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"HF"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#Hybrid Hybrid]/[#attHybridexchangetype @exchangetype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attexcoeff]]
+    [[# attHybridexcoeff]]
+  
+++ Attribute:  ##green|excoeff##  
+     Define value of the mixing parameter for exact exchange. ATTENTION: If you are using libxc, the libxc settings will be employed and your choice of this parameter will be ignored. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.25d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#Hybrid Hybrid]/[#attHybridexcoeff @excoeff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmaxscl]]
+    [[# attHybridmaxscl]]
+  
+++ Attribute:  ##green|maxscl##  
+    Upper limit for the Hybrids self-consistency loop.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"50"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#Hybrid Hybrid]/[#attHybridmaxscl @maxscl] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# solver]]
++ Element:##blue| solver##
+  
+  Optional configuration options for eigenvector solver.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attsolverArpackImproveInverse ArpackImproveInverse]}}**[[/span]], [[span class="attributelink"]]**{{[#attsolverArpackLinSolve ArpackLinSolve]}}**[[/span]], [[span class="attributelink"]]**{{[#attsolverArpackShift ArpackShift]}}**[[/span]], [[span class="attributelink"]]**{{[#attsolverArpackUserDefinedShift ArpackUserDefinedShift]}}**[[/span]], [[span class="attributelink"]]**{{[#attsolverDecompPrec DecompPrec]}}**[[/span]], [[span class="attributelink"]]**{{[#attsolverepsarpack epsarpack]}}**[[/span]], [[span class="attributelink"]]**{{[#attsolverevaltol evaltol]}}**[[/span]], [[span class="attributelink"]]**{{[#attsolverpackedmatrixstorage packedmatrixstorage]}}**[[/span]], [[span class="attributelink"]]**{{[#attsolvertype type]}}**[[/span]]
+  [[# attArpackImproveInverse]]
+    [[# attsolverArpackImproveInverse]]
+  
+++ Attribute:  ##green|ArpackImproveInverse##  
+     Tells whether iterative improvement should be applied during the shift-and-invert procedure. Setting to true may be useful, for instance, when DecompPrec is set to "sp". 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolverArpackImproveInverse @ArpackImproveInverse] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attArpackLinSolve]]
+    [[# attsolverArpackLinSolve]]
+  
+++ Attribute:  ##green|ArpackLinSolve##  
+     Linear solve method during shift-and-invert process in ARPACK. Pick either LDL, LU, LL, Diag and InvertOnce. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ LDL  
+ LL  
+ LU  
+ Diag  
+ InvertOnce  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"LDL"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolverArpackLinSolve @ArpackLinSolve] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attArpackShift]]
+    [[# attsolverArpackShift]]
+  
+++ Attribute:  ##green|ArpackShift##  
+     Energy shift in the shift-and-invert procedure in the ARPACK solver. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolverArpackShift @ArpackShift] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attArpackUserDefinedShift]]
+    [[# attsolverArpackUserDefinedShift]]
+  
+++ Attribute:  ##green|ArpackUserDefinedShift##  
+     ArpackShift will be used if this flag is set to true, otherwise the energy shift will be determined internally. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolverArpackUserDefinedShift @ArpackUserDefinedShift] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attDecompPrec]]
+    [[# attsolverDecompPrec]]
+  
+++ Attribute:  ##green|DecompPrec##  
+     Precision used during the factorization in ARPACK. Pick either sp or dp. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ sp  
+ dp  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"dp"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolverDecompPrec @DecompPrec] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsarpack]]
+    [[# attsolverepsarpack]]
+  
+++ Attribute:  ##green|epsarpack##  
+    Tolerance parameter for the ARPACK shift invert solver
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-14"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolverepsarpack @epsarpack] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attevaltol]]
+    [[# attsolverevaltol]]
+  
+++ Attribute:  ##green|evaltol##  
+    Error tolerance for the first-variational eigenvalues using the LAPACK Solver
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-14"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolverevaltol @evaltol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attpackedmatrixstorage]]
+    [[# attsolverpackedmatrixstorage]]
+  
+++ Attribute:  ##green|packedmatrixstorage##  
+     In the default calculation the matrix is sored in packed form. When using multi-threaded BLAS setting this parameter to {{"false"}} increases efficiency. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolverpackedmatrixstorage @packedmatrixstorage] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttype]]
+    [[# attsolvertype]]
+  
+++ Attribute:  ##green|type##  
+    Selects the eigenvalue solver for the first variational equation
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ Lapack  
+ Arpack  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"Lapack"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#solver solver]/[#attsolvertype @type] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# OEP]]
++ Element:##blue| OEP##
+  
+  Necessary, if exact exchange calculation is to be performed. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#OEP OEP] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attOEPconvoep convoep]}}**[[/span]], [[span class="attributelink"]]**{{[#attOEPmaxitoep maxitoep]}}**[[/span]], [[span class="attributelink"]]**{{[#attOEPtauoep tauoep]}}**[[/span]]
+  [[# attconvoep]]
+    [[# attOEPconvoep]]
+  
+++ Attribute:  ##green|convoep##  
+    Convergence tolerance for OEP residue when solving the exact exchange integral equations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1e-11"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#OEP OEP]/[#attOEPconvoep @convoep] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmaxitoep]]
+    [[# attOEPmaxitoep]]
+  
+++ Attribute:  ##green|maxitoep##  
+    Maximum number of iterations when solving the exact exchange integral equations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"300"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#OEP OEP]/[#attOEPmaxitoep @maxitoep] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttauoep]]
+    [[# attOEPtauoep]]
+  
+++ Attribute:  ##green|tauoep##  
+     The optimised effective potential is determined using an iterative method. //Phys. Rev. Lett.//  **98**, 196405 (2007). At the first iteration the step length is set to tauoep(1). During subsequent iterations, the step length is scaled by tauoep(2) or tauoep(3), when the residual is increasing or decreasing, respectively. See also [[span class="attributelink"]]**{{[#attmaxitoep maxitoep]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0 0.2d0 1.5d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#OEP OEP]/[#attOEPtauoep @tauoep] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# output]]
++ Element:##blue| output##
+  
+  Specifications on the file formats for output files.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#output output] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attoutputstate state]}}**[[/span]]
+  [[# attstate]]
+    [[# attoutputstate]]
+  
+++ Attribute:  ##green|state##  
+    Selects the file format of the STATE file.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ binary  
+ XML  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"binary"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#output output]/[#attoutputstate @state] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# libxc]]
++ Element:##blue| libxc##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#libxc libxc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attlibxccorrelation correlation]}}**[[/span]], [[span class="attributelink"]]**{{[#attlibxcexchange exchange]}}**[[/span]], [[span class="attributelink"]]**{{[#attlibxcxc xc]}}**[[/span]]
+  [[# attcorrelation]]
+    [[# attlibxccorrelation]]
+  
+++ Attribute:  ##green|correlation##  
+    
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ none  
+ XC_LDA_C_WIGNER  
+ XC_LDA_C_RPA  
+ XC_LDA_C_HL  
+ XC_LDA_C_GL  
+ XC_LDA_C_XALPHA  
+ XC_LDA_C_VWN  
+ XC_LDA_C_VWN_RPA  
+ XC_LDA_C_PZ  
+ XC_LDA_C_PZ_MOD  
+ XC_LDA_C_OB_PZ  
+ XC_LDA_C_PW  
+ XC_LDA_C_PW_MOD  
+ XC_LDA_C_OB_PW  
+ XC_LDA_C_2D_AMGB  
+ XC_LDA_C_2D_PRM  
+ XC_LDA_C_vBH  
+ XC_LDA_C_1D_CSC  
+ XC_LDA_C_ML1  
+ XC_LDA_C_ML2  
+ XC_LDA_C_GOMBAS  
+ XC_LDA_C_PW_RPA  
+ XC_LDA_C_1D_LOOS  
+ XC_LDA_C_RC04  
+ XC_LDA_C_VWN_1  
+ XC_LDA_C_VWN_2  
+ XC_LDA_C_VWN_3  
+ XC_LDA_C_VWN_4  
+ XC_GGA_C_OP_XALPHA  
+ XC_GGA_C_OP_G96  
+ XC_GGA_C_OP_PBE  
+ XC_GGA_C_OP_B88  
+ XC_GGA_C_FT97  
+ XC_GGA_C_SPBE  
+ XC_GGA_C_REVTCA  
+ XC_GGA_C_TCA  
+ XC_GGA_C_PBE  
+ XC_GGA_C_LYP  
+ XC_GGA_C_P86  
+ XC_GGA_C_PBE_SOL  
+ XC_GGA_C_PW91  
+ XC_GGA_C_AM05  
+ XC_GGA_C_XPBE  
+ XC_GGA_C_LM  
+ XC_GGA_C_PBE_JRGX  
+ XC_GGA_C_RGE2  
+ XC_GGA_C_WL  
+ XC_GGA_C_WI  
+ XC_GGA_C_SOGGA11  
+ XC_GGA_C_WI0  
+ XC_GGA_C_SOGGA11_X  
+ XC_GGA_C_APBE  
+ XC_GGA_C_OPTC  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"XC_GGA_C_PBE"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#libxc libxc]/[#attlibxccorrelation @correlation] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attexchange]]
+    [[# attlibxcexchange]]
+  
+++ Attribute:  ##green|exchange##  
+    
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ none  
+ XC_LDA_X  
+ XC_LDA_X_2D  
+ XC_LDA_X_1D  
+ XC_GGA_X_SSB_SW  
+ XC_GGA_X_SSB  
+ XC_GGA_X_SSB_D  
+ XC_GGA_X_BPCCAC  
+ XC_GGA_X_PBE  
+ XC_GGA_X_PBE_R  
+ XC_GGA_X_B86  
+ XC_GGA_X_HERMAN  
+ XC_GGA_X_B86_MGC  
+ XC_GGA_X_B88  
+ XC_GGA_X_G96  
+ XC_GGA_X_PW86  
+ XC_GGA_X_PW91  
+ XC_GGA_X_OPTX  
+ XC_GGA_X_DK87_R1  
+ XC_GGA_X_DK87_R2  
+ XC_GGA_X_LG93  
+ XC_GGA_X_FT97_A  
+ XC_GGA_X_FT97_B  
+ XC_GGA_X_PBE_SOL  
+ XC_GGA_X_RPBE  
+ XC_GGA_X_WC  
+ XC_GGA_X_MPW91  
+ XC_GGA_X_AM05  
+ XC_GGA_X_PBEA  
+ XC_GGA_X_MPBE  
+ XC_GGA_X_XPBE  
+ XC_GGA_X_2D_B86_MGC  
+ XC_GGA_X_BAYESIAN  
+ XC_GGA_X_PBE_JSJR  
+ XC_GGA_X_2D_B88  
+ XC_GGA_X_2D_B86  
+ XC_GGA_X_2D_PBE  
+ XC_GGA_X_OPTB88_VDW  
+ XC_GGA_X_PBEK1_VDW  
+ XC_GGA_X_OPTPBE_VDW  
+ XC_GGA_X_RGE2  
+ XC_GGA_X_RPW86  
+ XC_GGA_X_KT1  
+ XC_GGA_X_MB88  
+ XC_GGA_X_SOGGA  
+ XC_GGA_X_SOGGA11  
+ XC_GGA_X_C09X  
+ XC_GGA_X_LB  
+ XC_GGA_X_LBM  
+ XC_GGA_X_OL2  
+ XC_GGA_X_APBE  
+ XC_GGA_X_HTBS  
+ XC_GGA_X_AIRY  
+ XC_GGA_X_LAG  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"XC_GGA_X_PBE"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#libxc libxc]/[#attlibxcexchange @exchange] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxc]]
+    [[# attlibxcxc]]
+  
+++ Attribute:  ##green|xc##  
+     Combined functionals. If set it overrides the exchange and the correlation attributes.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ none  
+ XC_LDA_XC_TETER93  
+ XC_GGA_XC_HCTH_407P  
+ XC_GGA_XC_HCTH_P76  
+ XC_GGA_XC_HCTH_P14  
+ XC_GGA_XC_B97_GGA1  
+ XC_GGA_XC_HCTH_A  
+ XC_GGA_XC_KT2  
+ XC_GGA_XC_TH1  
+ XC_GGA_XC_TH2  
+ XC_GGA_XC_TH3  
+ XC_GGA_XC_TH4  
+ XC_GGA_XC_HCTH_93  
+ XC_GGA_XC_HCTH_120  
+ XC_GGA_XC_HCTH_147  
+ XC_GGA_XC_HCTH_407  
+ XC_GGA_XC_EDF1  
+ XC_GGA_XC_XLYP  
+ XC_GGA_XC_B97  
+ XC_GGA_XC_B97_1  
+ XC_GGA_XC_B97_2  
+ XC_GGA_XC_B97_D  
+ XC_GGA_XC_B97_K  
+ XC_GGA_XC_B97_3  
+ XC_GGA_XC_PBE1W  
+ XC_GGA_XC_MPWLYP1W  
+ XC_GGA_XC_PBELYP1W  
+ XC_GGA_XC_SB98_1a  
+ XC_GGA_XC_SB98_1b  
+ XC_GGA_XC_SB98_1c  
+ XC_GGA_XC_SB98_2a  
+ XC_GGA_XC_SB98_2b  
+ XC_GGA_XC_SB98_2c  
+ XC_GGA_XC_MOHLYP  
+ XC_GGA_XC_MOHLYP2  
+ XC_GGA_XC_TH_FL  
+ XC_GGA_XC_TH_FC  
+ XC_GGA_XC_TH_FCFO  
+ XC_GGA_XC_TH_FCO  
+ XC_HYB_GGA_XC_B3PW91  
+ XC_HYB_GGA_XC_B3LYP  
+ XC_HYB_GGA_XC_B3P86  
+ XC_HYB_GGA_XC_O3LYP  
+ XC_HYB_GGA_XC_mPW1K  
+ XC_HYB_GGA_XC_PBEH  
+ XC_HYB_GGA_XC_B97  
+ XC_HYB_GGA_XC_B97_1  
+ XC_HYB_GGA_XC_B97_2  
+ XC_HYB_GGA_XC_X3LYP  
+ XC_HYB_GGA_XC_B1WC  
+ XC_HYB_GGA_XC_B97_K  
+ XC_HYB_GGA_XC_B97_3  
+ XC_HYB_GGA_XC_MPW3PW  
+ XC_HYB_GGA_XC_B1LYP  
+ XC_HYB_GGA_XC_B1PW91  
+ XC_HYB_GGA_XC_mPW1PW  
+ XC_HYB_GGA_XC_MPW3LYP  
+ XC_HYB_GGA_XC_SB98_1a  
+ XC_HYB_GGA_XC_SB98_1b  
+ XC_HYB_GGA_XC_SB98_1c  
+ XC_HYB_GGA_XC_SB98_2a  
+ XC_HYB_GGA_XC_SB98_2b  
+ XC_HYB_GGA_XC_SB98_2c  
+ XC_HYB_GGA_XC_BHANDH  
+ XC_HYB_GGA_XC_BHANDHLYP  
+ XC_HYB_GGA_XC_MB3LYP_RC04  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"none"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#groundstate groundstate]/[#libxc libxc]/[#attlibxcxc @xc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[ref:common| listed separately]]].
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[ref:common| are described here]]].
+  

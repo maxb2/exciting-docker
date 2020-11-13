@@ -1,0 +1,310 @@
+
+[[# phonons]]
++ Element:##blue| phonons##
+  
+  
+  
+  Compute the dynamical matrix.  
+  
+  This is done by constructing a supercell (attributes [[span class="attributelink"]]**{{[#attngridq ngridq]}}**[[/span]] and [[span class="attributelink"]]**{{[#attreduceq reduceq]}}**[[/span]]), displacing atoms in it and obtaining the dynamical matrix from the forces. As all atoms are displaced four times in each direction, and this is done for every [[$ {\bf q} $]]-point, phonon calculations can become quite tedious. If the calculation was done already at an earlier point, and an existing dynamical matrix should be reused, the attribute [[span class="attributelink"]]**{{[#attdo do]}}**[[/span]] allows to skip a fresh calculation. Note also that the calculation of the dynamical matrix can be run in parallel.  
+  
+  To obtain phonon eigenvalues and eigenvectors for one or more [[$ {\bf q} $]]-points, add one of the elements [[span class="elementlink"]]**{{[[[ref:common#qpointset|qpointset]]]}}**[[/span]], [[span class="elementlink"]]**{{[#interpolate interpolate]}}**[[/span]], [[span class="elementlink"]]**{{[#phonondispplot phonondispplot]}}**[[/span]] or [[span class="elementlink"]]**{{[#phonondos phonondos]}}**[[/span]].
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#qpointset|qpointset]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#phonondos phonondos]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#phonondispplot phonondispplot]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#reformatdynmat reformatdynmat]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#interpolate interpolate]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#parts|parts]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attphononsdeltaph deltaph]}}**[[/span]], [[span class="attributelink"]]**{{[#attphononsdo do]}}**[[/span]], [[span class="attributelink"]]**{{[#attphononsgamma gamma]}}**[[/span]], [[span class="attributelink"]]**{{[#attphononsngridq ngridq]}}**[[/span]], [[span class="attributelink"]]**{{[#attphononsreduceq reduceq]}}**[[/span]]
+  [[# attdeltaph]]
+    [[# attphononsdeltaph]]
+  
+++ Attribute:  ##green|deltaph##  
+    
+  
+  Phonon calculations are performed by constructing a supercell corresponding to a particular [[$ {\bf q} $]]-vector and making small periodic sin- and cos-like displacements of the atoms. The amplitude of this displacement, in cartesian coordinates for each component, is given by {{deltaph}} (in units of Bohr). Additionally a displacement of {{2*deltaph}} is done, so in general each atom is displaced four times.  
+  
+  {{deltaph}} should not be made too large, as anharmonic terms could then become significant, neither should it be too small as this can introduce a numerical error.  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.03d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#attphononsdeltaph @deltaph] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdo]]
+    [[# attphononsdo]]
+  
+++ Attribute:  ##green|do##  
+     Specify if the phonon calculation is performed (value {{fromscratch}}) or skipped (value {{skip}}.) In the latter case the dynamical matrix is read from files produced in a previous run with the same parameters. The value {{fromscratch}} can also be used to continue an incomplete calculation.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ fromscratch  
+ skip  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"fromscratch"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#attphononsdo @do] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attgamma]]
+    [[# attphononsgamma]]
+  
+++ Attribute:  ##green|gamma##  
+     Determines how force constants at the [[$ \Gamma $]]-point are computed. The numerical differentiation is done from (a) a displacement by {{deltaphi}} and the equilibirum ({{onestep}}), (b) displacements by [[$ \pm $]]{{deltaphi}} ({{twostep}}), or (c) displacements by {{deltaphi}} and 2{{deltaphi}} ({{standard}}) for each atom in each cartesian direction. Note that options (a) requires [[$ 3N+1 $]] computations, whereas option (b) and (c) require [[$ 6N $]] for [[$ N $]] atoms. In particular if only the [[$ \Gamma $]]-point is to be computed, option (b) is more accurate and yields better eigenvectors than (a). 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ onestep  
+ twostep  
+ standard  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"twostep"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#attphononsgamma @gamma] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngridq]]
+    [[# attphononsngridq]]
+  
+++ Attribute:  ##green|ngridq##  
+    Number of [[$ {\bf q} $]] grid points along the basis vector directions. This determines the size of the supercell.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1 1 1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#attphononsngridq @ngridq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attreduceq]]
+    [[# attphononsreduceq]]
+  
+++ Attribute:  ##green|reduceq##  
+     The attribute {{reduceq}} is set to {{"true"}} if the [[$ {\bf q} $]]-point set is to be reduced with the crystal symmetries. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#attphononsreduceq @reduceq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# phonondos]]
++ Element:##blue| phonondos##
+  
+    
+  
+  Compute the phonon density of states (DOS) [[$ g(\omega) $]] and thermodynamical properties. This is done by calculating the phonon eigenvalues on a dense grid, specified by [[span class="attributelink"]]**{{[#attngrdos ngrdos]}}**[[/span]]. The DOS is output to file {{PHDOS.OUT}}. Note that [[$ \int\limits_{\omega_{\rm min}}^{\omega_{\rm max}} d\omega\; g(\omega) = 3N_{\rm at} $]]  
+  
+  From the DOS [[$ g(\omega) $]] the following thermodynamical properties are obtained: 
+* the zero-point energy [[$ E_{\rm ZP} = \frac{1}{2} \int\limits_{\omega_{\rm min}}^{\omega_{\rm max}} d\omega\; \omega\, g(\omega) $]]
+* the vibrational internal energy [[$ E_{\rm vib} = \frac{1}{2} \int\limits_{\omega_{\rm min}}^{\omega_{\rm max}} d\omega\; \omega\, g(\omega) \coth\frac{\omega}{2k_B T} $]]
+* the vibrational free energy [[$ F_{\rm vib} = k_B T \int\limits_{\omega_{\rm min}}^{\omega_{\rm max}} d\omega\; g(\omega) \log\left(2 \sinh \frac{\omega}{2k_B T}\right) $]]
+* the vibrational entropy [[$ S_{\rm vib} = \frac{E_{\rm vib}-F_{\rm vib}}{T} $]]
+* the heat capacity [[$ c = k_B \int\limits_{\omega_{\rm min}}^{\omega_{\rm max}} d\omega\; g(\omega) \left(\frac{\omega}{k_B T}\right)^{\!\!\! 2} {\exp\left(\frac{\omega}{k_B T}\right)}{\left[\exp(\frac{\omega}{k_B T})-1\right]^{-2}} $]]
+ where [[$ N_{\rm at} $]] is the number of atoms in the unit cell. These quantities are computed for the temperatures, specified by [[span class="attributelink"]]**{{[#attntemp ntemp]}}**[[/span]] and written to files {{THERMO.OUT}} and {{thermo.xml}}.  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#phonondos phonondos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attphonondosngrdos ngrdos]}}**[[/span]], [[span class="attributelink"]]**{{[#attphonondosnsmdos nsmdos]}}**[[/span]], [[span class="attributelink"]]**{{[#attphonondosntemp ntemp]}}**[[/span]], [[span class="attributelink"]]**{{[#attphonondosnwdos nwdos]}}**[[/span]]
+  [[# attngrdos]]
+    [[# attphonondosngrdos]]
+  
+++ Attribute:  ##green|ngrdos##  
+     Number of grid points in each lattice direction on which the eigenvalues are interpolated. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"100"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#phonondos phonondos]/[#attphonondosngrdos @ngrdos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnsmdos]]
+    [[# attphonondosnsmdos]]
+  
+++ Attribute:  ##green|nsmdos##  
+     Number of 3-point averaging runs to smoothen the DOS. One run corresponds to setting the DOS value for one frequency [[$ g(\omega_i) $]] to the average [[$ 1/3\:\left[g(\omega_{i-1})+g(\omega_{i})+g(\omega_{i+1})\right] $]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#phonondos phonondos]/[#attphonondosnsmdos @nsmdos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attntemp]]
+    [[# attphonondosntemp]]
+  
+++ Attribute:  ##green|ntemp##  
+    Number of temperatures in the range up to the maximal temperature [[$ T_{\rm max} $]] for the calculation of the thermodynamical properties from the phonon DOS This corresponds to the maximal phonon frequency [[$ \omega_{\rm max} $]] by [[$ T_{\rm max} = \omega_{\rm max} / k_B $]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"200"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#phonondos phonondos]/[#attphonondosntemp @ntemp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnwdos]]
+    [[# attphonondosnwdos]]
+  
+++ Attribute:  ##green|nwdos##  
+     Number of steps between the lowest and highest phonon frequency for the DOS. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"500"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#phonondos phonondos]/[#attphonondosnwdos @nwdos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# phonondispplot]]
++ Element:##blue| phonondispplot##
+  
+  Produce a phonon dispersion plot by interpolating phonon frequencies for points on a path through the Brillouin zone. The frequencies for all phonon modes along the path are written to file {{PHDISP.OUT}}, vertex lines are written to file {{PHDLINES.OUT}}. Use the element [[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] to specify the path in reciprocal lattice vectors.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]]  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#phonondispplot phonondispplot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# reformatdynmat]]
++ Element:##blue| reformatdynmat##
+  
+  
+  
+  Reads in the dynamical matrix rows from the corresponding files and outputs them as [[$ 3\times 3 $]] blocks for each atom combination to the file {{DYNMAT.OUT}}. A corrected dynamical matrix which fulfills the accoustic sumrule is output to the file {{DYNMAT_SUMRULE.OUT}}. It is obtained by subtracting the three lowest eigenvectors from the original matrix: [[$ D_{ij}^{\bf q}\rightarrow D_{ij}^{\bf q}-\sum_{k=1}^3 (\omega_k^0)^2 v_{k;i}^0 v_{k;j}^0 $]] for all [[$ {\bf q} $]], where [[$ \omega_k^0 $]] is the [[$ k $]]th eigenvalue of the [[$ {\bf q}=0 $]] dynamical matrix and [[$ v_{k;i}^0 $]] the [[$ i $]]th component of its eigenvector.  
+  
+  Symmetrized forms are written to the files {{DYNMAT_SYM.OUT}} and {{DYNMAT_SYM_SUMRULE.OUT}}.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#reformatdynmat reformatdynmat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# interpolate]]
++ Element:##blue| interpolate##
+  
+  Interpolates the phonon frequencies, and optionally eigenvectors, on a given [[$ {\bf q} $]]-point grid and outputs them to file {{PHONON_INTERPOLATE.OUT}}.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#interpolate interpolate] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attinterpolatengridq ngridq]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attinterpolatevqloff vqloff]}}**[[/span]], [[span class="attributelink"]]**{{[#attinterpolatewriteeigenvectors writeeigenvectors]}}**[[/span]]
+  [[# attngridq]]
+    [[# attinterpolatengridq]]
+  
+++ Attribute:  ##green|ngridq##  
+    [[$ {\bf q} $]]-point grid for interpolation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#interpolate interpolate]/[#attinterpolatengridq @ngridq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvqloff]]
+    [[# attinterpolatevqloff]]
+  
+++ Attribute:  ##green|vqloff##  
+    The [[$ {\bf q} $]]-point offset vector in lattice coordinates.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#interpolate interpolate]/[#attinterpolatevqloff @vqloff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwriteeigenvectors]]
+    [[# attinterpolatewriteeigenvectors]]
+  
+++ Attribute:  ##green|writeeigenvectors##  
+     Set to {{true}} if the phonon eigenvectors are to be interpolated and output in addition to the phonon frequencies. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#phonons phonons]/[#interpolate interpolate]/[#attinterpolatewriteeigenvectors @writeeigenvectors] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[ref:common| listed separately]]].
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[ref:common| are described here]]].
+  

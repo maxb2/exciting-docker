@@ -1,0 +1,1215 @@
+ This document describes the file format for the species definitions. 
+[[# spdb]]
++ Element:##blue| spdb##
+  
+  Species-database element contains the species element [[span class="elementlink"]]**{{[#sp sp]}}**[[/span]]
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#sp sp]}}**[[/span]]  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# sp]]
++ Element:##blue| sp##
+  
+   A species is an atom type definition containing all information to construct the basis functions. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#muffinTin muffinTin]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#atomicState atomicState]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#basis basis]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attspchemicalSymbol chemicalSymbol]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attspmass mass]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attspz z]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attspname name]}}**[[/span]]
+  [[# attchemicalSymbol]]
+    [[# attspchemicalSymbol]]
+  
+++ Attribute:  ##green|chemicalSymbol##  
+    Chemical Symbol.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]ID
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#attspchemicalSymbol @chemicalSymbol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmass]]
+    [[# attspmass]]
+  
+++ Attribute:  ##green|mass##  
+    Mass in [[$ m_e $]].
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#attspmass @mass] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attname]]
+    [[# attspname]]
+  
+++ Attribute:  ##green|name##  
+    Optional element name.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#attspname @name] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attz]]
+    [[# attspz]]
+  
+++ Attribute:  ##green|z##  
+    Atomic number.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#attspz @z] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# muffinTin]]
++ Element:##blue| muffinTin##
+  
+   This element gives the size of the muffin tin radius and the resolution of the radial functions. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attmuffinTinradialmeshPoints radialmeshPoints]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attmuffinTinradius radius]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attmuffinTinrinf rinf]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attmuffinTinrmin rmin]}}**[[/span]] ##red|(required)##
+  [[# attradialmeshPoints]]
+    [[# attmuffinTinradialmeshPoints]]
+  
+++ Attribute:  ##green|radialmeshPoints##  
+     Number of data points for radial atomic functions. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin]/[#attmuffinTinradialmeshPoints @radialmeshPoints] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attradius]]
+    [[# attmuffinTinradius]]
+  
+++ Attribute:  ##green|radius##  
+     The radius of the muffin tin sphere. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin]/[#attmuffinTinradius @radius] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrinf]]
+    [[# attmuffinTinrinf]]
+  
+++ Attribute:  ##green|rinf##  
+     Radius from which the influence on the potential is regarded to be negligible. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin]/[#attmuffinTinrinf @rinf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrmin]]
+    [[# attmuffinTinrmin]]
+  
+++ Attribute:  ##green|rmin##  
+     The radius where radial mesh begins. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin]/[#attmuffinTinrmin @rmin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# atomicState]]
++ Element:##blue| atomicState##
+  
+   The [[span class="elementlink"]]**{{[#atomicState atomicState]}}**[[/span]] element lists the atomic states that schould be used to approximate the wavefunction in the sphere. They can be marked as core or none core electrons by the [[span class="attributelink"]]**{{[#attcore core]}}**[[/span]] attribute. Core electrons are threated separately by numeric itegration. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attatomicStatecore core]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStatekappa kappa]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStatel l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStaten n]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStateocc occ]}}**[[/span]] ##red|(required)##
+  [[# attcore]]
+    [[# attatomicStatecore]]
+  
+++ Attribute:  ##green|core##  
+     If {{true}}, state is threated as core state in the calculation. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatecore @core] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attkappa]]
+    [[# attatomicStatekappa]]
+  
+++ Attribute:  ##green|kappa##  
+     Relativistic quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatekappa @kappa] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attl]]
+    [[# attatomicStatel]]
+  
+++ Attribute:  ##green|l##  
+     Azimuthal quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatel @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attn]]
+    [[# attatomicStaten]]
+  
+++ Attribute:  ##green|n##  
+     Principal quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStaten @n] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attocc]]
+    [[# attatomicStateocc]]
+  
+++ Attribute:  ##green|occ##  
+     Ocuppation number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStateocc @occ] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# basis]]
++ Element:##blue| basis##
+  
+   Definion of the APW basis. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#default default]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#custom custom]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#lo lo]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# default]]
++ Element:##blue| default##
+  
+   Global definition of APW functions (valid for all L [[$ \le $]]  {{lmaxapw}}). 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wf wf]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attdefaultsearchE searchE]}}**[[/span]], [[span class="attributelink"]]**{{[#attdefaulttrialEnergy trialEnergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attdefaulttype type]}}**[[/span]]
+  [[# attsearchE]]
+    [[# attdefaultsearchE]]
+  
+++ Attribute:  ##green|searchE##  
+     If {{true}} the energy of the radial wave function, [[$ E_0 $]] is optimized to match the boundary condition  
+[[math label]] 
+\psi(R_{MT})=0.
+[[/math]]
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default]/[#attdefaultsearchE @searchE] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttrialEnergy]]
+    [[# attdefaulttrialEnergy]]
+  
+++ Attribute:  ##green|trialEnergy##  
+     Energy level of the radial wave function (initial condition for numerical radial Schrodinger equation) 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.15d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default]/[#attdefaulttrialEnergy @trialEnergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttype]]
+    [[# attdefaulttype]]
+  
+++ Attribute:  ##green|type##  
+     Augmentation type (LAPW or APW+lo). Default lapw. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"lapw"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default]/[#attdefaulttype @type] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# custom]]
++ Element:##blue| custom##
+  
+   Custom definition of APW for a given L. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wf wf]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attcustoml l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attcustomsearchE searchE]}}**[[/span]], [[span class="attributelink"]]**{{[#attcustomtrialEnergy trialEnergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attcustomtype type]}}**[[/span]]
+  [[# attl]]
+    [[# attcustoml]]
+  
+++ Attribute:  ##green|l##  
+     Specifies the azimuthal quantum number for which the custom definition of APW function applies. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustoml @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsearchE]]
+    [[# attcustomsearchE]]
+  
+++ Attribute:  ##green|searchE##  
+     If {{true}} the energy of the radial wave function, [[$ E_0 $]] is optimized to match the boundary condition  
+[[math label]] 
+\psi(R_{MT})=0.
+[[/math]]
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomsearchE @searchE] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttrialEnergy]]
+    [[# attcustomtrialEnergy]]
+  
+++ Attribute:  ##green|trialEnergy##  
+     Energy level of the radial wave function (initial condition for numerical radial Schrodinger equation) 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.15d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomtrialEnergy @trialEnergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttype]]
+    [[# attcustomtype]]
+  
+++ Attribute:  ##green|type##  
+     Augmentation type (LAPW or APW+lo). Default apw+lo. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"apw+lo"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomtype @type] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# lo]]
++ Element:##blue| lo##
+  
+   Definition of the local orbitals (LO). Note that the local orbitals corresponding to the APW+lo basis type are included automatically and need not to be specified here. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wf wf]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attlol l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlowfproj wfproj]}}**[[/span]]
+  [[# attl]]
+    [[# attlol]]
+  
+++ Attribute:  ##green|l##  
+     Azimuthal quantum number for which the local orbital is defined. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo]/[#attlol @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwfproj]]
+    [[# attlowfproj]]
+  
+++ Attribute:  ##green|wfproj##  
+     Use this local orbital for projection while constructing Wannier functions. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo]/[#attlowfproj @wfproj] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[/common| listed separately]]].
+  
+[[# atomicState]]
++ Element:##blue| atomicState##
+  
+   The [[span class="elementlink"]]**{{[#atomicState atomicState]}}**[[/span]] element lists the atomic states that schould be used to approximate the wavefunction in the sphere. They can be marked as core or none core electrons by the [[span class="attributelink"]]**{{[#attcore core]}}**[[/span]] attribute. Core electrons are threated separately by numeric itegration. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attatomicStatecore core]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStatekappa kappa]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStatel l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStaten n]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStateocc occ]}}**[[/span]] ##red|(required)##
+  [[# attcore]]
+    [[# attatomicStatecore]]
+  
+++ Attribute:  ##green|core##  
+     If {{true}}, state is threated as core state in the calculation. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatecore @core] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attkappa]]
+    [[# attatomicStatekappa]]
+  
+++ Attribute:  ##green|kappa##  
+     Relativistic quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatekappa @kappa] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attl]]
+    [[# attatomicStatel]]
+  
+++ Attribute:  ##green|l##  
+     Azimuthal quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatel @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attn]]
+    [[# attatomicStaten]]
+  
+++ Attribute:  ##green|n##  
+     Principal quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStaten @n] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attocc]]
+    [[# attatomicStateocc]]
+  
+++ Attribute:  ##green|occ##  
+     Ocuppation number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStateocc @occ] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# wf]]
++ Element:##blue| wf##
+  
+  Defines the radial part of an atomic wavefunction. This functions used to construct a lapw orbital. The actual basis functions for the calculation inside the MT are linear combinations of these and [[$ Y_{lm} $]].
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#wf wf] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]
+[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo]
+[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwfmatchingOrder matchingOrder]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attwfsearchE searchE]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attwftrialEnergy trialEnergy]}}**[[/span]] ##red|(required)##
+  [[# attmatchingOrder]]
+    [[# attwfmatchingOrder]]
+  
+++ Attribute:  ##green|matchingOrder##  
+     Gives the order of the derivative that must be matched to the plain wave. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#wf wf]/[#attwfmatchingOrder @matchingOrder] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsearchE]]
+    [[# attwfsearchE]]
+  
+++ Attribute:  ##green|searchE##  
+     If {{true}} the energy of the radial wave function, [[$ E_0 $]] is optimized to match the boundary condition  
+[[math label]] 
+\psi(R_{MT})=0.
+[[/math]]
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#wf wf]/[#attwfsearchE @searchE] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttrialEnergy]]
+    [[# attwftrialEnergy]]
+  
+++ Attribute:  ##green|trialEnergy##  
+     Energy level of the radial wave function (initial condition for numerical radial Schrodinger equation) 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#wf wf]/[#attwftrialEnergy @trialEnergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# custom]]
++ Element:##blue| custom##
+  
+   Custom definition of APW for a given L. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wf wf]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attcustoml l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attcustomsearchE searchE]}}**[[/span]], [[span class="attributelink"]]**{{[#attcustomtrialEnergy trialEnergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attcustomtype type]}}**[[/span]]
+  [[# attl]]
+    [[# attcustoml]]
+  
+++ Attribute:  ##green|l##  
+     Specifies the azimuthal quantum number for which the custom definition of APW function applies. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustoml @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsearchE]]
+    [[# attcustomsearchE]]
+  
+++ Attribute:  ##green|searchE##  
+     If {{true}} the energy of the radial wave function, [[$ E_0 $]] is optimized to match the boundary condition  
+[[math label]] 
+\psi(R_{MT})=0.
+[[/math]]
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomsearchE @searchE] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttrialEnergy]]
+    [[# attcustomtrialEnergy]]
+  
+++ Attribute:  ##green|trialEnergy##  
+     Energy level of the radial wave function (initial condition for numerical radial Schrodinger equation) 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.15d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomtrialEnergy @trialEnergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttype]]
+    [[# attcustomtype]]
+  
+++ Attribute:  ##green|type##  
+     Augmentation type (LAPW or APW+lo). Default apw+lo. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"apw+lo"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomtype @type] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# lo]]
++ Element:##blue| lo##
+  
+   Definition of the local orbitals (LO). Note that the local orbitals corresponding to the APW+lo basis type are included automatically and need not to be specified here. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wf wf]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attlol l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlowfproj wfproj]}}**[[/span]]
+  [[# attl]]
+    [[# attlol]]
+  
+++ Attribute:  ##green|l##  
+     Azimuthal quantum number for which the local orbital is defined. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo]/[#attlol @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwfproj]]
+    [[# attlowfproj]]
+  
+++ Attribute:  ##green|wfproj##  
+     Use this local orbital for projection while constructing Wannier functions. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo]/[#attlowfproj @wfproj] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# sp]]
++ Element:##blue| sp##
+  
+   A species is an atom type definition containing all information to construct the basis functions. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#muffinTin muffinTin]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#atomicState atomicState]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#basis basis]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attspchemicalSymbol chemicalSymbol]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attspmass mass]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attspz z]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attspname name]}}**[[/span]]
+  [[# attchemicalSymbol]]
+    [[# attspchemicalSymbol]]
+  
+++ Attribute:  ##green|chemicalSymbol##  
+    Chemical Symbol.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]ID
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#attspchemicalSymbol @chemicalSymbol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmass]]
+    [[# attspmass]]
+  
+++ Attribute:  ##green|mass##  
+    Mass in [[$ m_e $]].
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#attspmass @mass] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attname]]
+    [[# attspname]]
+  
+++ Attribute:  ##green|name##  
+    Optional element name.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#attspname @name] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attz]]
+    [[# attspz]]
+  
+++ Attribute:  ##green|z##  
+    Atomic number.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#attspz @z] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# muffinTin]]
++ Element:##blue| muffinTin##
+  
+   This element gives the size of the muffin tin radius and the resolution of the radial functions. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attmuffinTinradialmeshPoints radialmeshPoints]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attmuffinTinradius radius]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attmuffinTinrinf rinf]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attmuffinTinrmin rmin]}}**[[/span]] ##red|(required)##
+  [[# attradialmeshPoints]]
+    [[# attmuffinTinradialmeshPoints]]
+  
+++ Attribute:  ##green|radialmeshPoints##  
+     Number of data points for radial atomic functions. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin]/[#attmuffinTinradialmeshPoints @radialmeshPoints] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attradius]]
+    [[# attmuffinTinradius]]
+  
+++ Attribute:  ##green|radius##  
+     The radius of the muffin tin sphere. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin]/[#attmuffinTinradius @radius] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrinf]]
+    [[# attmuffinTinrinf]]
+  
+++ Attribute:  ##green|rinf##  
+     Radius from which the influence on the potential is regarded to be negligible. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin]/[#attmuffinTinrinf @rinf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrmin]]
+    [[# attmuffinTinrmin]]
+  
+++ Attribute:  ##green|rmin##  
+     The radius where radial mesh begins. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#muffinTin muffinTin]/[#attmuffinTinrmin @rmin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# atomicState]]
++ Element:##blue| atomicState##
+  
+   The [[span class="elementlink"]]**{{[#atomicState atomicState]}}**[[/span]] element lists the atomic states that schould be used to approximate the wavefunction in the sphere. They can be marked as core or none core electrons by the [[span class="attributelink"]]**{{[#attcore core]}}**[[/span]] attribute. Core electrons are threated separately by numeric itegration. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attatomicStatecore core]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStatekappa kappa]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStatel l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStaten n]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attatomicStateocc occ]}}**[[/span]] ##red|(required)##
+  [[# attcore]]
+    [[# attatomicStatecore]]
+  
+++ Attribute:  ##green|core##  
+     If {{true}}, state is threated as core state in the calculation. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatecore @core] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attkappa]]
+    [[# attatomicStatekappa]]
+  
+++ Attribute:  ##green|kappa##  
+     Relativistic quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatekappa @kappa] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attl]]
+    [[# attatomicStatel]]
+  
+++ Attribute:  ##green|l##  
+     Azimuthal quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStatel @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attn]]
+    [[# attatomicStaten]]
+  
+++ Attribute:  ##green|n##  
+     Principal quantum number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStaten @n] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attocc]]
+    [[# attatomicStateocc]]
+  
+++ Attribute:  ##green|occ##  
+     Ocuppation number. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#atomicState atomicState]/[#attatomicStateocc @occ] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# basis]]
++ Element:##blue| basis##
+  
+   Definion of the APW basis. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#default default]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#custom custom]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#lo lo]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# default]]
++ Element:##blue| default##
+  
+   Global definition of APW functions (valid for all L [[$ \le $]]  {{lmaxapw}}). 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wf wf]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attdefaultsearchE searchE]}}**[[/span]], [[span class="attributelink"]]**{{[#attdefaulttrialEnergy trialEnergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attdefaulttype type]}}**[[/span]]
+  [[# attsearchE]]
+    [[# attdefaultsearchE]]
+  
+++ Attribute:  ##green|searchE##  
+     If {{true}} the energy of the radial wave function, [[$ E_0 $]] is optimized to match the boundary condition  
+[[math label]] 
+\psi(R_{MT})=0.
+[[/math]]
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default]/[#attdefaultsearchE @searchE] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttrialEnergy]]
+    [[# attdefaulttrialEnergy]]
+  
+++ Attribute:  ##green|trialEnergy##  
+     Energy level of the radial wave function (initial condition for numerical radial Schrodinger equation) 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.15d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default]/[#attdefaulttrialEnergy @trialEnergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttype]]
+    [[# attdefaulttype]]
+  
+++ Attribute:  ##green|type##  
+     Augmentation type (LAPW or APW+lo). Default lapw. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"lapw"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#default default]/[#attdefaulttype @type] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# custom]]
++ Element:##blue| custom##
+  
+   Custom definition of APW for a given L. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wf wf]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attcustoml l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attcustomsearchE searchE]}}**[[/span]], [[span class="attributelink"]]**{{[#attcustomtrialEnergy trialEnergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attcustomtype type]}}**[[/span]]
+  [[# attl]]
+    [[# attcustoml]]
+  
+++ Attribute:  ##green|l##  
+     Specifies the azimuthal quantum number for which the custom definition of APW function applies. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustoml @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsearchE]]
+    [[# attcustomsearchE]]
+  
+++ Attribute:  ##green|searchE##  
+     If {{true}} the energy of the radial wave function, [[$ E_0 $]] is optimized to match the boundary condition  
+[[math label]] 
+\psi(R_{MT})=0.
+[[/math]]
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomsearchE @searchE] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttrialEnergy]]
+    [[# attcustomtrialEnergy]]
+  
+++ Attribute:  ##green|trialEnergy##  
+     Energy level of the radial wave function (initial condition for numerical radial Schrodinger equation) 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.15d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomtrialEnergy @trialEnergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttype]]
+    [[# attcustomtype]]
+  
+++ Attribute:  ##green|type##  
+     Augmentation type (LAPW or APW+lo). Default apw+lo. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"apw+lo"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#custom custom]/[#attcustomtype @type] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# lo]]
++ Element:##blue| lo##
+  
+   Definition of the local orbitals (LO). Note that the local orbitals corresponding to the APW+lo basis type are included automatically and need not to be specified here. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wf wf]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attlol l]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlowfproj wfproj]}}**[[/span]]
+  [[# attl]]
+    [[# attlol]]
+  
+++ Attribute:  ##green|l##  
+     Azimuthal quantum number for which the local orbital is defined. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo]/[#attlol @l] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwfproj]]
+    [[# attlowfproj]]
+  
+++ Attribute:  ##green|wfproj##  
+     Use this local orbital for projection while constructing Wannier functions. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[/|]]]/[#spdb spdb]/[#sp sp]/[#basis basis]/[#lo lo]/[#attlowfproj @wfproj] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[/common| are described here]]].
+  
+  [[# fortrandouble]]
+++ Type   fortrandouble
+  
+   The type {{fortrandouble}} allows to use the letters {{"eEdDqQ"}} for exponent operators. This alters in what precision the number is parsed. 

@@ -1,0 +1,2840 @@
+
+[[# xs]]
++ Element:##blue| xs##
+  
+   If this element is present with valid configuration, the macroscopic dielectric function and related spectroscopic quantities in the linear regime are calculated through either time-dependent DFT (TDDFT) or the Bethe-Salpeter equation (BSE).
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#storeexcitons storeexcitons]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#writeexcitons writeexcitons]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#writekpathweights writekpathweights]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#excitonPlot excitonPlot]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#tddft tddft]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#screening screening]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#BSE BSE]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#transitions transitions]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#qpointset|qpointset]]]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#tetra tetra]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#energywindow|energywindow]]]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#plan plan]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attxsxstype xstype]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attxsbfieldc bfieldc]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsbroad broad]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsdbglev dbglev]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsdfoffdiag dfoffdiag]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsdogroundstate dogroundstate]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsemattype emattype]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsemaxdf emaxdf]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsepsdfde epsdfde]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsfastpmat fastpmat]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsgqmax gqmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsgqmaxtype gqmaxtype]}}**[[/span]], [[span class="attributelink"]]**{{[#attxslmaxapw lmaxapw]}}**[[/span]], [[span class="attributelink"]]**{{[#attxslmaxapwwf lmaxapwwf]}}**[[/span]], [[span class="attributelink"]]**{{[#attxslmaxemat lmaxemat]}}**[[/span]], [[span class="attributelink"]]**{{[#attxslmaxmat lmaxmat]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsmaxscl maxscl]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsnempty nempty]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsngridk ngridk]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsngridq ngridq]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsnosym nosym]}}**[[/span]], [[span class="attributelink"]]**{{[#attxspwmat pwmat]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsreducek reducek]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsreduceq reduceq]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsrgkmax rgkmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsscissor scissor]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsskipgnd skipgnd]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsswidth swidth]}}**[[/span]], [[span class="attributelink"]]**{{[#attxstappinfo tappinfo]}}**[[/span]], [[span class="attributelink"]]**{{[#attxstevout tevout]}}**[[/span]], [[span class="attributelink"]]**{{[#attxsvkloff vkloff]}}**[[/span]], [[span class="attributelink"]]**{{[#attxswritexsgrids writexsgrids]}}**[[/span]]
+  [[# attbfieldc]]
+    [[# attxsbfieldc]]
+  
+++ Attribute:  ##green|bfieldc##  
+     This attribute overrides the homonym attribute from the groundstate/spin element. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0 "}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsbfieldc @bfieldc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbroad]]
+    [[# attxsbroad]]
+  
+++ Attribute:  ##green|broad##  
+    Lorentzian broadening for all spectra
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.01d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsbroad @broad] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdbglev]]
+    [[# attxsdbglev]]
+  
+++ Attribute:  ##green|dbglev##  
+    Debugging level. Any value [[$ { > 0 } $]] will produce additional debug output. The large the value, the more information is output.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsdbglev @dbglev] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdfoffdiag]]
+    [[# attxsdfoffdiag]]
+  
+++ Attribute:  ##green|dfoffdiag##  
+      {{"true"}} if also off-diagonal tensor elements for the interacting response function are to be calculated. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsdfoffdiag @dfoffdiag] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdogroundstate]]
+    [[# attxsdogroundstate]]
+  
+++ Attribute:  ##green|dogroundstate##  
+     Decides if the ground state is calculated starting from scratch or using the densities from file.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ fromscratch  
+ fromfile  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"fromfile"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsdogroundstate @dogroundstate] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attemattype]]
+    [[# attxsemattype]]
+  
+++ Attribute:  ##green|emattype##  
+    Type of matrix element generation (band-combinations). Should only be referenced for experimental features. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsemattype @emattype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attemaxdf]]
+    [[# attxsemaxdf]]
+  
+++ Attribute:  ##green|emaxdf##  
+    Energy cutoff for the unoccupied states in the Kohn-Sham response function and screening. This parameter ensures a cutoff at the specified energy and is defined in addition to the [[span class="attributelink"]]**{{[#attnempty nempty]}}**[[/span]] parameter.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsemaxdf @emaxdf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsdfde]]
+    [[# attxsepsdfde]]
+  
+++ Attribute:  ##green|epsdfde##  
+    The smallest energy difference for which the square of its inverse will be considered in the Kohn-Sham response function. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-8"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsepsdfde @epsdfde] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfastpmat]]
+    [[# attxsfastpmat]]
+  
+++ Attribute:  ##green|fastpmat##  
+     If set to {{"true"}}, a fast method to calculate APW-lo, lo-APW and lo-lo parts of the momentum matrix elements in the muffin-tin is used. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsfastpmat @fastpmat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attgqmax]]
+    [[# attxsgqmax]]
+  
+++ Attribute:  ##green|gqmax##  
+    [[$ {\bf |G+q|} $]] cutoff for Kohn-Sham response function, screening and for expansion of Coulomb potential
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsgqmax @gqmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attgqmaxtype]]
+    [[# attxsgqmaxtype]]
+  
+++ Attribute:  ##green|gqmaxtype##  
+    Defines the way the gqmax cutoff is applied for the selection of the G-vectors. For [[$ "|G+q|" $]] G vectors are selected such that [[$ {\bf G+q} $]] lies within the [[span class="attributelink"]]**{{[#attgqmax gqmax]}}**[[/span]] cutoff. For [[$ "|G|" $]] G vectors are selected such that [[$ {\bf G} $]] lies within the {{gqmax}} cutoff. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ |G+q|  
+ |G|  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"|G+q|"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsgqmaxtype @gqmaxtype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxapw]]
+    [[# attxslmaxapw]]
+  
+++ Attribute:  ##green|lmaxapw##  
+    Angular momentum cut-off for the APW functions.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxslmaxapw @lmaxapw] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxapwwf]]
+    [[# attxslmaxapwwf]]
+  
+++ Attribute:  ##green|lmaxapwwf##  
+    Maximum angular momentum for APW functions for q-dependent matrix elements.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxslmaxapwwf @lmaxapwwf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxemat]]
+    [[# attxslmaxemat]]
+  
+++ Attribute:  ##green|lmaxemat##  
+     Maximum angular momentum for Rayleigh expansion of [[$ {\bf q} $]]-dependent plane wave factor. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"3"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxslmaxemat @lmaxemat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxmat]]
+    [[# attxslmaxmat]]
+  
+++ Attribute:  ##green|lmaxmat##  
+    Angular momentum cut-off for the outer-most loop in the hamiltonian and overlap matrix setup.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxslmaxmat @lmaxmat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmaxscl]]
+    [[# attxsmaxscl]]
+  
+++ Attribute:  ##green|maxscl##  
+    Upper limit of the self-consistency loop for the calculation of eigenvectors and eigenvalues from an existing ground-state calculation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsmaxscl @maxscl] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnempty]]
+    [[# attxsnempty]]
+  
+++ Attribute:  ##green|nempty##  
+     Number of empty states. This parameter determines the energy cutoff for the excitation spectra. For determining the number of states related to an energy cutoff, perform one iteration of a SCF calculation, setting [[span class="attributelink"]]**{{[#attnempty nempty]}}**[[/span]] to a higher value and check the {{**//EIGVAL.OUT//**}}. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsnempty @nempty] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngridk]]
+    [[# attxsngridk]]
+  
+++ Attribute:  ##green|ngridk##  
+    [[$ {\mathbf k} $]]-point grid sizes.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1 1 1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsngridk @ngridk] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngridq]]
+    [[# attxsngridq]]
+  
+++ Attribute:  ##green|ngridq##  
+    q-point grid sizes.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1 1 1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsngridq @ngridq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnosym]]
+    [[# attxsnosym]]
+  
+++ Attribute:  ##green|nosym##  
+      [[span class="attributelink"]]**{{[#attnosym nosym]}}**[[/span]] is {{"true"}} if no symmetry information should be used 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsnosym @nosym] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attpwmat]]
+    [[# attxspwmat]]
+  
+++ Attribute:  ##green|pwmat##  
+     Algorithm for calculating matrix elements of plane waves. Matrix multiplications (mm) are better suited for small systems, while fast Fourier transforms (fft) are appropriate for large systems. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ fft  
+ mm  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"fft"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxspwmat @pwmat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attreducek]]
+    [[# attxsreducek]]
+  
+++ Attribute:  ##green|reducek##  
+      [[span class="attributelink"]]**{{[#attreducek reducek]}}**[[/span]] is {{"true"}} if [[$ {\mathbf k} $]]-points are to be reduced (with crystal symmetries). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsreducek @reducek] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attreduceq]]
+    [[# attxsreduceq]]
+  
+++ Attribute:  ##green|reduceq##  
+      [[span class="attributelink"]]**{{[#attreducek reducek]}}**[[/span]] is {{"true"}} if q-points are to be reduced (with crystal symmetries). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsreduceq @reduceq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrgkmax]]
+    [[# attxsrgkmax]]
+  
+++ Attribute:  ##green|rgkmax##  
+    Smallest muffin-tin radius times {{gkmax}}. If set to zero (the default), this value defaults to the rgkmax set in the groundstate element.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsrgkmax @rgkmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscissor]]
+    [[# attxsscissor]]
+  
+++ Attribute:  ##green|scissor##  
+    Scissors correction to correct the conduction band energies.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsscissor @scissor] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attskipgnd]]
+    [[# attxsskipgnd]]
+  
+++ Attribute:  ##green|skipgnd##  
+     If set to {{"true"}}, recalculation of KS eigenvalues and eigenvectors is skipped. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsskipgnd @skipgnd] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attswidth]]
+    [[# attxsswidth]]
+  
+++ Attribute:  ##green|swidth##  
+    Width of the smooth approximation to the Dirac delta function (must be > 0).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.001d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsswidth @swidth] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttappinfo]]
+    [[# attxstappinfo]]
+  
+++ Attribute:  ##green|tappinfo##  
+    {{"true"}} to append info to output file.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxstappinfo @tappinfo] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttevout]]
+    [[# attxstevout]]
+  
+++ Attribute:  ##green|tevout##  
+      {{"true"}} if energy outputs are in eV. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxstevout @tevout] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvkloff]]
+    [[# attxsvkloff]]
+  
+++ Attribute:  ##green|vkloff##  
+     The [[$ {\mathbf k} $]]-point set offset. All [[$ {\mathbf k} $]]-points of a regular [[$ {\mathbf k} $]]-mesh (a mesh containing the Gamma point) are shifted by a constant vector given by [[$ ({\rm vkloff}_1/N_1, {\rm vkloff}_2/N_2, {\rm vkloff}_3/N_3) $]], where [[$  (N_1,N_2,N_3)  $]] is the division of the [[$ {\mathbf k} $]]-point mesh. It should be selected such that all symmetries among the [[$ {\mathbf k} $]]-points from the regular (non-shifted) mesh are broken. An exception is the case of optical spectra without local field effects where symmetries among [[$ {\mathbf k} $]]-points are explicitly taken into account. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0 "}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsvkloff @vkloff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwritexsgrids]]
+    [[# attxswritexsgrids]]
+  
+++ Attribute:  ##green|writexsgrids##  
+    {{"true"}} to write out k, k+q, g, g+k, g+q grids to file.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxswritexsgrids @writexsgrids] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxstype]]
+    [[# attxsxstype]]
+  
+++ Attribute:  ##green|xstype##  
+    Should TDDFT be used or BSE.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ TDDFT  
+ BSE  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#attxsxstype @xstype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# storeexcitons]]
++ Element:##blue| storeexcitons##
+  
+  When present this element allows to store the exciton components (BSE eigenvectors). The number of stored excitons starting from the lowest energy one is given by the attribute [[span class="attributelink"]]**{{[#attMaxNumberExcitons MaxNumberExcitons]}}**[[/span]].
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#storeexcitons storeexcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attstoreexcitonsMaxEnergyExcitons MaxEnergyExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attstoreexcitonsMaxNumberExcitons MaxNumberExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attstoreexcitonsMinEnergyExcitons MinEnergyExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attstoreexcitonsMinNumberExcitons MinNumberExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attstoreexcitonsselectenergy selectenergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attstoreexcitonsuseev useev]}}**[[/span]]
+  [[# attMaxEnergyExcitons]]
+    [[# attstoreexcitonsMaxEnergyExcitons]]
+  
+++ Attribute:  ##green|MaxEnergyExcitons##  
+    Upper limit of the energy interval for the stored excitons.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"100.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#storeexcitons storeexcitons]/[#attstoreexcitonsMaxEnergyExcitons @MaxEnergyExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMaxNumberExcitons]]
+    [[# attstoreexcitonsMaxNumberExcitons]]
+  
+++ Attribute:  ##green|MaxNumberExcitons##  
+    It represents the upper limit of the number of stored excitons.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#storeexcitons storeexcitons]/[#attstoreexcitonsMaxNumberExcitons @MaxNumberExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMinEnergyExcitons]]
+    [[# attstoreexcitonsMinEnergyExcitons]]
+  
+++ Attribute:  ##green|MinEnergyExcitons##  
+    Lower limit of the energy interval for the stored excitons.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#storeexcitons storeexcitons]/[#attstoreexcitonsMinEnergyExcitons @MinEnergyExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMinNumberExcitons]]
+    [[# attstoreexcitonsMinNumberExcitons]]
+  
+++ Attribute:  ##green|MinNumberExcitons##  
+    It represents the lower limit of the number of stored excitons.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#storeexcitons storeexcitons]/[#attstoreexcitonsMinNumberExcitons @MinNumberExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attselectenergy]]
+    [[# attstoreexcitonsselectenergy]]
+  
+++ Attribute:  ##green|selectenergy##  
+     Set to {{"true"}} if excitons within a specified energy interval shall be stored.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#storeexcitons storeexcitons]/[#attstoreexcitonsselectenergy @selectenergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attuseev]]
+    [[# attstoreexcitonsuseev]]
+  
+++ Attribute:  ##green|useev##  
+      {{"true"}} if energy input is in eV. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#storeexcitons storeexcitons]/[#attstoreexcitonsuseev @useev] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# writeexcitons]]
++ Element:##blue| writeexcitons##
+  
+  When present this element allows to write the stored exciton components (BSE eigenvectors) to ASCII files. The range of excitons must lie within the stored range given by the attributes in the element storeexcitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwriteexcitonsMaxEnergyExcitons MaxEnergyExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attwriteexcitonsMaxNumberExcitons MaxNumberExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attwriteexcitonsMinEnergyExcitons MinEnergyExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attwriteexcitonsMinNumberExcitons MinNumberExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attwriteexcitonsabscutares abscutares]}}**[[/span]], [[span class="attributelink"]]**{{[#attwriteexcitonsabscutres abscutres]}}**[[/span]], [[span class="attributelink"]]**{{[#attwriteexcitonsselectenergy selectenergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attwriteexcitonsuseev useev]}}**[[/span]]
+  [[# attMaxEnergyExcitons]]
+    [[# attwriteexcitonsMaxEnergyExcitons]]
+  
+++ Attribute:  ##green|MaxEnergyExcitons##  
+    Upper limit of the energy interval of the written excitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"100.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons]/[#attwriteexcitonsMaxEnergyExcitons @MaxEnergyExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMaxNumberExcitons]]
+    [[# attwriteexcitonsMaxNumberExcitons]]
+  
+++ Attribute:  ##green|MaxNumberExcitons##  
+    It represents the upper limit of the number of written excitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons]/[#attwriteexcitonsMaxNumberExcitons @MaxNumberExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMinEnergyExcitons]]
+    [[# attwriteexcitonsMinEnergyExcitons]]
+  
+++ Attribute:  ##green|MinEnergyExcitons##  
+    Lower limit of the energy interval of the written excitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons]/[#attwriteexcitonsMinEnergyExcitons @MinEnergyExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMinNumberExcitons]]
+    [[# attwriteexcitonsMinNumberExcitons]]
+  
+++ Attribute:  ##green|MinNumberExcitons##  
+    It represents the lower limit of the number of written excitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons]/[#attwriteexcitonsMinNumberExcitons @MinNumberExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attabscutares]]
+    [[# attwriteexcitonsabscutares]]
+  
+++ Attribute:  ##green|abscutares##  
+     Cutoff interval for exciton eigenvector writeout (anit-resonant). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 1.0d10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons]/[#attwriteexcitonsabscutares @abscutares] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attabscutres]]
+    [[# attwriteexcitonsabscutres]]
+  
+++ Attribute:  ##green|abscutres##  
+     Cutoff interval for exciton eigenvector writeout (resonant). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 1.0d10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons]/[#attwriteexcitonsabscutres @abscutres] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attselectenergy]]
+    [[# attwriteexcitonsselectenergy]]
+  
+++ Attribute:  ##green|selectenergy##  
+     Set to {{"true"}} if excitons within a specified energy interval shall written.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons]/[#attwriteexcitonsselectenergy @selectenergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attuseev]]
+    [[# attwriteexcitonsuseev]]
+  
+++ Attribute:  ##green|useev##  
+      {{"true"}} if energy input is in eV. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writeexcitons writeexcitons]/[#attwriteexcitonsuseev @useev] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# writekpathweights]]
++ Element:##blue| writekpathweights##
+  
+   This element configures the interpolation of the excitonic weights onto a banstructure path performend by the writekpathweights task. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwritekpathweightsMaxEnergyExcitons MaxEnergyExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attwritekpathweightsMaxNumberExcitons MaxNumberExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attwritekpathweightsMinEnergyExcitons MinEnergyExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attwritekpathweightsMinNumberExcitons MinNumberExcitons]}}**[[/span]], [[span class="attributelink"]]**{{[#attwritekpathweightsintorder intorder]}}**[[/span]], [[span class="attributelink"]]**{{[#attwritekpathweightsprintgridweights printgridweights]}}**[[/span]], [[span class="attributelink"]]**{{[#attwritekpathweightsselectenergy selectenergy]}}**[[/span]], [[span class="attributelink"]]**{{[#attwritekpathweightsuseev useev]}}**[[/span]]
+  [[# attMaxEnergyExcitons]]
+    [[# attwritekpathweightsMaxEnergyExcitons]]
+  
+++ Attribute:  ##green|MaxEnergyExcitons##  
+    Upper limit of the energy interval of the written excitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"100.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights]/[#attwritekpathweightsMaxEnergyExcitons @MaxEnergyExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMaxNumberExcitons]]
+    [[# attwritekpathweightsMaxNumberExcitons]]
+  
+++ Attribute:  ##green|MaxNumberExcitons##  
+    It represents the upper limit of the number of written excitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights]/[#attwritekpathweightsMaxNumberExcitons @MaxNumberExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMinEnergyExcitons]]
+    [[# attwritekpathweightsMinEnergyExcitons]]
+  
+++ Attribute:  ##green|MinEnergyExcitons##  
+    Lower limit of the energy interval of the written excitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights]/[#attwritekpathweightsMinEnergyExcitons @MinEnergyExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attMinNumberExcitons]]
+    [[# attwritekpathweightsMinNumberExcitons]]
+  
+++ Attribute:  ##green|MinNumberExcitons##  
+    It represents the lower limit of the number of written excitons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights]/[#attwritekpathweightsMinNumberExcitons @MinNumberExcitons] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attintorder]]
+    [[# attwritekpathweightsintorder]]
+  
+++ Attribute:  ##green|intorder##  
+     Spline order for the interpolation of the excitonic weights (polynomial order + 1). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights]/[#attwritekpathweightsintorder @intorder] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attprintgridweights]]
+    [[# attwritekpathweightsprintgridweights]]
+  
+++ Attribute:  ##green|printgridweights##  
+      {{"true"}} if the excitonic weights on the k-grid shall be printed to file. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights]/[#attwritekpathweightsprintgridweights @printgridweights] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attselectenergy]]
+    [[# attwritekpathweightsselectenergy]]
+  
+++ Attribute:  ##green|selectenergy##  
+     Set to {{"true"}} if excitons within a specified energy interval shall be considered.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights]/[#attwritekpathweightsselectenergy @selectenergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attuseev]]
+    [[# attwritekpathweightsuseev]]
+  
+++ Attribute:  ##green|useev##  
+      {{"true"}} if energy input is in eV. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#writekpathweights writekpathweights]/[#attwritekpathweightsuseev @useev] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# excitonPlot]]
++ Element:##blue| excitonPlot##
+  
+  Parameters for the electron-hole visualization.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#exciton exciton]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#hole hole]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#electron electron]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#excitonPlot excitonPlot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attexcitonPlotepstol epstol]}}**[[/span]]
+  [[# attepstol]]
+    [[# attexcitonPlotepstol]]
+  
+++ Attribute:  ##green|epstol##  
+    Threshold value for selecting states which contribute to the exciton.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-4"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#excitonPlot excitonPlot]/[#attexcitonPlotepstol @epstol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# exciton]]
++ Element:##blue| exciton##
+  
+  Electron-hole pair descriptor.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#excitonPlot excitonPlot]/[#exciton exciton] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attexcitonfix fix]}}**[[/span]], [[span class="attributelink"]]**{{[#attexcitonlambda lambda]}}**[[/span]]
+  [[# attfix]]
+    [[# attexcitonfix]]
+  
+++ Attribute:  ##green|fix##  
+     Fix position (in lattice coordinates) either of the "hole" or "electron". 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"hole"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#excitonPlot excitonPlot]/[#exciton exciton]/[#attexcitonfix @fix] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlambda]]
+    [[# attexcitonlambda]]
+  
+++ Attribute:  ##green|lambda##  
+     The index of the stored exciton. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#excitonPlot excitonPlot]/[#exciton exciton]/[#attexcitonlambda @lambda] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# hole]]
++ Element:##blue| hole##
+  
+   For the exciton wavefunction visualization: Real space grid for the hole distribution. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#excitonPlot excitonPlot]/[#hole hole] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# electron]]
++ Element:##blue| electron##
+  
+   For the exciton wavefunction visualization: Real space grid for the electron distribution. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#excitonPlot excitonPlot]/[#electron electron] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# tddft]]
++ Element:##blue| tddft##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#atttddftacont acont]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftahc ahc]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftalphalrc alphalrc]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftalphalrcdyn alphalrcdyn]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftaresdf aresdf]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftaresfxc aresfxc]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftbetalrcdyn betalrcdyn]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftdo do]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftdrude drude]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftfxcbsesplit fxcbsesplit]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftfxctype fxctype]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftintraband intraband]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftkerndiag kerndiag]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftlindhard lindhard]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftlmaxalda lmaxalda]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftmdfqtype mdfqtype]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddftnwacont nwacont]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddfttorddf torddf]}}**[[/span]], [[span class="attributelink"]]**{{[#atttddfttordfxc tordfxc]}}**[[/span]]
+  [[# attacont]]
+    [[# atttddftacont]]
+  
+++ Attribute:  ##green|acont##  
+    Set to {{"true"}} if analytic continuation from the imaginary axis to the real axis is to be performed.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftacont @acont] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attahc]]
+    [[# atttddftahc]]
+  
+++ Attribute:  ##green|ahc##  
+     By setting it to {{"true"}}, the anomalous Hall conductivity (AHC) term is included in the calculation of the dielectric tensor [see PRB 86, 125139 (2012)]. In this case, the MOKE.OUT output file is generated, containing the MOKE spectrum. This attribute only has effect when local field effects are neglected (gqmax=0) and q=0.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftahc @ahc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attalphalrc]]
+    [[# atttddftalphalrc]]
+  
+++ Attribute:  ##green|alphalrc##  
+    [[$ \alpha $]]-parameter for the static long range contribution (LRC) model xc kernel.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftalphalrc @alphalrc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attalphalrcdyn]]
+    [[# atttddftalphalrcdyn]]
+  
+++ Attribute:  ##green|alphalrcdyn##  
+    [[$ \alpha $]]-parameter for the dynamical long range contribution (LRC) model xc kernel.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftalphalrcdyn @alphalrcdyn] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attaresdf]]
+    [[# atttddftaresdf]]
+  
+++ Attribute:  ##green|aresdf##  
+     Set to {{"true"}} if to consider the anti-resonant part for the dielectric function. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftaresdf @aresdf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attaresfxc]]
+    [[# atttddftaresfxc]]
+  
+++ Attribute:  ##green|aresfxc##  
+     Set to {{"true"}} if to consider the anti-resonant part for the MBPT derived xc-kernels. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftaresfxc @aresfxc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbetalrcdyn]]
+    [[# atttddftbetalrcdyn]]
+  
+++ Attribute:  ##green|betalrcdyn##  
+    [[$ \beta $]]-parameter for the dynamical long range contribution (LRC) model xc kernel.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftbetalrcdyn @betalrcdyn] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdo]]
+    [[# atttddftdo]]
+  
+++ Attribute:  ##green|do##  
+     Decides if the TDDFT calculation is to be resumed starting from a new xc kernel or is to be skipped. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ fromscratch  
+ fromkernel  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"fromscratch"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftdo @do] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdrude]]
+    [[# atttddftdrude]]
+  
+++ Attribute:  ##green|drude##  
+     Parameters defining semiclassical Drude approximation to intraband term. The first value determines the plasma frequency [[$ \omega_p $]] and the second the inverse relaxation time [[$ \omega_{\tau} $]]:[[$ \chi_0^D=\frac{1}{\omega}\frac{\omega_p^2}{\omega+i\omega_{\tau}} $]]  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftdrude @drude] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfxcbsesplit]]
+    [[# atttddftfxcbsesplit]]
+  
+++ Attribute:  ##green|fxcbsesplit##  
+    Split parameter for degeneracy in energy differences of MBPT derived xc kernels. See A. Marini, Phys. Rev. Lett., 91, (2003) 256402.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftfxcbsesplit @fxcbsesplit] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfxctype]]
+    [[# atttddftfxctype]]
+  
+++ Attribute:  ##green|fxctype##  
+    Defines which xc kernel is to be used. Examples on the use of the different kernels can be found online on the Tutorial "TDDFT Calculations with Different Kernels" on www.exciting-code.org. In the options indicated below, if the suffix {{"_NLF"}} is present, then local-field effects are neglected (scalar kernel). Otherwise the kernel is a matrix of the size of the number of [[$ \mathbf{G} $]]-vectors, whose diagonal elements are all equal. The available kernels [[$ f_{xc} $]] are:
+* {{"RPA"}} - Random-phase approximation kernel. [[$ f_{xc}=0 $]]  
+* {{"LRCstatic[_NLF]"}} - Long-range correction kernel.  
+[[math label]] 
+
+		    f_{xc}=-\frac{\alpha}{\mathbf{q}^2}.
+		  
+[[/math]]
+ See S. Botti et al., Phys. Rev. B 69, 155112 (2004) 
+* {{"LRCdyn[_NLF]"}} - Dynamical long-range correction kernel.  
+[[math label]] 
+
+		    f_{xc}=-\frac{\alpha+\beta \omega^2}{\mathbf{q}^2}
+		  
+[[/math]]
+ with [[$ \alpha $]] given by the value of [[span class="attributelink"]]**{{[#attalphalrcdyn alphalrcdyn]}}**[[/span]] and [[$ \beta $]] given by the value of [[span class="attributelink"]]**{{[#attbetalrcdyn betalrcdyn]}}**[[/span]]. See S. Botti et al., Phys. Rev. B 72, 125203 (2005) 
+* {{"ALDA"}} - Adiabatic LDA kernel.  
+[[math label]] 
+
+		    f_{xc}(\mathbf{r},\mathbf{r}',t-t')=\frac{\delta V_{xc}(\mathbf{r})}{\delta n(\mathbf{r}')}\delta(t-t').
+		  
+[[/math]]
+ In this implementation, [[$ V_{xc}(\mathbf{r}) $]] is the spin-unpolarised exchange-correlation potential corresponding to the Perdew-Wang parameterisation of Ceperley-Alder's Monte-Carlo data (see Phys. Rev. B 45, 13244 (1992) and Phys. Rev. Lett. 45, 566 (1980)). 
+* {{"MB1[_NLF]"}} - BSE derived xc kernel. See L. Reining et al., Phys. Rev. Lett. 88, 066404 (2002) and A. Marini et al., Phys. Rev. Lett. 91, 256402 (2003). 
+* {{"BO"}} - Bootstrap kernel.  
+[[math label]] 
+
+		    f_{xc}=\frac{\varepsilon^{-1}(\omega=0)}{\chi_{00}(\omega=0)}.
+		  
+[[/math]]
+ See S. Sharma et al., Phys. Rev. Lett. 107, 186401 (2011). 
+* {{"BO_SCALAR"}} - Scalar version of the bootstrap kernel. [[$  f_{xc}=\left[\varepsilon_M(\omega=0)\chi_{00}(\omega=0)\right]^{-1}  $]]. See S. Sharma et al., Phys. Rev. Lett. 107, 186401 (2011). 
+* {{"RBO"}} - RPA bootstrap kernel. [[$  f_{xc}=\left[\varepsilon^{RPA}_M(\omega=0)\overline{\chi}_{00}^{RPA}(\omega=0)\right]^{-1}  $]]. See S. Rigamonti et al., Phys. Rev. Lett. 114, 146402 (2015). 
+ 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ RPA  
+ LRCstatic_NLF  
+ LRCstatic  
+ LRCdyn_NLF  
+ LRCdyn  
+ ALDA  
+ MB1_NLF  
+ MB1  
+ BO  
+ BO_SCALAR  
+ RBO  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"RPA"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftfxctype @fxctype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attintraband]]
+    [[# atttddftintraband]]
+  
+++ Attribute:  ##green|intraband##  
+     By setting it to {{"true"}}, the intraband contribution is included in the calculation for the finite q.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftintraband @intraband] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attkerndiag]]
+    [[# atttddftkerndiag]]
+  
+++ Attribute:  ##green|kerndiag##  
+     Set to {{"true"}} if only diagonal part of xc-kernel is to be used. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftkerndiag @kerndiag] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlindhard]]
+    [[# atttddftlindhard]]
+  
+++ Attribute:  ##green|lindhard##  
+     Set to {{"true"}} if Lindhard-like function is to be calculated. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftlindhard @lindhard] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxalda]]
+    [[# atttddftlmaxalda]]
+  
+++ Attribute:  ##green|lmaxalda##  
+    Angular momentum cutoff for Rayleigh expansion of exponential factor for ALDA-kernel.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"3"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftlmaxalda @lmaxalda] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmdfqtype]]
+    [[# atttddftmdfqtype]]
+  
+++ Attribute:  ##green|mdfqtype##  
+     Treatment of macroscopic dielectric function for [[$ {\bf Q} $]]-point outside of Brillouin zone. A value of 0 uses the full [[$ {\bf Q} $]] and the [[$ ({\bf 0},{\bf 0}) $]] component of the microscopic dielectric matrix is used. A value of 1 invokes a decomposition [[$ {\bf Q}={\bf q}+{\bf G}_{\bf q} $]] and the [[$ ({\bf Q}_{\bf q},{\bf Q}_{\bf q}) $]] component of the microscopic dielectric matrix is used. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftmdfqtype @mdfqtype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnwacont]]
+    [[# atttddftnwacont]]
+  
+++ Attribute:  ##green|nwacont##  
+    Number of energy intervals (on imaginary axis) for analytic continuation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddftnwacont @nwacont] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttorddf]]
+    [[# atttddfttorddf]]
+  
+++ Attribute:  ##green|torddf##  
+     Set to {{"true"}} if to consider the time-ordered version of the dielectric function. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddfttorddf @torddf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttordfxc]]
+    [[# atttddfttordfxc]]
+  
+++ Attribute:  ##green|tordfxc##  
+     Set to {{"true"}} if to consider the time-ordered version of xc kernel (MBPT derived kernels only). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tddft tddft]/[#atttddfttordfxc @tordfxc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# screening]]
++ Element:##blue| screening##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attscreeningdo do]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningintraband intraband]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningnempty nempty]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningngridk ngridk]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningnosym nosym]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningreducek reducek]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningrgkmax rgkmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningscreentype screentype]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningtr tr]}}**[[/span]], [[span class="attributelink"]]**{{[#attscreeningvkloff vkloff]}}**[[/span]]
+  [[# attdo]]
+    [[# attscreeningdo]]
+  
+++ Attribute:  ##green|do##  
+     Decides if the calculation of the screening is done from scratch or is to be skipped.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ fromscratch  
+ skip  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"fromscratch"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningdo @do] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attintraband]]
+    [[# attscreeningintraband]]
+  
+++ Attribute:  ##green|intraband##  
+     Set to {{"false"}} to not use transition between states at same n but different k. Note: If the unit cell used in the calculation is not primitive, the n index does not corresponds to then physical band index due to the umklapp process at the cell boundaries. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningintraband @intraband] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnempty]]
+    [[# attscreeningnempty]]
+  
+++ Attribute:  ##green|nempty##  
+    Number of empty states.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningnempty @nempty] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngridk]]
+    [[# attscreeningngridk]]
+  
+++ Attribute:  ##green|ngridk##  
+    [[$ {\mathbf k} $]]-point grid sizes for screening.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0 0 0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningngridk @ngridk] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnosym]]
+    [[# attscreeningnosym]]
+  
+++ Attribute:  ##green|nosym##  
+      [[span class="attributelink"]]**{{[#attnosym nosym]}}**[[/span]] is {{"true"}} if no symmetry information should be used for screening. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningnosym @nosym] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attreducek]]
+    [[# attscreeningreducek]]
+  
+++ Attribute:  ##green|reducek##  
+      [[span class="attributelink"]]**{{[#attreducek reducek]}}**[[/span]] is {{"true"}} if [[$ {\mathbf k} $]]-points are to be reduced with crystal symmetries for screening. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningreducek @reducek] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrgkmax]]
+    [[# attscreeningrgkmax]]
+  
+++ Attribute:  ##green|rgkmax##  
+    The smallest muffin-tin radius times {{gkmax}} for screening.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningrgkmax @rgkmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscreentype]]
+    [[# attscreeningscreentype]]
+  
+++ Attribute:  ##green|screentype##  
+    Defines which type of screening is to be used.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ full  
+ diag  
+ noinvdiag  
+ longrange  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"full"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningscreentype @screentype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttr]]
+    [[# attscreeningtr]]
+  
+++ Attribute:  ##green|tr##  
+      [[span class="attributelink"]]**{{[#atttr tr]}}**[[/span]] is {{"true"}} if the time reversal symmetry is used to equate the anit-resonant with the resonant part of Chi0 in the case of static screening without broadening. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningtr @tr] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvkloff]]
+    [[# attscreeningvkloff]]
+  
+++ Attribute:  ##green|vkloff##  
+    [[$ {\mathbf k} $]]-point offset for screening.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-1.0d0 -1.0d0 -1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#screening screening]/[#attscreeningvkloff @vkloff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# BSE]]
++ Element:##blue| BSE##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attBSEaresbse aresbse]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEblocks blocks]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEbsedirsing bsedirsing]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEbsetype bsetype]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEcheckposdef checkposdef]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEchibarq chibarq]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEcoupling coupling]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEcuttype cuttype]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEdistribute distribute]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEeconv econv]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEeecs eecs]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEefind efind]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEfbzq fbzq]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEiqmtrange iqmtrange]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSElmaxdielt lmaxdielt]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEmeasure measure]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEnexc nexc]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEngridksub ngridksub]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEnleblaik nleblaik]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEnosym nosym]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEnstlbse nstlbse]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEnstlxas nstlxas]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEoutputlevel outputlevel]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEreducek reducek]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSErgkmax rgkmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEsciavbd sciavbd]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEsciavqbd sciavqbd]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEsciavqhd sciavqhd]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEsciavqwg sciavqwg]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEsciavtype sciavtype]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEscrherm scrherm]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSEvkloff vkloff]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSExas xas]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSExasatom xasatom]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSExasedge xasedge]}}**[[/span]], [[span class="attributelink"]]**{{[#attBSExasspecies xasspecies]}}**[[/span]]
+  [[# attaresbse]]
+    [[# attBSEaresbse]]
+  
+++ Attribute:  ##green|aresbse##  
+     Is set to {{"true"}} if to consider the anti-resonant part for the BSE spectrum. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEaresbse @aresbse] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attblocks]]
+    [[# attBSEblocks]]
+  
+++ Attribute:  ##green|blocks##  
+    Defines which blocks of the BSE Hamiltonian are to be set up (resonant-resonat, resonant-anti-resonant or both).
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ rr  
+ ra  
+ both  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"both"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEblocks @blocks] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbsedirsing]]
+    [[# attBSEbsedirsing]]
+  
+++ Attribute:  ##green|bsedirsing##  
+    {{"true"}} if effective singular part of direct term of BSE Hamiltonian is to be used.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEbsedirsing @bsedirsing] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbsetype]]
+    [[# attBSEbsetype]]
+  
+++ Attribute:  ##green|bsetype##  
+    Defines which parts of the BSE Hamiltonian are to be considered.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ IP  
+ RPA  
+ singlet  
+ triplet  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"singlet"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEbsetype @bsetype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attcheckposdef]]
+    [[# attBSEcheckposdef]]
+  
+++ Attribute:  ##green|checkposdef##  
+     Set to {{"true"}} to check positive definitness of the auxilliary matrix used in BSE+TI.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEcheckposdef @checkposdef] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attchibarq]]
+    [[# attBSEchibarq]]
+  
+++ Attribute:  ##green|chibarq##  
+     Set to {{"true"}} to use the modified $\bar{\chi}$ also for finite q.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEchibarq @chibarq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attcoupling]]
+    [[# attBSEcoupling]]
+  
+++ Attribute:  ##green|coupling##  
+     Set to {{"true"}} to perform BSE without Tamm-Dancoff approximation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEcoupling @coupling] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attcuttype]]
+    [[# attBSEcuttype]]
+  
+++ Attribute:  ##green|cuttype##  
+    Defines how the Coulomb potential is to be truncated. Used for lower dimentional systems.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ none  
+ 0d  
+ 2d  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"none"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEcuttype @cuttype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdistribute]]
+    [[# attBSEdistribute]]
+  
+++ Attribute:  ##green|distribute##  
+     Use ScaLAPACK or not. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEdistribute @distribute] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atteconv]]
+    [[# attBSEeconv]]
+  
+++ Attribute:  ##green|econv##  
+     Additional energy for KS transitions to be included in the construction of the BSE hamiltoninan. Spectrum for a desired energy window needs to be converged with respect to this parameter. First/second entry is convergence energy for the lower/upper end of the spectrum. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEeconv @econv] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atteecs]]
+    [[# attBSEeecs]]
+  
+++ Attribute:  ##green|eecs##  
+    Estimated BSE eigenvalue cluster size.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"3"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEeecs @eecs] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attefind]]
+    [[# attBSEefind]]
+  
+++ Attribute:  ##green|efind##  
+     Set to {{"true"}} to solve the BSE Hamiltonian only for needed solutions with respect to desired energy window.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEefind @efind] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfbzq]]
+    [[# attBSEfbzq]]
+  
+++ Attribute:  ##green|fbzq##  
+    Set to {{"true"}} if q-point set is to be taken from the first Brillouin zone.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEfbzq @fbzq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attiqmtrange]]
+    [[# attBSEiqmtrange]]
+  
+++ Attribute:  ##green|iqmtrange##  
+    For which points in the q-point list should the BSE Matrix be constructed. A value of iqmtrange(1)=-1 uses all listed Q-points.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integerpair|integerpair]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1 1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEiqmtrange @iqmtrange] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxdielt]]
+    [[# attBSElmaxdielt]]
+  
+++ Attribute:  ##green|lmaxdielt##  
+    Angular momentum cutoff of the spherical harmonics expansion of the dielectric matrix.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"14"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSElmaxdielt @lmaxdielt] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmeasure]]
+    [[# attBSEmeasure]]
+  
+++ Attribute:  ##green|measure##  
+     Set to {{"true"}} to write out measures for the resonant-anti-resonat coupling.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEmeasure @measure] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnexc]]
+    [[# attBSEnexc]]
+  
+++ Attribute:  ##green|nexc##  
+    Number of excitons (eigensolutions) to be considered in a BSE calculation. The default corresponds to all.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEnexc @nexc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngridksub]]
+    [[# attBSEngridksub]]
+  
+++ Attribute:  ##green|ngridksub##  
+     The sub-grid of a BSE double grid run. Any value larger than 1 triggers a computation following this scheme: the BSE is solved several times on coarse grids, as given by [[span class="attributelink"]]**{{[#attngridk ngridk]}}**[[/span]] and [[span class="attributelink"]]**{{[#attngridq ngridq]}}**[[/span]], which are shifted to all symmetry non-equivalent points of the sub-grid. The latter are distributed uniformly between the k-points of the coarse grid. The final results are obtained by averaging all the spectra yielded in this way, what is expected to be almost as good as solving the BSE on the fine grid, at much less computational cost. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1 1 1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEngridksub @ngridksub] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnleblaik]]
+    [[# attBSEnleblaik]]
+  
+++ Attribute:  ##green|nleblaik##  
+    Number of points used for the Lebedev-Laikov grids must be selected according to V.I. Lebedev, and D.N. Laikov, Doklady Mathematics, 59 (1999) 477.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5810"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEnleblaik @nleblaik] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnosym]]
+    [[# attBSEnosym]]
+  
+++ Attribute:  ##green|nosym##  
+     Set to {{"true"}} if no symmetry information should be used for BSE. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEnosym @nosym] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnstlbse]]
+    [[# attBSEnstlbse]]
+  
+++ Attribute:  ##green|nstlbse##  
+    Range of bands included for the BSE calculation. The first pair of numbers corresponds to the band index for local orbitals and valence states (counted from the lowest eigenenergy), the second pair corresponds to the band index of the conduction states (counted from the Fermi level).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integerquadrupel|integerquadrupel]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0 0 0 0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEnstlbse @nstlbse] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnstlxas]]
+    [[# attBSEnstlxas]]
+  
+++ Attribute:  ##green|nstlxas##  
+    Range of bands included for the BSE calculation. The pair corresponds to the band index of the conduction states (counted from the Fermi level).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integerpair|integerpair]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0 0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEnstlxas @nstlxas] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attoutputlevel]]
+    [[# attBSEoutputlevel]]
+  
+++ Attribute:  ##green|outputlevel##  
+     Specify amount of information which is printed to files: 
+* normal - (default) standard information
+* exper - detailed output
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ normal  
+ expert  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"normal"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEoutputlevel @outputlevel] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attreducek]]
+    [[# attBSEreducek]]
+  
+++ Attribute:  ##green|reducek##  
+      [[span class="attributelink"]]**{{[#attreducek reducek]}}**[[/span]] is {{"true"}} if [[$ {\mathbf k} $]]-points are to be reduced with crystal symmetries for BSE. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEreducek @reducek] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrgkmax]]
+    [[# attBSErgkmax]]
+  
+++ Attribute:  ##green|rgkmax##  
+    Smallest muffin-tin radius times {{gkmax}}.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSErgkmax @rgkmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsciavbd]]
+    [[# attBSEsciavbd]]
+  
+++ Attribute:  ##green|sciavbd##  
+      {{"true"}} if the body of the screened Coulomb interaction is to be averaged (q=0). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEsciavbd @sciavbd] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsciavqbd]]
+    [[# attBSEsciavqbd]]
+  
+++ Attribute:  ##green|sciavqbd##  
+      {{"true"}} if the body of the screened Coulomb interaction is to be averaged (q!=0). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEsciavqbd @sciavqbd] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsciavqhd]]
+    [[# attBSEsciavqhd]]
+  
+++ Attribute:  ##green|sciavqhd##  
+      {{"true"}} if the head of the screened Coulomb interaction is to be averaged (q!=0). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEsciavqhd @sciavqhd] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsciavqwg]]
+    [[# attBSEsciavqwg]]
+  
+++ Attribute:  ##green|sciavqwg##  
+      {{"true"}} if the wings of the screened Coulomb interaction are to be averaged (q!=0). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEsciavqwg @sciavqwg] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsciavtype]]
+    [[# attBSEsciavtype]]
+  
+++ Attribute:  ##green|sciavtype##  
+     Defines how the screened Coulomb interaction matrix is to be averaged (important for the singular terms). 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ spherical  
+ screendiag  
+ invscreendiag  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"spherical"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEsciavtype @sciavtype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscrherm]]
+    [[# attBSEscrherm]]
+  
+++ Attribute:  ##green|scrherm##  
+     Method of how an almost Hermitian matrix is inverted. A value of 0: invert full matrix (matrix is allowed to be not strictly Hermitian); a value of 1: take the Hermitian average for inversion; a value of 2: assume Hermitian and use the upper triangle; a value of 3: assume Hermitian and use the lower triangle.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEscrherm @scrherm] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvkloff]]
+    [[# attBSEvkloff]]
+  
+++ Attribute:  ##green|vkloff##  
+    [[$ {\mathbf k} $]]-point offset for BSE.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-1.0d0 -1.0d0 -1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSEvkloff @vkloff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxas]]
+    [[# attBSExas]]
+  
+++ Attribute:  ##green|xas##  
+     Set to {{"true"}} to perform BSE X-rasy absorption spectroscopy (XAS) calculation 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSExas @xas] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxasatom]]
+    [[# attBSExasatom]]
+  
+++ Attribute:  ##green|xasatom##  
+    Atom number for which the XAS is calculated.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSExasatom @xasatom] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxasedge]]
+    [[# attBSExasedge]]
+  
+++ Attribute:  ##green|xasedge##  
+    Defines the initial states of the XAS calculation.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ K  
+ L1  
+ L2  
+ L3  
+ L23  
+ M1  
+ M2  
+ M3  
+ M23  
+ M4  
+ M5  
+ M45  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"K"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSExasedge @xasedge] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxasspecies]]
+    [[# attBSExasspecies]]
+  
+++ Attribute:  ##green|xasspecies##  
+    Species number for which the XAS is calculated.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#BSE BSE]/[#attBSExasspecies @xasspecies] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# transitions]]
++ Element:##blue| transitions##
+  
+  Describe transitions between Kohn-Sham states for the calculation of the Kohn-Sham response function (and screening) here. Individual transitions as well as a range (or a list) of initial and final states can be defined.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#individual individual]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#ranges ranges]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#lists lists]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# individual]]
++ Element:##blue| individual##
+  
+  A list of individual transitions consisting of an initial state a final state and a [[$ {\mathbf k} $]]-point is given here. If the list is empty, no transitions are considered.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#trans trans]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#individual individual] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# trans]]
++ Element:##blue| trans##
+  
+   An individual transition consisting of an initial state a final state and a [[$ {\mathbf k} $]]-point is given here. Values of zero correspond to the inclusion of all initial and final states and all [[$ {\mathbf k} $]]-points and can be used as "wildcards" (default). Therefore, an empty element amounts to include all transitions.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#individual individual]/[#trans trans] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#atttransaction action]}}**[[/span]], [[span class="attributelink"]]**{{[#atttransfinal final]}}**[[/span]], [[span class="attributelink"]]**{{[#atttransinitial initial]}}**[[/span]], [[span class="attributelink"]]**{{[#atttranskpointnumber kpointnumber]}}**[[/span]]
+  [[# attaction]]
+    [[# atttransaction]]
+  
+++ Attribute:  ##green|action##  
+    Select to include or exclude states. If a state is included as well as excluded several times the last definition (in the sequence of individual transitions) counts.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ include  
+ exclude  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"include"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#individual individual]/[#trans trans]/[#atttransaction @action] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfinal]]
+    [[# atttransfinal]]
+  
+++ Attribute:  ##green|final##  
+    Final state of individual transition. A value of zero (default) means to include all states. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#individual individual]/[#trans trans]/[#atttransfinal @final] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attinitial]]
+    [[# atttransinitial]]
+  
+++ Attribute:  ##green|initial##  
+    Initial state of individual transition. A value of zero (default) means to include all states. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#individual individual]/[#trans trans]/[#atttransinitial @initial] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attkpointnumber]]
+    [[# atttranskpointnumber]]
+  
+++ Attribute:  ##green|kpointnumber##  
+    Number of [[$ {\mathbf k} $]]-points to be considered. A value of zero (default) means to include all [[$ {\mathbf k} $]]-points. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#individual individual]/[#trans trans]/[#atttranskpointnumber @kpointnumber] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# ranges]]
++ Element:##blue| ranges##
+  
+  A list of ranges of transitions (initial state as well as final state ranges) and a [[$ {\mathbf k} $]]-point are given here. An empty list amounts to no transitions at all.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#range range]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#ranges ranges] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# range]]
++ Element:##blue| range##
+  
+  A range of transitions (for initial as well as final states) is given here. A range consists of a "start" and a "stop" values as well as a [[$ {\mathbf k} $]]-point. Values of zero correspond to starting at the first state and stopping at the last state and considering all [[$ {\mathbf k} $]]-points. They can be used as "wildcards" (default). Therefore, an empty element corresponds to the full initial/final state range for all [[$ {\mathbf k} $]]-points.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#ranges ranges]/[#range range] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attrangestatestype statestype]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attrangeaction action]}}**[[/span]], [[span class="attributelink"]]**{{[#attrangekpointnumber kpointnumber]}}**[[/span]], [[span class="attributelink"]]**{{[#attrangestart start]}}**[[/span]], [[span class="attributelink"]]**{{[#attrangestop stop]}}**[[/span]]
+  [[# attaction]]
+    [[# attrangeaction]]
+  
+++ Attribute:  ##green|action##  
+    Select to include or exclude states. If a state is included as well as excluded several times the last definition (in the sequence of individual transitions) counts.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ include  
+ exclude  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"include"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#ranges ranges]/[#range range]/[#attrangeaction @action] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attkpointnumber]]
+    [[# attrangekpointnumber]]
+  
+++ Attribute:  ##green|kpointnumber##  
+    Number of [[$ {\mathbf k} $]]-point to be considered. A value of zero (default) means to include all [[$ {\mathbf k} $]]-point. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#ranges ranges]/[#range range]/[#attrangekpointnumber @kpointnumber] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstart]]
+    [[# attrangestart]]
+  
+++ Attribute:  ##green|start##  
+    Start value (first state) for range. A value of zero (default) means to start from the first state. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#ranges ranges]/[#range range]/[#attrangestart @start] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstatestype]]
+    [[# attrangestatestype]]
+  
+++ Attribute:  ##green|statestype##  
+    Select for initial or final state range.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ initialstates  
+ finalstates  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#ranges ranges]/[#range range]/[#attrangestatestype @statestype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstop]]
+    [[# attrangestop]]
+  
+++ Attribute:  ##green|stop##  
+    Stop value (last state) for range. A value of zero (default) means to stop at the last state (no upper limit).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#ranges ranges]/[#range range]/[#attrangestop @stop] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# lists]]
++ Element:##blue| lists##
+  
+  A list of initial and final state entries to be considered for transitions. An empty list amounts to no transitions at all.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#istate istate]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#lists lists] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# istate]]
++ Element:##blue| istate##
+  
+  An initial or final state and corresponding [[$ {\mathbf k} $]]-point is given here. Values of zero correspond to considering all initial/final states for all [[$ {\mathbf k} $]]-points. They can be used as "wildcards" (default). Therefore, an empty element corresponds to the full initial/final state set for all [[$ {\mathbf k} $]]-points.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#lists lists]/[#istate istate] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attistatestatestype statestype]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attistateaction action]}}**[[/span]], [[span class="attributelink"]]**{{[#attistatekpointnumber kpointnumber]}}**[[/span]], [[span class="attributelink"]]**{{[#attistatestate state]}}**[[/span]]
+  [[# attaction]]
+    [[# attistateaction]]
+  
+++ Attribute:  ##green|action##  
+    Select to include or exclude states. If a state is included as well as excluded several times the last definition (in the sequence of individual transitions) counts.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ include  
+ exclude  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"include"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#lists lists]/[#istate istate]/[#attistateaction @action] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attkpointnumber]]
+    [[# attistatekpointnumber]]
+  
+++ Attribute:  ##green|kpointnumber##  
+    Number of [[$ {\mathbf k} $]]-point to be consider. A value of zero (default) means to include all [[$ {\mathbf k} $]]-point. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#lists lists]/[#istate istate]/[#attistatekpointnumber @kpointnumber] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstate]]
+    [[# attistatestate]]
+  
+++ Attribute:  ##green|state##  
+    The state to be considered. A value of zero (default) means to include all states.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#lists lists]/[#istate istate]/[#attistatestate @state] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstatestype]]
+    [[# attistatestatestype]]
+  
+++ Attribute:  ##green|statestype##  
+    Select for initial or final state list.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ initialstates  
+ finalstates  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#transitions transitions]/[#lists lists]/[#istate istate]/[#attistatestatestype @statestype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# tetra]]
++ Element:##blue| tetra##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tetra tetra] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#atttetracw1k cw1k]}}**[[/span]], [[span class="attributelink"]]**{{[#atttetrakordexc kordexc]}}**[[/span]], [[span class="attributelink"]]**{{[#atttetraqweights qweights]}}**[[/span]], [[span class="attributelink"]]**{{[#atttetratetradf tetradf]}}**[[/span]], [[span class="attributelink"]]**{{[#atttetratetraocc tetraocc]}}**[[/span]]
+  [[# attcw1k]]
+    [[# atttetracw1k]]
+  
+++ Attribute:  ##green|cw1k##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tetra tetra]/[#atttetracw1k @cw1k] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attkordexc]]
+    [[# atttetrakordexc]]
+  
+++ Attribute:  ##green|kordexc##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tetra tetra]/[#atttetrakordexc @kordexc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attqweights]]
+    [[# atttetraqweights]]
+  
+++ Attribute:  ##green|qweights##  
+    Choice of weights and nodes for the tetrahedron method and non-zero Q-point.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tetra tetra]/[#atttetraqweights @qweights] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttetradf]]
+    [[# atttetratetradf]]
+  
+++ Attribute:  ##green|tetradf##  
+      {{"true"}} if tetrahedron method is used for the [[$ {\mathbf k} $]]-space integration in the Kohn-Sham response function. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tetra tetra]/[#atttetratetradf @tetradf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttetraocc]]
+    [[# atttetratetraocc]]
+  
+++ Attribute:  ##green|tetraocc##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#tetra tetra]/[#atttetratetraocc @tetraocc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# plan]]
++ Element:##blue| plan##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#doonly doonly]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#plan plan] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# doonly]]
++ Element:##blue| doonly##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#plan plan]/[#doonly doonly] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attdoonlytask task]}}**[[/span]] ##red|(required)##
+  [[# atttask]]
+    [[# attdoonlytask]]
+  
+++ Attribute:  ##green|task##  
+    
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ xsgeneigvec  
+ tetcalccw  
+ writepmatxs  
+ writeemat  
+ df  
+ df2  
+ idf  
+ scrgeneigvec  
+ scrtetcalccw  
+ scrwritepmat  
+ screen  
+ scrcoulint  
+ exccoulint  
+ bse  
+ bsegenspec  
+ writeexcitons  
+ writekpathweights  
+ bsesurvey  
+ kernxc_bse  
+ writebandgapgrid  
+ writepmat  
+ dielectric  
+ writepmatasc  
+ pmatxs2orig  
+ writeematasc  
+ writepwmat  
+ emattest  
+ x0toasc  
+ x0tobin  
+ fxc_alda_check  
+ kernxc_bse3  
+ testxs  
+ xsestimate  
+ xstiming  
+ testmain  
+ excitonWavefunction  
+ portstate(1)  
+ portstate(2)  
+ portstate(-1)  
+ portstate(-2)  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#xs xs]/[#plan plan]/[#doonly doonly]/[#attdoonlytask @task] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[ref:common| listed separately]]].
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[ref:common| are described here]]].
+  

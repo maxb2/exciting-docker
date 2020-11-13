@@ -1,0 +1,1031 @@
+
+[[# gw]]
++ Element:##blue| gw##
+  
+  G0W0 calculation setup.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]]  
+[[span class="elementlink"]]**{{[#freqgrid freqgrid]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#selfenergy selfenergy]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#mixbasis mixbasis]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#barecoul barecoul]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#scrcoul scrcoul]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attgwat1 at1]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwat2 at2]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwcoreflag coreflag]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwdebug debug]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwibgw ibgw]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwibmax ibmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwibmax2 ibmax2]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwibmin ibmin]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwibmin2 ibmin2]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwigmax igmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwigmin igmin]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwiik iik]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwjjk jjk]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwnbgw nbgw]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwnempty nempty]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwngridq ngridq]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwreduceq reduceq]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwrmax rmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwrpath rpath]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwrpmat rpmat]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwskipgnd skipgnd]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwtaskname taskname]}}**[[/span]], [[span class="attributelink"]]**{{[#attgwvqloff vqloff]}}**[[/span]]
+  [[# attat1]]
+    [[# attgwat1]]
+  
+++ Attribute:  ##green|at1##  
+    First atom number (for test only)
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwat1 @at1] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attat2]]
+    [[# attgwat2]]
+  
+++ Attribute:  ##green|at2##  
+    Second atom number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwat2 @at2] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attcoreflag]]
+    [[# attgwcoreflag]]
+  
+++ Attribute:  ##green|coreflag##  
+     Option for treating core. Valid options are: 
+* all - All electron calculation
+* val - Valence electron only calculation
+* vab - Core electrons are excluded from the mixed product basis
+* xal - All electron treatment of the exchange self-energy only
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"all"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwcoreflag @coreflag] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdebug]]
+    [[# attgwdebug]]
+  
+++ Attribute:  ##green|debug##  
+     Print debugging information. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwdebug @debug] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attibgw]]
+    [[# attgwibgw]]
+  
+++ Attribute:  ##green|ibgw##  
+    Lower band index for GW output.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwibgw @ibgw] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attibmax]]
+    [[# attgwibmax]]
+  
+++ Attribute:  ##green|ibmax##  
+    Upper bound for the band number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwibmax @ibmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attibmax2]]
+    [[# attgwibmax2]]
+  
+++ Attribute:  ##green|ibmax2##  
+    Upper bound for the band number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwibmax2 @ibmax2] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attibmin]]
+    [[# attgwibmin]]
+  
+++ Attribute:  ##green|ibmin##  
+    Lower bound for the band number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwibmin @ibmin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attibmin2]]
+    [[# attgwibmin2]]
+  
+++ Attribute:  ##green|ibmin2##  
+    Lower bound for the band number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwibmin2 @ibmin2] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attigmax]]
+    [[# attgwigmax]]
+  
+++ Attribute:  ##green|igmax##  
+    Upper bound for the G-vector number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwigmax @igmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attigmin]]
+    [[# attgwigmin]]
+  
+++ Attribute:  ##green|igmin##  
+    Lower bound for the G-vector number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwigmin @igmin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attiik]]
+    [[# attgwiik]]
+  
+++ Attribute:  ##green|iik##  
+    Lower bound for the k-point number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwiik @iik] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attjjk]]
+    [[# attgwjjk]]
+  
+++ Attribute:  ##green|jjk##  
+    Upper bound for the k-point number (for test only).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwjjk @jjk] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnbgw]]
+    [[# attgwnbgw]]
+  
+++ Attribute:  ##green|nbgw##  
+    Upper band index for GW output. If not specified, the maximum number of the available states is used. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwnbgw @nbgw] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnempty]]
+    [[# attgwnempty]]
+  
+++ Attribute:  ##green|nempty##  
+    Number of empty states (cutoff parameter) used in GW. If not specified, the same number as for the groundstate calculations is used. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwnempty @nempty] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngridq]]
+    [[# attgwngridq]]
+  
+++ Attribute:  ##green|ngridq##  
+     k/q-point grid size to be used in GW calculations. If not specified, (2,2,2) k-grid is used. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0 0 0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwngridq @ngridq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attreduceq]]
+    [[# attgwreduceq]]
+  
+++ Attribute:  ##green|reduceq##  
+     Use the crystal symmetry to calculate the dielectric function and perform q-point BZ integration (currently is not implemented). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwreduceq @reduceq] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrmax]]
+    [[# attgwrmax]]
+  
+++ Attribute:  ##green|rmax##  
+     Determine the basis size for the Fourier-series based interpolation subroutine used for the QP bandstructure plot. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"40.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwrmax @rmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrpath]]
+    [[# attgwrpath]]
+  
+++ Attribute:  ##green|rpath##  
+     Type of the 1d real space path: "atoms" - connecting atoms specified in at1 and at2; "rad" - radial grid path in MT of at1; "azi" - azimuthal path in MT of at1. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"atoms"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwrpath @rpath] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attrpmat]]
+    [[# attgwrpmat]]
+  
+++ Attribute:  ##green|rpmat##  
+     Skip calculation of the momentum matrix elements but read them from files PMATVV.OUT and PMATCV.OUT. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwrpmat @rpmat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attskipgnd]]
+    [[# attgwskipgnd]]
+  
+++ Attribute:  ##green|skipgnd##  
+     Skip recalculation KS eigenvalues and eigenvectors for the complete k-point grid. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwskipgnd @skipgnd] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttaskname]]
+    [[# attgwtaskname]]
+  
+++ Attribute:  ##green|taskname##  
+     Type of calculations. Available tasks: 
+* g0w0 - G0W0 calculations
+* g0w0[[$ \_ $]]x - Exchange only (Hartree-Fock) G0W0 calculations
+* gw0 - Partially self-consistent GW0 calculations
+* cohsex - Coulomb-hole and screened-exchange (COHSEX) approximation
+* band - QP banstructure as obtained by Fourier interpolation
+* dos - QP density of states
+* emac - Calculate the macroscopic dielectric function
+* vxc - Calculate diagonal matrix elements of the exchange-correlation potential
+* pmat - Calculate matrix elements of the momentum operator
+* acon - Perform analytic continuation of the correlation self-energy from imaginary to real frequency and calculate QP energies
+* wannier- 
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"g0w0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwtaskname @taskname] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvqloff]]
+    [[# attgwvqloff]]
+  
+++ Attribute:  ##green|vqloff##  
+     The [[$ {\mathbf k/q} $]]-point offset vector in lattice coordinates. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#attgwvqloff @vqloff] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# freqgrid]]
++ Element:##blue| freqgrid##
+  
+   Frequecy grid parameters. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#freqgrid freqgrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attfreqgridfconv fconv]}}**[[/span]], [[span class="attributelink"]]**{{[#attfreqgridfgrid fgrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attfreqgridfreqmax freqmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attfreqgridnomeg nomeg]}}**[[/span]]
+  [[# attfconv]]
+    [[# attfreqgridfconv]]
+  
+++ Attribute:  ##green|fconv##  
+     Frequency convolution type: 'nofreq' - no frequecy dependence of the weights; 'refreq' - weights calculated for real frequecies; 'imfreq' - weights calculated for imaginary frequecies. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"imfreq"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#freqgrid freqgrid]/[#attfreqgridfconv @fconv] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfgrid]]
+    [[# attfreqgridfgrid]]
+  
+++ Attribute:  ##green|fgrid##  
+     Frequency integration grid type: 'eqdis' - equidistant frequencies from 0 to freqmax; 'gaulag' - Gauss-Laguerre quadrature from 0 to infinity; 'gauleg' - Gauss-Legendre quadrature from 0 to freqmax; 'gaule2' (default) - double Gauss-Legendre quadrature from 0 to freqmax and from freqmax to infinity. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"gaule2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#freqgrid freqgrid]/[#attfreqgridfgrid @fgrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfreqmax]]
+    [[# attfreqgridfreqmax]]
+  
+++ Attribute:  ##green|freqmax##  
+     Parameter of the double frequency grid technique. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#freqgrid freqgrid]/[#attfreqgridfreqmax @freqmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnomeg]]
+    [[# attfreqgridnomeg]]
+  
+++ Attribute:  ##green|nomeg##  
+     Number of frequency (grid) points. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"16"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#freqgrid freqgrid]/[#attfreqgridnomeg @nomeg] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# selfenergy]]
++ Element:##blue| selfenergy##
+  
+   Options related to the calculations of the correlation self-energy. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#SpectralFunctionPlot SpectralFunctionPlot]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attselfenergyactype actype]}}**[[/span]], [[span class="attributelink"]]**{{[#attselfenergyiopes iopes]}}**[[/span]], [[span class="attributelink"]]**{{[#attselfenergynempty nempty]}}**[[/span]], [[span class="attributelink"]]**{{[#attselfenergynpol npol]}}**[[/span]], [[span class="attributelink"]]**{{[#attselfenergysecordw secordw]}}**[[/span]], [[span class="attributelink"]]**{{[#attselfenergysingularity singularity]}}**[[/span]]
+  [[# attactype]]
+    [[# attselfenergyactype]]
+  
+++ Attribute:  ##green|actype##  
+     Analytical continuation scheme: 'pade': Pade's approximant (by H. J. Vidberg and J. W. Serence, J. Low Temp. Phys. 29, 179 (1977)) 'mpf': Multi-Pole Fitting (by H. N Rojas, R. W. Godby and R. J. Needs, Phys. Rev. Lett. 74, 1827 (1995)) 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"pade"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#attselfenergyactype @actype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attiopes]]
+    [[# attselfenergyiopes]]
+  
+++ Attribute:  ##green|iopes##  
+     Solution of the quasiparticle equation: 0 : perturbative G0W0 without energy shift; 1 : perturbative G0W0 with energy shift 2 - iterative G0W0 with energy shift; 3 - iterative G0W0 without energy shift. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#attselfenergyiopes @iopes] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnempty]]
+    [[# attselfenergynempty]]
+  
+++ Attribute:  ##green|nempty##  
+     Number of empty states to be used to calculate the correlation self energy. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#attselfenergynempty @nempty] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnpol]]
+    [[# attselfenergynpol]]
+  
+++ Attribute:  ##green|npol##  
+     Number of poles used in the analytical continuation. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#attselfenergynpol @npol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsecordw]]
+    [[# attselfenergysecordw]]
+  
+++ Attribute:  ##green|secordw##  
+     Calculate second order screened exchange contribution. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#attselfenergysecordw @secordw] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsingularity]]
+    [[# attselfenergysingularity]]
+  
+++ Attribute:  ##green|singularity##  
+     Treatment of the integrable singular terms: 'none': No special treatment (test purpose only); 'mpb' : Auxiliary function method by S. Massidda, M. Posternak, and A. Baldereschi, PRB 48, 5058 (1993); 'crg' : Auxiliary function method by P. Carrier, S. Rohra, and A. Goerling, PRB 75, 205126 (2007). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"mpb"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#attselfenergysingularity @singularity] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# SpectralFunctionPlot]]
++ Element:##blue| SpectralFunctionPlot##
+  
+   Parameters for the self-energy and spectral function visualization. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#SpectralFunctionPlot SpectralFunctionPlot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attSpectralFunctionPlotaxis axis]}}**[[/span]], [[span class="attributelink"]]**{{[#attSpectralFunctionPloteta eta]}}**[[/span]], [[span class="attributelink"]]**{{[#attSpectralFunctionPlotnwgrid nwgrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attSpectralFunctionPlotwmax wmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attSpectralFunctionPlotwmin wmin]}}**[[/span]]
+  [[# attaxis]]
+    [[# attSpectralFunctionPlotaxis]]
+  
+++ Attribute:  ##green|axis##  
+     Real ("real") or imaginary ("imag") frequency axis for visialization. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"real"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#SpectralFunctionPlot SpectralFunctionPlot]/[#attSpectralFunctionPlotaxis @axis] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atteta]]
+    [[# attSpectralFunctionPloteta]]
+  
+++ Attribute:  ##green|eta##  
+     Smearing parameter (small number). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-4"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#SpectralFunctionPlot SpectralFunctionPlot]/[#attSpectralFunctionPloteta @eta] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnwgrid]]
+    [[# attSpectralFunctionPlotnwgrid]]
+  
+++ Attribute:  ##green|nwgrid##  
+     Number of grid points within the visualization interval. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1001"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#SpectralFunctionPlot SpectralFunctionPlot]/[#attSpectralFunctionPlotnwgrid @nwgrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwmax]]
+    [[# attSpectralFunctionPlotwmax]]
+  
+++ Attribute:  ##green|wmax##  
+     Upper bound for the visualization frequency interval. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#SpectralFunctionPlot SpectralFunctionPlot]/[#attSpectralFunctionPlotwmax @wmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwmin]]
+    [[# attSpectralFunctionPlotwmin]]
+  
+++ Attribute:  ##green|wmin##  
+     Lower bound for the visualization frequency interval. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#selfenergy selfenergy]/[#SpectralFunctionPlot SpectralFunctionPlot]/[#attSpectralFunctionPlotwmin @wmin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# mixbasis]]
++ Element:##blue| mixbasis##
+  
+   Mixed basis parameters. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#mixbasis mixbasis] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attmixbasisepsmb epsmb]}}**[[/span]], [[span class="attributelink"]]**{{[#attmixbasisgmb gmb]}}**[[/span]], [[span class="attributelink"]]**{{[#attmixbasislmaxmb lmaxmb]}}**[[/span]]
+  [[# attepsmb]]
+    [[# attmixbasisepsmb]]
+  
+++ Attribute:  ##green|epsmb##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-4"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#mixbasis mixbasis]/[#attmixbasisepsmb @epsmb] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attgmb]]
+    [[# attmixbasisgmb]]
+  
+++ Attribute:  ##green|gmb##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#mixbasis mixbasis]/[#attmixbasisgmb @gmb] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmaxmb]]
+    [[# attmixbasislmaxmb]]
+  
+++ Attribute:  ##green|lmaxmb##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"3"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#mixbasis mixbasis]/[#attmixbasislmaxmb @lmaxmb] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# barecoul]]
++ Element:##blue| barecoul##
+  
+   Parameters for the bare coulomb potential: pwm - Maximum G for the pw basis (in gmaxvr*gmb units) stctol - Convergence tolerance of the struct. const. barcevtol - Tolerance to choose basis functions from bare Coulomb matrix eigenvectors. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#barecoul barecoul] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attbarecoulbarcevtol barcevtol]}}**[[/span]], [[span class="attributelink"]]**{{[#attbarecoulbasis basis]}}**[[/span]], [[span class="attributelink"]]**{{[#attbarecoulcutofftype cutofftype]}}**[[/span]], [[span class="attributelink"]]**{{[#attbarecoulpwm pwm]}}**[[/span]], [[span class="attributelink"]]**{{[#attbarecoulstctol stctol]}}**[[/span]]
+  [[# attbarcevtol]]
+    [[# attbarecoulbarcevtol]]
+  
+++ Attribute:  ##green|barcevtol##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.1d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#barecoul barecoul]/[#attbarecoulbarcevtol @barcevtol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbasis]]
+    [[# attbarecoulbasis]]
+  
+++ Attribute:  ##green|basis##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"mb"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#barecoul barecoul]/[#attbarecoulbasis @basis] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attcutofftype]]
+    [[# attbarecoulcutofftype]]
+  
+++ Attribute:  ##green|cutofftype##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"none"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#barecoul barecoul]/[#attbarecoulcutofftype @cutofftype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attpwm]]
+    [[# attbarecoulpwm]]
+  
+++ Attribute:  ##green|pwm##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#barecoul barecoul]/[#attbarecoulpwm @pwm] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstctol]]
+    [[# attbarecoulstctol]]
+  
+++ Attribute:  ##green|stctol##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-15"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#barecoul barecoul]/[#attbarecoulstctol @stctol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# scrcoul]]
++ Element:##blue| scrcoul##
+  
+   Parameters for the dynamically screened Coulomb potential: 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#scrcoul scrcoul] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attscrcoullmaxdielt lmaxdielt]}}**[[/span]], [[span class="attributelink"]]**{{[#attscrcoulnleblaik nleblaik]}}**[[/span]], [[span class="attributelink"]]**{{[#attscrcoulomegap omegap]}}**[[/span]], [[span class="attributelink"]]**{{[#attscrcoulq0eps q0eps]}}**[[/span]], [[span class="attributelink"]]**{{[#attscrcoulsciavbd sciavbd]}}**[[/span]], [[span class="attributelink"]]**{{[#attscrcoulsciavtype sciavtype]}}**[[/span]], [[span class="attributelink"]]**{{[#attscrcoulscrtype scrtype]}}**[[/span]]
+  [[# attlmaxdielt]]
+    [[# attscrcoullmaxdielt]]
+  
+++ Attribute:  ##green|lmaxdielt##  
+     Angular momentum cutoff in anisotropy treatment. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#scrcoul scrcoul]/[#attscrcoullmaxdielt @lmaxdielt] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnleblaik]]
+    [[# attscrcoulnleblaik]]
+  
+++ Attribute:  ##green|nleblaik##  
+     Number of Lebedev-Laikov grid points in anisotropy treatment. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5810"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#scrcoul scrcoul]/[#attscrcoulnleblaik @nleblaik] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attomegap]]
+    [[# attscrcoulomegap]]
+  
+++ Attribute:  ##green|omegap##  
+     Plasmon-pole model fitting parameter (plasmon frequency). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#scrcoul scrcoul]/[#attscrcoulomegap @omegap] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attq0eps]]
+    [[# attscrcoulq0eps]]
+  
+++ Attribute:  ##green|q0eps##  
+     q0eps - averaging direction q [[$ \to $]] 0. Default: (1,1,1) 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0 1.0d0 1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#scrcoul scrcoul]/[#attscrcoulq0eps @q0eps] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsciavbd]]
+    [[# attscrcoulsciavbd]]
+  
+++ Attribute:  ##green|sciavbd##  
+     Flag for anisotropic averaging of the dielectric tensor 'body' part. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#scrcoul scrcoul]/[#attscrcoulsciavbd @sciavbd] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsciavtype]]
+    [[# attscrcoulsciavtype]]
+  
+++ Attribute:  ##green|sciavtype##  
+     Type of volume averaging: isotropic - Simple averaging along a specified direction using only diagonal components of the dielectric tensor; anisotropic - Anisotropic screening by C. Freysoldt et al., CPC 176, 1-13 (2007). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"isotropic"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#scrcoul scrcoul]/[#attscrcoulsciavtype @sciavtype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscrtype]]
+    [[# attscrcoulscrtype]]
+  
+++ Attribute:  ##green|scrtype##  
+     Model type: rpa - Full-frequency random-phase approximation; ppm - Godby-Needs plasmon-pole model. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"rpa"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#gw gw]/[#scrcoul scrcoul]/[#attscrcoulscrtype @scrtype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[ref:common| listed separately]]].
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[ref:common| are described here]]].
+  

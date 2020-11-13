@@ -1,0 +1,270 @@
+
+[[# relax]]
++ Element:##blue| relax##
+  
+  The element [[span class="elementlink"]]**{{[#relax relax]}}**[[/span]] activates the optimization of atomic positions at fixed lattice parameters.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attrelaxaddtohistory addtohistory]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxendbfgs endbfgs]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxepsforce epsforce]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxhistory history]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxhistoryformat historyformat]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxmaxbfgs maxbfgs]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxmaxsteps maxsteps]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxmethod method]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxoutputlevel outputlevel]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxprinttorque printtorque]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxtaubfgs taubfgs]}}**[[/span]], [[span class="attributelink"]]**{{[#attrelaxtaunewton taunewton]}}**[[/span]]
+  [[# attaddtohistory]]
+    [[# attrelaxaddtohistory]]
+  
+++ Attribute:  ##green|addtohistory##  
+     If [[span class="attributelink"]]**{{[#atthistory history]}}**[[/span]] is {{"true"}}, this switch allows newly computed optimization steps to be appended to a previously generated history file. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxaddtohistory @addtohistory] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attendbfgs]]
+    [[# attrelaxendbfgs]]
+  
+++ Attribute:  ##green|endbfgs##  
+     When using the {{"bfgs"}} method, specifies the method employed for the relaxation if the {{"bfgs"}} scheme fails to converge. 
+*   {{"newton"}} - Simple (Newton-like) method, see also [[span class="attributelink"]]**{{[#attmethod method]}}**[[/span]]. 
+*   {{"harmonic"}} - Method based on the combination of the {{"newton"}} method and the harmonic approximation, see also [[span class="attributelink"]]**{{[#attmethod method]}}**[[/span]]. 
+*   {{"stop"}} - Stops the {{"bfgs"}} optimization procedure at the last accepted configuration. 
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"harmonic"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxendbfgs @endbfgs] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsforce]]
+    [[# attrelaxepsforce]]
+  
+++ Attribute:  ##green|epsforce##  
+     The optimization stops when the maximum amplitude of the force acting on the atoms is lower then the value specified by {{epsforce}}. Notice that, in particular for the {{"bfgs"}} method, high accuracy in the calculated forces requires high accuracy in the calculated total energy (see the attribute [[span class="attributelink"]]**{{[#attepsengy epsengy]}}**[[/span]] of the [[span class="elementlink"]]**{{[[[ref:groundstate|groundstate]]]}}**[[/span]] element). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2.0d-4"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxepsforce @epsforce] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atthistory]]
+    [[# attrelaxhistory]]
+  
+++ Attribute:  ##green|history##  
+     If {{"true"}} the atomic configuration at each relaxation step is written in a history file which is generated in one of the formats specified in [[span class="attributelink"]]**{{[#atthistoryformat historyformat]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxhistory @history] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atthistoryformat]]
+    [[# attrelaxhistoryformat]]
+  
+++ Attribute:  ##green|historyformat##  
+     If [[span class="attributelink"]]**{{[#atthistory history]}}**[[/span]] is {{"true"}}, the history file, containig atomic configurations at each optimization step, is generated in one of the following formats: 
+*   {{"xyz"}} molecular format. The first line of this file the total number of atoms. The second line is a comment line with total energy in eV. Finally, starting from line three, one finds atomic species, cartesian coordinates in Angstrom, and forces in eV/Angstrom. This format is repeated for each optimization step. 
+*   {{"gulp"}} format, which is useful to visualize crystal structure changes using the {{GDIS}} program. 
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"xyz"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxhistoryformat @historyformat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmaxbfgs]]
+    [[# attrelaxmaxbfgs]]
+  
+++ Attribute:  ##green|maxbfgs##  
+     Maximum number of atomic configurations that can be investigated in a single {{"bfgs"}} optimization step. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxmaxbfgs @maxbfgs] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmaxsteps]]
+    [[# attrelaxmaxsteps]]
+  
+++ Attribute:  ##green|maxsteps##  
+     Maximum number of optimization steps. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"200"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxmaxsteps @maxsteps] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmethod]]
+    [[# attrelaxmethod]]
+  
+++ Attribute:  ##green|method##  
+     Specify the method used for atomic relaxation: 
+*   {{"newton"}} - Simple (Newton-like) method. At each step [[$ m $]] of a structural optimization run, the atom [[$ \alpha $]] is displaced according to  
+[[math label]] 
+
+                           {\bf r}_{\alpha}^{(m+1)}={\bf r}_{\alpha}^{(m)}+\tau_{\alpha}^{(m)}
+                           \left({ \bf F}_{\alpha}^{(m)}+{ \bf F}_{\alpha}^{(m-1)}\right),
+                           
+[[/math]]
+ i.e., the magnitude of the displacement at the step [[$ m $]] is proportional to [[$ \tau_{\alpha}^{(m)} $]]. For the initial step, [[$ \tau_{\alpha}^{(0)} $]] is set to [[span class="attributelink"]]**{{[#atttaunewton taunewton]}}**[[/span]]. If the forces of two subsequent optimization steps have the same sign, [[$ \tau_{\alpha}^{(m)} $]] is increased by [[$ \tau_{\alpha}^{(0)} $]]. Otherwise, [[$ \tau_{\alpha}^{(m)} $]] is reset to [[$ \tau_{\alpha}^{(0)} $]]. 
+*   {{"harmonic"}} - Method based on the combination of the {{"newton"}} method and the harmonic approximation. Contrary to {{"newton"}}, all cartesian components of the position vector of each atom are treated independently. At the optimization step [[$ m $]], each cartesian component of the position vector of each atom is updated using the same algorithm as in {{"newton"}} (``newton step") unless the ``harmonic condition", either  
+[[math label]] 
+
+			   \beta\equiv\frac{{ \bf F}_{\alpha}^{(m-1)}}{{ \bf F}_{\alpha}^{(m)}} \in\; ]-\infty,0] 
+			   
+[[/math]]
+ or  
+[[math label]] 
+
+			   \beta \in [3,\infty[\:,
+			   
+[[/math]]
+ is fulfilled. In this case (``harmonic step"), atomic positions are updated according to  
+[[math label]] 
+
+                           {\bf r}_{\alpha}^{(m+1)}=\frac{ {\bf r}_{\alpha}^{(m-1)}-\beta\,{\bf r}_{\alpha}^{(m)} }
+			   { 1-\beta }\:.
+                           
+[[/math]]
+ The {{"harmonic"}} method is of general validity and it is particularly efficient when the atomic configuration is close to the optimized one and the internal degrees of freedom are weakly coupled. 
+*   {{"bfgs"}} - Limited memory algorithm for bound constrained optimization, see {{Byrd,}}  {{et}}  {{al.,}}  {{ SIAM J. Scientific Computing 16, 1190 (1995)}}. This method requires high accuracy for the determination of the total energy in dependence of the maximum allowed for the residual atomic force. For this reason, the default value of the attribute [[span class="attributelink"]]**{{[#attepsengy epsengy]}}**[[/span]] is decreased in order to be at least equal to the value of the attribute [[span class="attributelink"]]**{{[#attepsforce epsforce]}}**[[/span]] of the [[span class="elementlink"]]**{{[#relax relax]}}**[[/span]] element multiplied by a factor {{0.02}}. 
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"bfgs"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxmethod @method] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attoutputlevel]]
+    [[# attrelaxoutputlevel]]
+  
+++ Attribute:  ##green|outputlevel##  
+     Specify the amount of information which is printed to output files: 
+*   {{"low"}} - Minimal output is produced. For each optimization steps, the main output file {{"INFO.OUT"}} contains information on the number of SCF cicles performed, the value of the maximum force acting on the atoms, and the calculated total energy. 
+*   {{"normal"}} - (default) Standard information. In addition to the output level {{"low"}}, the atomic configuration (in lattice coordinates) and the total forces (in cartesian coordinates) acting on the atoms are also given. If a constrained optimization is performed, the constrained (unconstrained) cartesian components of each atom are labeled by {{"T"}} ({{"F"}}). 
+*   {{"high"}} - Detailed output. In addition to the output level {{"normal"}}, partial charges and the different force contributions are also specified. 
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ low  
+ normal  
+ high  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"normal"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxoutputlevel @outputlevel] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attprinttorque]]
+    [[# attrelaxprinttorque]]
+  
+++ Attribute:  ##green|printtorque##  
+     If {{"true"}} the total torque with respect to cartesian axes with origin in the center of mass is written on the output file {{INFO.OUT}}. This option is useful when dealing with isolated molecules when checking if the molecule is rotating as a whole during the optimization. If {{printtorque}} is set to {{"true"}} the cartesian coordinates of the center of mass are also written. Notice that the definition of a {{center of mass}} is unique only for isolated molecules. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxprinttorque @printtorque] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttaubfgs]]
+    [[# attrelaxtaubfgs]]
+  
+++ Attribute:  ##green|taubfgs##  
+     Maximum atomic displacement for atomic relaxation when using the {{"bfgs"}} method. At each optimization step, the optimized value of each cartesian coordinate of each atom is searched in a range of size [[$ 2\tau_{\tt BFGS} $]] centered at the actual value of the coordinate. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxtaubfgs @taubfgs] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttaunewton]]
+    [[# attrelaxtaunewton]]
+  
+++ Attribute:  ##green|taunewton##  
+     Parameter determining the initial amplitude of atomic displacement for the {{"newton"}} method of atomic relaxation. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.2d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#relax relax]/[#attrelaxtaunewton @taunewton] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[ref:common| listed separately]]].
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[ref:common| are described here]]].
+  

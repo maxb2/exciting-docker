@@ -1,0 +1,2600 @@
+
+[[# properties]]
++ Element:##blue| properties##
+  
+   Properties listed in this element can be calculated from the groundstate. It works also from a saved state from a previous run. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#bandstructure bandstructure]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#stm stm]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#wfplot wfplot]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#dos dos]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#LSJ LSJ]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#masstensor masstensor]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#chargedensityplot chargedensityplot]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#TSvdW TSvdW]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#DFTD2 DFTD2]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#exccplot exccplot]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#elfplot elfplot]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#mvecfield mvecfield]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#xcmvecfield xcmvecfield]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#electricfield electricfield]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#gradmvecfield gradmvecfield]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#fermisurfaceplot fermisurfaceplot]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#EFG EFG]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#mossbauer mossbauer]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#expiqr expiqr]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#elnes elnes]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#eliashberg eliashberg]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#momentummatrix momentummatrix]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#dielmat dielmat]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#boltzequ boltzequ]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#raman raman]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#moke moke]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#shg shg]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#wannier wannier]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#wannierplot wannierplot]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#wanniergap wanniergap]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# bandstructure]]
++ Element:##blue| bandstructure##
+  
+  If present a banstructure is calculated.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]]  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#bandstructure bandstructure] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attbandstructurecharacter character]}}**[[/span]], [[span class="attributelink"]]**{{[#attbandstructurederiv deriv]}}**[[/span]], [[span class="attributelink"]]**{{[#attbandstructurescissor scissor]}}**[[/span]], [[span class="attributelink"]]**{{[#attbandstructurewannier wannier]}}**[[/span]]
+  [[# attcharacter]]
+    [[# attbandstructurecharacter]]
+  
+++ Attribute:  ##green|character##  
+    Band structure plot which includes angular momentum characters for every atom.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#bandstructure bandstructure]/[#attbandstructurecharacter @character] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attderiv]]
+    [[# attbandstructurederiv]]
+  
+++ Attribute:  ##green|deriv##  
+    In addition, the first and second band-derivative is computed using Wannier interpolation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#bandstructure bandstructure]/[#attbandstructurederiv @deriv] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscissor]]
+    [[# attbandstructurescissor]]
+  
+++ Attribute:  ##green|scissor##  
+    Value to shift bandgap.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#bandstructure bandstructure]/[#attbandstructurescissor @scissor] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwannier]]
+    [[# attbandstructurewannier]]
+  
+++ Attribute:  ##green|wannier##  
+    Wannier interpolation is used for calculating the band-structure.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#bandstructure bandstructure]/[#attbandstructurewannier @wannier] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# stm]]
++ Element:##blue| stm##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#region region]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attstmbias bias]}}**[[/span]], [[span class="attributelink"]]**{{[#attstmstmmode stmmode]}}**[[/span]], [[span class="attributelink"]]**{{[#attstmstmtype stmtype]}}**[[/span]]
+  [[# attbias]]
+    [[# attstmbias]]
+  
+++ Attribute:  ##green|bias##  
+    Value of the STM bias voltage in Hartree. A positive value gives an empty states STM image while a negative bias gives a filled states images.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm]/[#attstmbias @bias] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstmmode]]
+    [[# attstmstmmode]]
+  
+++ Attribute:  ##green|stmmode##  
+    Specifies the STM mode of operation to be simulated.
+*  constantHeight (default): Calculates the property defined in the "stmtype" attribute on a two-dimensional mesh defined by the plot2d element. 
+*  topographic: (to be implemented) Calculates the iso-surface of the property defined in the "stmtype" attribute.
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ constantHeight  
+ topographic  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"constantHeight"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm]/[#attstmstmmode @stmmode] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstmtype]]
+    [[# attstmstmtype]]
+  
+++ Attribute:  ##green|stmtype##  
+    Specifies the type of STM calculation.
+*  differentialConductance (default): calculation of the LDOS at an energy Ef+bias. 
+*  integratedLDOS: integrates the LDOS in the range [Ef,Ef+bias] for positive bias and in the range [Ef+bias, Ef] for negative bias.
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ differentialConductance  
+ integratedLDOS  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"differentialConductance"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm]/[#attstmstmtype @stmtype] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# region]]
++ Element:##blue| region##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm]/[#region region] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attregiongrid2d grid2d]}}**[[/span]], [[span class="attributelink"]]**{{[#attregiongrid3d grid3d]}}**[[/span]], [[span class="attributelink"]]**{{[#attregionheight height]}}**[[/span]], [[span class="attributelink"]]**{{[#attregionzrange zrange]}}**[[/span]]
+  [[# attgrid2d]]
+    [[# attregiongrid2d]]
+  
+++ Attribute:  ##green|grid2d##  
+    Number of grid points along first and second unit cell vectors, respectively.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integerpair|integerpair]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"10 10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm]/[#region region]/[#attregiongrid2d @grid2d] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attgrid3d]]
+    [[# attregiongrid3d]]
+  
+++ Attribute:  ##green|grid3d##  
+    Number of grid points along first and second unit cell vectors and along the segment between zmin and zmax along the third cell vector.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"10 10 10"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm]/[#region region]/[#attregiongrid3d @grid3d] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attheight]]
+    [[# attregionheight]]
+  
+++ Attribute:  ##green|height##  
+    Height (z-coordinate) of the STM tip in Bohr radius, measured from the absolute origin of the unit cell as defined in the structure element. Assumes the surface is in xy plane.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Bohr  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm]/[#region region]/[#attregionheight @height] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attzrange]]
+    [[# attregionzrange]]
+  
+++ Attribute:  ##green|zrange##  
+    Pair of floats giving the minimum and maximum z coordinate of the volumetric region for sampling the differential-conductance or integrated-LDOS in topographic mode.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0 0.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Bohr  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#stm stm]/[#region region]/[#attregionzrange @zrange] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# wfplot]]
++ Element:##blue| wfplot##
+  
+  Wavefunction plot.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#kstlist|kstlist]]]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wfplot wfplot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwfplotversion version]}}**[[/span]]
+  [[# attversion]]
+    [[# attwfplotversion]]
+  
+++ Attribute:  ##green|version##  
+     (Temporal solution) 'old' and 'new' version of the visualization subroutine. All tutorials are currently supporting only 'old' version.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"old"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wfplot wfplot]/[#attwfplotversion @version] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# dos]]
++ Element:##blue| dos##
+  
+   If present a DOS calculation is started. 
+  
+   DOS and optics plots require integrals of the kind  
+[[math label]] 
+g(\omega_i)=\frac{\Omega}{(2\pi)^3}\int_{\rm BZ} f({ \bf k})
+                \delta(\omega_i-e({\bf k}))d{ \bf k}.
+[[/math]]
+ These are calculated by first interpolating the functions [[$ e({ \bf k}) $]] and [[$ f({ \bf k}) $]] with the trilinear method on a much finer mesh whose size is determined by [[span class="attributelink"]]**{{[#attngrdos ngrdos]}}**[[/span]]. Then the [[$ \omega $]]-dependent histogram of the integrand is accumulated over the fine mesh. If the output function is noisy then either [[span class="attributelink"]]**{{[#attngrdos ngrdos]}}**[[/span]] should be increased or [[span class="attributelink"]]**{{[#attnwdos nwdos]}}**[[/span]] decreased. Alternatively, the output function can be artificially smoothed up to a level given by [[span class="attributelink"]]**{{[#attnsmdos nsmdos]}}**[[/span]]. This is the number of successive 3-point averages to be applied to the function [[$ g $]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attdosjdos jdos]}}**[[/span]], [[span class="attributelink"]]**{{[#attdoslmirep lmirep]}}**[[/span]], [[span class="attributelink"]]**{{[#attdoslonly lonly]}}**[[/span]], [[span class="attributelink"]]**{{[#attdosnewint newint]}}**[[/span]], [[span class="attributelink"]]**{{[#attdosngrdos ngrdos]}}**[[/span]], [[span class="attributelink"]]**{{[#attdosngridkint ngridkint]}}**[[/span]], [[span class="attributelink"]]**{{[#attdosnsmdos nsmdos]}}**[[/span]], [[span class="attributelink"]]**{{[#attdosnwdos nwdos]}}**[[/span]], [[span class="attributelink"]]**{{[#attdosscissor scissor]}}**[[/span]], [[span class="attributelink"]]**{{[#attdossqados sqados]}}**[[/span]], [[span class="attributelink"]]**{{[#attdoswannier wannier]}}**[[/span]], [[span class="attributelink"]]**{{[#attdoswinddos winddos]}}**[[/span]]
+  [[# attjdos]]
+    [[# attdosjdos]]
+  
+++ Attribute:  ##green|jdos##  
+    If true, in addition, the joint density of states is computed. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdosjdos @jdos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlmirep]]
+    [[# attdoslmirep]]
+  
+++ Attribute:  ##green|lmirep##  
+     When lmirep is set to {{"true"}}, the spherical harmonic basis is transformed into one in which the site symmetries are block diagonal. Band characters determined from the density matrix expressed in this basis correspond to irreducible representations, and allow the partial DOS to be resolved into physically relevant contributions, for example eg and t2g. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdoslmirep @lmirep] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlonly]]
+    [[# attdoslonly]]
+  
+++ Attribute:  ##green|lonly##  
+    If true, the partial density of states is computed only l-resolved but not l- and m-resoveld. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdoslonly @lonly] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnewint]]
+    [[# attdosnewint]]
+  
+++ Attribute:  ##green|newint##  
+    If true, a new (partially analytical) routine for the BZ integration is used. It is more efficient for high values of {{ngrdos}} and give less noisy results. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdosnewint @newint] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngrdos]]
+    [[# attdosngrdos]]
+  
+++ Attribute:  ##green|ngrdos##  
+        Effective k-point mesh size to be used for Brillouin zone integration.    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"100"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdosngrdos @ngrdos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attngridkint]]
+    [[# attdosngridkint]]
+  
+++ Attribute:  ##green|ngridkint##  
+    The dense integration grid on which the energies are interpolated when {{wannier}} is set to {{true}}. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0 0 0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdosngridkint @ngridkint] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnsmdos]]
+    [[# attdosnsmdos]]
+  
+++ Attribute:  ##green|nsmdos##  
+    This attribute indicates the type of smearing for the resulting DOS. In particular, the value 0 means no smearing at all, 1 that a three nearest point averaging is performed, 2 that two such consecutive averagings are done, etc. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdosnsmdos @nsmdos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnwdos]]
+    [[# attdosnwdos]]
+  
+++ Attribute:  ##green|nwdos##  
+        Number of frequency/energy points in the DOS    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"500"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdosnwdos @nwdos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscissor]]
+    [[# attdosscissor]]
+  
+++ Attribute:  ##green|scissor##  
+    The scissor operator is applied, i.e. all bands above the fermi-level are shifted by the given value. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdosscissor @scissor] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsqados]]
+    [[# attdossqados]]
+  
+++ Attribute:  ##green|sqados##  
+     Spin-quantization axis in Cartesian coordinates used when plotting the spin-resolved DOS (z-axis by default). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdossqados @sqados] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwannier]]
+    [[# attdoswannier]]
+  
+++ Attribute:  ##green|wannier##  
+    If true, Wannier interpolation is used to perform the BZ integration. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdoswannier @wannier] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwinddos]]
+    [[# attdoswinddos]]
+  
+++ Attribute:  ##green|winddos##  
+    Frequency/energy window for the DOS or optics plot.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-0.5d0 0.5d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Hartree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dos dos]/[#attdoswinddos @winddos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# LSJ]]
++ Element:##blue| LSJ##
+  
+  Output L, S and J expectation values.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#kstlist|kstlist]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#LSJ LSJ] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# masstensor]]
++ Element:##blue| masstensor##
+  
+   Compute the effective mass tensor at the [[$ {\mathbf k} $]]-point given by vklem. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#masstensor masstensor] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attmasstensordeltaem deltaem]}}**[[/span]], [[span class="attributelink"]]**{{[#attmasstensorndspem ndspem]}}**[[/span]], [[span class="attributelink"]]**{{[#attmasstensorvklem vklem]}}**[[/span]]
+  [[# attdeltaem]]
+    [[# attmasstensordeltaem]]
+  
+++ Attribute:  ##green|deltaem##  
+     The size of the [[$ {\mathbf k} $]]-vector displacement used when calculating numerical derivatives for the effective mass tensor. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.025d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#masstensor masstensor]/[#attmasstensordeltaem @deltaem] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attndspem]]
+    [[# attmasstensorndspem]]
+  
+++ Attribute:  ##green|ndspem##  
+     The number of [[$ {\mathbf k} $]]-vector displacements in each direction around vklem when computing the numerical derivatives for the effective mass tensor.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#masstensor masstensor]/[#attmasstensorndspem @ndspem] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvklem]]
+    [[# attmasstensorvklem]]
+  
+++ Attribute:  ##green|vklem##  
+    The [[$ {\mathbf k} $]]-point in lattice coordinates at which to compute the effective mass tensors.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#masstensor masstensor]/[#attmasstensorvklem @vklem] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# chargedensityplot]]
++ Element:##blue| chargedensityplot##
+  
+  Plot the charge density
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#chargedensityplot chargedensityplot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attchargedensityplotnocore nocore]}}**[[/span]]
+  [[# attnocore]]
+    [[# attchargedensityplotnocore]]
+  
+++ Attribute:  ##green|nocore##  
+     Visualize only the density of valence electrons. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#chargedensityplot chargedensityplot]/[#attchargedensityplotnocore @nocore] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# TSvdW]]
++ Element:##blue| TSvdW##
+  
+   If the subelement [[span class="elementlink"]]**{{[#TSvdW TSvdW]}}**[[/span]] is specified inside the element [[span class="elementlink"]]**{{[#properties properties]}}**[[/span]], the **TS-vdW** method (find reference here: [[span class="attributelink"]]**{{[#attvdWcorrection vdWcorrection]}}**[[/span]]) for van-der-Waals correction to the total energy is used. The energy correction is written to a file called {{TSvdW.OUT}}. Since this method makes use of the electron density of the specific system under investigation, the **TS-vdW** correction can only be obtained in combination with a standard DFT ground-state calculation. In case you skip the ground-state calculation ([[span class="attributelink"]]**{{[#attdo do]}}**[[/span]]={{"skip"}}), you should make sure that a {{STATE.OUT}}-file from a previous calculation is contained in your working directory. The electron density will then be read in from this file. If you are interested in changing any of the **TS-vdW** parameters, you can use the element [[span class="elementlink"]]**{{[[[ref:TSvdWparameters|TSvdWparameters]]]}}**[[/span]] to do so. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#TSvdW TSvdW] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# DFTD2]]
++ Element:##blue| DFTD2##
+  
+   If the subelement [[span class="elementlink"]]**{{[#DFTD2 DFTD2]}}**[[/span]] is specified inside the element [[span class="elementlink"]]**{{[#properties properties]}}**[[/span]], the **DFT-D2** method (find reference here: [[span class="attributelink"]]**{{[#attvdWcorrection vdWcorrection]}}**[[/span]]) for van-der-Waals correction to the total energy is used. The energy correction is written to a file called {{DFTD2.OUT}}. It is not necessary to perform a ground-state calculation, so you could choose [[span class="attributelink"]]**{{[#attdo do]}}**[[/span]]={{"skip"}} and only calculate the van-der-Waals correction. Only the input file {{input.xml}} with the declaration of the structure of interest must be provided. If you are interested in changing any of the **DFT-D2** parameters, you can use the element [[span class="elementlink"]]**{{[[[ref:DFTD2parameters|DFTD2parameters]]]}}**[[/span]] to do so. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#DFTD2 DFTD2] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# exccplot]]
++ Element:##blue| exccplot##
+  
+  Exchange-correlation and Coulomb potential plots.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#exccplot exccplot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# elfplot]]
++ Element:##blue| elfplot##
+  
+  Electron localization function (ELF).
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#elfplot elfplot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# mvecfield]]
++ Element:##blue| mvecfield##
+  
+  Plot of magnetization vector field.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#mvecfield mvecfield] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# xcmvecfield]]
++ Element:##blue| xcmvecfield##
+  
+  Plot of exchange-correlation magnetic vector field.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#xcmvecfield xcmvecfield] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# electricfield]]
++ Element:##blue| electricfield##
+  
+  Writes the electric field to file.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#electricfield electricfield] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# gradmvecfield]]
++ Element:##blue| gradmvecfield##
+  
+  Plot of he gradient of the magnetic vector field.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#gradmvecfield gradmvecfield] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# fermisurfaceplot]]
++ Element:##blue| fermisurfaceplot##
+  
+  Writes Fermi surface data to file.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#fermisurfaceplot fermisurfaceplot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attfermisurfaceplotnstfsp nstfsp]}}**[[/span]]
+  [[# attnstfsp]]
+    [[# attfermisurfaceplotnstfsp]]
+  
+++ Attribute:  ##green|nstfsp##  
+    Number of states to be included in the Fermi surface plot file.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"6"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#fermisurfaceplot fermisurfaceplot]/[#attfermisurfaceplotnstfsp @nstfsp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# EFG]]
++ Element:##blue| EFG##
+  
+  Calculation of electric field gradient (EFG), contact charge.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#EFG EFG] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# mossbauer]]
++ Element:##blue| mossbauer##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#mossbauer mossbauer] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# expiqr]]
++ Element:##blue| expiqr##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#kstlist|kstlist]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#expiqr expiqr] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# elnes]]
++ Element:##blue| elnes##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#elnes elnes] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attelnesngrid ngrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attelnesvecql vecql]}}**[[/span]], [[span class="attributelink"]]**{{[#attelneswgrid wgrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attelneswmax wmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attelneswmin wmin]}}**[[/span]]
+  [[# attngrid]]
+    [[# attelnesngrid]]
+  
+++ Attribute:  ##green|ngrid##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"100"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#elnes elnes]/[#attelnesngrid @ngrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attvecql]]
+    [[# attelnesvecql]]
+  
+++ Attribute:  ##green|vecql##  
+    Gives the q-vector in lattice coordinates for calculating ELNES.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect3d|vect3d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#elnes elnes]/[#attelnesvecql @vecql] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwgrid]]
+    [[# attelneswgrid]]
+  
+++ Attribute:  ##green|wgrid##  
+    Number of grid points inside [wmin,wmax] interval.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"100"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#elnes elnes]/[#attelneswgrid @wgrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwmax]]
+    [[# attelneswmax]]
+  
+++ Attribute:  ##green|wmax##  
+    Upper energy limit.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#elnes elnes]/[#attelneswmax @wmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwmin]]
+    [[# attelneswmin]]
+  
+++ Attribute:  ##green|wmin##  
+    Lower energy limit.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#elnes elnes]/[#attelneswmin @wmin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# eliashberg]]
++ Element:##blue| eliashberg##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#eliashberg eliashberg] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#atteliashbergmustar mustar]}}**[[/span]]
+  [[# attmustar]]
+    [[# atteliashbergmustar]]
+  
+++ Attribute:  ##green|mustar##  
+    Coulomb pseudopotential, [[$ \mu* $]], used in the McMillan-Allen-Dynes equation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.15d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#eliashberg eliashberg]/[#atteliashbergmustar @mustar] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# momentummatrix]]
++ Element:##blue| momentummatrix##
+  
+   Generate matrix elements of the momentum operator and store them in PMAT.OUT. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#momentummatrix momentummatrix] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attmomentummatrixfastpmat fastpmat]}}**[[/span]]
+  [[# attfastpmat]]
+    [[# attmomentummatrixfastpmat]]
+  
+++ Attribute:  ##green|fastpmat##  
+    apply generalised DFT correction of L. Fritsche and Y. M. Gu, Phys. Rev. B 48, 4250 (1993)
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#momentummatrix momentummatrix]/[#attmomentummatrixfastpmat @fastpmat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# dielmat]]
++ Element:##blue| dielmat##
+  
+   Calculate the dielectric tensor in IP-RPA (without local-field effect) for q=0. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#epscomp epscomp]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attdielmatdrude drude]}}**[[/span]], [[span class="attributelink"]]**{{[#attdielmatintraband intraband]}}**[[/span]], [[span class="attributelink"]]**{{[#attdielmatscissor scissor]}}**[[/span]], [[span class="attributelink"]]**{{[#attdielmatswidth swidth]}}**[[/span]], [[span class="attributelink"]]**{{[#attdielmattevout tevout]}}**[[/span]], [[span class="attributelink"]]**{{[#attdielmatwgrid wgrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attdielmatwmax wmax]}}**[[/span]]
+  [[# attdrude]]
+    [[# attdielmatdrude]]
+  
+++ Attribute:  ##green|drude##  
+     Parameters for the Drude term used for calculating the intraband contribution: First value determines the plasma frequency, second - the lifetime broadening. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat]/[#attdielmatdrude @drude] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attintraband]]
+    [[# attdielmatintraband]]
+  
+++ Attribute:  ##green|intraband##  
+     The intraband attribute is {{"true"}} if the intraband term is to be added to the optical matrix.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat]/[#attdielmatintraband @intraband] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscissor]]
+    [[# attdielmatscissor]]
+  
+++ Attribute:  ##green|scissor##  
+    Value of the "scissor" correction.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat]/[#attdielmatscissor @scissor] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attswidth]]
+    [[# attdielmatswidth]]
+  
+++ Attribute:  ##green|swidth##  
+    Broadening factor to fit the experimental resolution.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.01d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat]/[#attdielmatswidth @swidth] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttevout]]
+    [[# attdielmattevout]]
+  
+++ Attribute:  ##green|tevout##  
+    {{"true"}} if energy outputs are in eV.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat]/[#attdielmattevout @tevout] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwgrid]]
+    [[# attdielmatwgrid]]
+  
+++ Attribute:  ##green|wgrid##  
+    Number of grid points inside [0,wmax] interval.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"400"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat]/[#attdielmatwgrid @wgrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwmax]]
+    [[# attdielmatwmax]]
+  
+++ Attribute:  ##green|wmax##  
+    Upper energy limit for the dielectric matrix calculations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.30"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat]/[#attdielmatwmax @wmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# epscomp]]
++ Element:##blue| epscomp##
+  
+  Components of the dielectric tensor to be calculated.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integerpair|integerpair]]]
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#dielmat dielmat]/[#epscomp epscomp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# boltzequ]]
++ Element:##blue| boltzequ##
+  
+   Calculate the electronic transport coefficients from the Boltzmann equation. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#condcomp condcomp]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attboltzequmugrid mugrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attboltzequnwtdf nwtdf]}}**[[/span]], [[span class="attributelink"]]**{{[#attboltzequswidth swidth]}}**[[/span]], [[span class="attributelink"]]**{{[#attboltzequtevout tevout]}}**[[/span]], [[span class="attributelink"]]**{{[#attboltzequtgrid tgrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attboltzequtsiout tsiout]}}**[[/span]], [[span class="attributelink"]]**{{[#attboltzequwindmu windmu]}}**[[/span]], [[span class="attributelink"]]**{{[#attboltzequwindtdf windtdf]}}**[[/span]], [[span class="attributelink"]]**{{[#attboltzequwindtemp windtemp]}}**[[/span]]
+  [[# attmugrid]]
+    [[# attboltzequmugrid]]
+  
+++ Attribute:  ##green|mugrid##  
+    Number of chemical potential points.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequmugrid @mugrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnwtdf]]
+    [[# attboltzequnwtdf]]
+  
+++ Attribute:  ##green|nwtdf##  
+    Number of frequency (or energy) points for the evaluation of the transport distribution function.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"100"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequnwtdf @nwtdf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attswidth]]
+    [[# attboltzequswidth]]
+  
+++ Attribute:  ##green|swidth##  
+    Broadening factor used in the calculation of the transport distribution function.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.01d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequswidth @swidth] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttevout]]
+    [[# attboltzequtevout]]
+  
+++ Attribute:  ##green|tevout##  
+    If {{"true"}}, output energies are in eV.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequtevout @tevout] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttgrid]]
+    [[# attboltzequtgrid]]
+  
+++ Attribute:  ##green|tgrid##  
+    Number of temperature points.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequtgrid @tgrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttsiout]]
+    [[# attboltzequtsiout]]
+  
+++ Attribute:  ##green|tsiout##  
+    If {{"true"}}, output transport coefficients are given in SI units: Seebeck coefficient in V/K , electrical conductivity over relaxation time in S/(m s) , thermal conductivity over relaxation time in W/(mK s). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequtsiout @tsiout] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwindmu]]
+    [[# attboltzequwindmu]]
+  
+++ Attribute:  ##green|windmu##  
+    Chemical potential window for the evaluation of the transport coefficients.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequwindmu @windmu] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwindtdf]]
+    [[# attboltzequwindtdf]]
+  
+++ Attribute:  ##green|windtdf##  
+    Frequency (or energy) window for the evaluation of the transport distribution function.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-0.5d0 0.5d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequwindtdf @windtdf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwindtemp]]
+    [[# attboltzequwindtemp]]
+  
+++ Attribute:  ##green|windtemp##  
+    Temperature window for the evaluation of the transport coefficients in Kelvin.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"300.0d0 300.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#attboltzequwindtemp @windtemp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# condcomp]]
++ Element:##blue| condcomp##
+  
+  Components of the tensors for the electronic transport coefficients to be calculated.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integerpair|integerpair]]]
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#boltzequ boltzequ]/[#condcomp condcomp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# raman]]
++ Element:##blue| raman##
+  
+  Compute first order Raman spectra. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#eigvec eigvec]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#energywindow|energywindow]]]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attramanbroad broad]}}**[[/span]], [[span class="attributelink"]]**{{[#attramandegree degree]}}**[[/span]], [[span class="attributelink"]]**{{[#attramandispl displ]}}**[[/span]], [[span class="attributelink"]]**{{[#attramandoequilibrium doequilibrium]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanelaser elaser]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanelaserunit elaserunit]}}**[[/span]], [[span class="attributelink"]]**{{[#attramangetphonon getphonon]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanmode mode]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanmolecule molecule]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanninter ninter]}}**[[/span]], [[span class="attributelink"]]**{{[#attramannstate nstate]}}**[[/span]], [[span class="attributelink"]]**{{[#attramannstep nstep]}}**[[/span]], [[span class="attributelink"]]**{{[#attramantemp temp]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanuseforces useforces]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanusesym usesym]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanwritefunc writefunc]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanxmax xmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attramanxmin xmin]}}**[[/span]]
+  [[# attbroad]]
+    [[# attramanbroad]]
+  
+++ Attribute:  ##green|broad##  
+    Lorentzian broadening in cm[[$ ^{-1} $]] for simulation of experimental spectra. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"10.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanbroad @broad] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdegree]]
+    [[# attramandegree]]
+  
+++ Attribute:  ##green|degree##  
+    Degree of fitting polynomial for the potential. The default of [[$ 2 $]] results in a harmonic oscillator. For the dielectric function also a polynomial of degree [[span class="attributelink"]]**{{[#attdegree degree]}}**[[/span]] is fitted, but only the first derivative used. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramandegree @degree] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdispl]]
+    [[# attramandispl]]
+  
+++ Attribute:  ##green|displ##  
+    Step length for each displacement along normal coordinate, [[$ |{\bf u}_i | $]] in Bohr. For solids, a value of 0.01-0.02 times the number of atoms in the unit cell is often a good choice. In any case check the obtained potential and dielectric functions carefully. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.02d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramandispl @displ] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attdoequilibrium]]
+    [[# attramandoequilibrium]]
+  
+++ Attribute:  ##green|doequilibrium##  
+     Specifiy whether the true equilibirum geometry should be included in the frozen phonon calculations. On one hand the symmetry of the equilibrium might be higher and the properties slightly changed; on the other hand the same equilibrium structure is used for all active modes and thus some computer time can be saved. The default is {{false}}, which means that a close-to-equilibrium structure with the same symmetry as the mode is used. For every mode this is a slightly different structure. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramandoequilibrium @doequilibrium] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attelaser]]
+    [[# attramanelaser]]
+  
+++ Attribute:  ##green|elaser##  
+    Energy of the incident laser beam. Specify it in units of [[span class="attributelink"]]**{{[#attelaserunit elaserunit]}}**[[/span]]  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanelaser @elaser] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attelaserunit]]
+    [[# attramanelaserunit]]
+  
+++ Attribute:  ##green|elaserunit##  
+    Units of {{elaser}}: electron volts, photon wave length in nm, reciprocal centimeters or Hartree. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ eV  
+ nm  
+ cm-1  
+ Ha  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"nm"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanelaserunit @elaserunit] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attgetphonon]]
+    [[# attramangetphonon]]
+  
+++ Attribute:  ##green|getphonon##  
+     Prior to the calculation of Raman intensities, the normal coordinates of the phonon modes have to be ready. Four choices are available: {{fromscratch}} triggers a supercell phonon calculation for the [[$ \Gamma $]]-point (i.e. the supercell is just the unit cell), note that the relevant attributes given with the element [[span class="elementlink"]]**{{[[[ref:phonons|phonons]]]}}**[[/span]] will be overwritten by suitable values; {{fromfile}} reads the dynamical matrix from {{DYN_*.OUT}} files produced in a previous phonon calculation; {{readinput}} enables you to input a phonon eigenvector manually; and {{symvec}} constructs symmetry vectors from the crystal symmetries and uses them instead of eigenvectors (this is not generally meaningful, as the symmetry vectors are obtained as linear combinations of eigenvectors in case several phonon modes which belong to the same irreducible representation occur, so check the output carefully). {{symveccheck}} solely produces the symmetry vectors and stops. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ fromscratch  
+ fromfile  
+ symvec  
+ symveccheck  
+ readinput  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"fromscratch"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramangetphonon @getphonon] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmode]]
+    [[# attramanmode]]
+  
+++ Attribute:  ##green|mode##  
+    Optionally choose a phonon mode to compute ([[$ 4 \leq  $]]{{mode}}[[$  \leq 3N_{\mathrm{atm}} $]]). The default of 0 means compute spectra of all Raman active modes present. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanmode @mode] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmolecule]]
+    [[# attramanmolecule]]
+  
+++ Attribute:  ##green|molecule##  
+     If {{true}}, an isolated molecule is assumed and some additional output created. The default of {{false}} means the calculation is done for the solid state limit. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanmolecule @molecule] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attninter]]
+    [[# attramanninter]]
+  
+++ Attribute:  ##green|ninter##  
+    Number of intervals in numerical (FE) solution of the oscillator problem. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"500"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanninter @ninter] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnstate]]
+    [[# attramannstate]]
+  
+++ Attribute:  ##green|nstate##  
+    Number of vibrational states to solve for. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramannstate @nstate] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnstep]]
+    [[# attramannstep]]
+  
+++ Attribute:  ##green|nstep##  
+    Create {{nstep}} distorted geometries to sample the potential and dielectric function. The distortion is done by displacing atoms along normal coordinate by [[$ n* $]][[span class="attributelink"]]**{{[#attdispl displ]}}**[[/span]] with [[$ -1/2 $]][[span class="attributelink"]]**{{[#attnstep nstep]}}**[[/span]][[$ \le n\le 1/2 $]][[span class="attributelink"]]**{{[#attnstep nstep]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"5"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramannstep @nstep] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttemp]]
+    [[# attramantemp]]
+  
+++ Attribute:  ##green|temp##  
+    Temperature in K for which the Raman spectrum is computed. This affects the occupation of vibrational states. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"298.15"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramantemp @temp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attuseforces]]
+    [[# attramanuseforces]]
+  
+++ Attribute:  ##green|useforces##  
+     Request the use forces to fit the potential along normal coordinates (if set to {{true}}), otherwise the total energy will be used (if set to {{false}}). 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanuseforces @useforces] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attusesym]]
+    [[# attramanusesym]]
+  
+++ Attribute:  ##green|usesym##  
+     Flag wether to use symmetry to analyze the Raman activity of phonon modes prior to running through all computation steps. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanusesym @usesym] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwritefunc]]
+    [[# attramanwritefunc]]
+  
+++ Attribute:  ##green|writefunc##  
+    If {{true}} output eigenfunctions of oscillator problem to files. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanwritefunc @writefunc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxmax]]
+    [[# attramanxmax]]
+  
+++ Attribute:  ##green|xmax##  
+    Upper boundary of the oscillator problem, give a distance along the normal coordinate, [[$ |{\bf u}_i | $]] in Bohr. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"3.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanxmax @xmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attxmin]]
+    [[# attramanxmin]]
+  
+++ Attribute:  ##green|xmin##  
+    Lower boundary of the oscillator problem, give a distance along the normal coordinate, [[$ |{\bf u}_i | $]] in Bohr. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-3.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#attramanxmin @xmin] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# eigvec]]
++ Element:##blue| eigvec##
+  
+   Input manually the eigenvector of a normal mode. Note: Not normalized eigenvectors are renormalized by {{exciting}}. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#eigvec eigvec] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#atteigveccomp comp]}}**[[/span]] ##red|(required)##
+  [[# attcomp]]
+    [[# atteigveccomp]]
+  
+++ Attribute:  ##green|comp##  
+    A component of the phonon eigenvector. The order of the given components must correspond to the order of the atoms given in [[span class="elementlink"]]**{{[[[ref:structure|structure]]]}}**[[/span]], and consist of three times the element [[span class="elementlink"]]**{{[#eigvec eigvec]}}**[[/span]] for each atom (for [[$ x $]], [[$ y $]] and [[$ z $]]). Each time specify two floating point numbers, which are the real and imaginary part of the component. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#raman raman]/[#eigvec eigvec]/[#atteigveccomp @comp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# moke]]
++ Element:##blue| moke##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#moke moke] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attmokedrude drude]}}**[[/span]], [[span class="attributelink"]]**{{[#attmokeintraband intraband]}}**[[/span]], [[span class="attributelink"]]**{{[#attmokescissor scissor]}}**[[/span]], [[span class="attributelink"]]**{{[#attmokeswidth swidth]}}**[[/span]], [[span class="attributelink"]]**{{[#attmoketevout tevout]}}**[[/span]], [[span class="attributelink"]]**{{[#attmokewgrid wgrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attmokewmax wmax]}}**[[/span]]
+  [[# attdrude]]
+    [[# attmokedrude]]
+  
+++ Attribute:  ##green|drude##  
+     Parameters for the Drude term used for calculating the intraband contribution: First value determines the plasma frequency, second - the lifetime broadening. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#moke moke]/[#attmokedrude @drude] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attintraband]]
+    [[# attmokeintraband]]
+  
+++ Attribute:  ##green|intraband##  
+     Use the intraband term in calculations if the dielectric matrix.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#moke moke]/[#attmokeintraband @intraband] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscissor]]
+    [[# attmokescissor]]
+  
+++ Attribute:  ##green|scissor##  
+    Scissors operator.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#moke moke]/[#attmokescissor @scissor] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attswidth]]
+    [[# attmokeswidth]]
+  
+++ Attribute:  ##green|swidth##  
+    Broadening factor.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.01d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#moke moke]/[#attmokeswidth @swidth] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttevout]]
+    [[# attmoketevout]]
+  
+++ Attribute:  ##green|tevout##  
+    {{"true"}} if energy outputs are in eV.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#moke moke]/[#attmoketevout @tevout] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwgrid]]
+    [[# attmokewgrid]]
+  
+++ Attribute:  ##green|wgrid##  
+    Number of grid points inside [0,wmax] interval.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"400"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#moke moke]/[#attmokewgrid @wgrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwmax]]
+    [[# attmokewmax]]
+  
+++ Attribute:  ##green|wmax##  
+    Upper energy limit for the Kerr angle calculation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.30"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#moke moke]/[#attmokewmax @wmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# shg]]
++ Element:##blue| shg##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#chicomp chicomp]}}**[[/span]]  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#shg shg] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attshgetol etol]}}**[[/span]], [[span class="attributelink"]]**{{[#attshgscissor scissor]}}**[[/span]], [[span class="attributelink"]]**{{[#attshgswidth swidth]}}**[[/span]], [[span class="attributelink"]]**{{[#attshgtevout tevout]}}**[[/span]], [[span class="attributelink"]]**{{[#attshgwgrid wgrid]}}**[[/span]], [[span class="attributelink"]]**{{[#attshgwmax wmax]}}**[[/span]]
+  [[# attetol]]
+    [[# attshgetol]]
+  
+++ Attribute:  ##green|etol##  
+    Tolerence factor (to avoid singularities).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.004d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#shg shg]/[#attshgetol @etol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscissor]]
+    [[# attshgscissor]]
+  
+++ Attribute:  ##green|scissor##  
+    Scissors operator.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#shg shg]/[#attshgscissor @scissor] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attswidth]]
+    [[# attshgswidth]]
+  
+++ Attribute:  ##green|swidth##  
+    Broadening factor.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.01d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#shg shg]/[#attshgswidth @swidth] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# atttevout]]
+    [[# attshgtevout]]
+  
+++ Attribute:  ##green|tevout##  
+    {{"true"}} if energy outputs are in eV.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#shg shg]/[#attshgtevout @tevout] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwgrid]]
+    [[# attshgwgrid]]
+  
+++ Attribute:  ##green|wgrid##  
+    Number of grid points inside [0,emax] interval.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"400"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#shg shg]/[#attshgwgrid @wgrid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwmax]]
+    [[# attshgwmax]]
+  
+++ Attribute:  ##green|wmax##  
+    Upper energy limit for SHG calculations.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.3"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#shg shg]/[#attshgwmax @wmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# chicomp]]
++ Element:##blue| chicomp##
+  
+  The components of the second-order optical tensor Chi(-2w,w,w) to be calculated.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1 2 3"}} [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#shg shg]/[#chicomp chicomp] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# wannier]]
++ Element:##blue| wannier##
+  
+   When the [[span class="elementlink"]]**{{[#wannier wannier]}}**[[/span]] element is present, in addition Wannier functions are calculated. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#projection projection]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[#group group]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwannierdo do]}}**[[/span]], [[span class="attributelink"]]**{{[#attwannierfermizero fermizero]}}**[[/span]], [[span class="attributelink"]]**{{[#attwannierinput input]}}**[[/span]], [[span class="attributelink"]]**{{[#attwanniermindist mindist]}}**[[/span]], [[span class="attributelink"]]**{{[#attwannierprintproj printproj]}}**[[/span]]
+  [[# attdo]]
+    [[# attwannierdo]]
+  
+++ Attribute:  ##green|do##  
+    Specifies, whether Wannier functions are calculated from scratch, skipped, read in from file or maximally localized starting from a previous result from file.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ fromscratch  
+ fromfile  
+ maxfromfile  
+ skip  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"fromscratch"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#attwannierdo @do] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfermizero]]
+    [[# attwannierfermizero]]
+  
+++ Attribute:  ##green|fermizero##  
+    Set Fermi energy to zero.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#attwannierfermizero @fermizero] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attinput]]
+    [[# attwannierinput]]
+  
+++ Attribute:  ##green|input##  
+    Specifies, which method was used for the input calculation.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ gs  
+ gw  
+ hybrid  
+ qsgw  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"gs"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{/[#properties properties]/[#wannier wannier]/[#attwannierinput @input] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmindist]]
+    [[# attwanniermindist]]
+  
+++ Attribute:  ##green|mindist##  
+    Use minimal distances for interpolation. This is more accurate for coarse k-grids but also more costly.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#attwanniermindist @mindist] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attprintproj]]
+    [[# attwannierprintproj]]
+  
+++ Attribute:  ##green|printproj##  
+    If true the projection functions are written to {{WANNIER_INFO.OUT}}.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#attwannierprintproj @printproj] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# projection]]
++ Element:##blue| projection##
+  
+  Various parameters on the local-orbital set for the projection.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#projection projection] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attprojectiondordmax dordmax]}}**[[/span]], [[span class="attributelink"]]**{{[#attprojectionepsld epsld]}}**[[/span]], [[span class="attributelink"]]**{{[#attprojectionnprojtot nprojtot]}}**[[/span]], [[span class="attributelink"]]**{{[#attprojectionnunocc nunocc]}}**[[/span]]
+  [[# attdordmax]]
+    [[# attprojectiondordmax]]
+  
+++ Attribute:  ##green|dordmax##  
+    Energy derivative up to which local-orbitals are added.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#projection projection]/[#attprojectiondordmax @dordmax] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsld]]
+    [[# attprojectionepsld]]
+  
+++ Attribute:  ##green|epsld##  
+    Tolerance for removing linear dependent local-orbitals.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-3"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#projection projection]/[#attprojectionepsld @epsld] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnprojtot]]
+    [[# attprojectionnprojtot]]
+  
+++ Attribute:  ##green|nprojtot##  
+    Total number of local-orbitals used for the projection
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#projection projection]/[#attprojectionnprojtot @nprojtot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnunocc]]
+    [[# attprojectionnunocc]]
+  
+++ Attribute:  ##green|nunocc##  
+    Number of unoccupied states per atom for which local-orbitals are added.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"20"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#projection projection]/[#attprojectionnunocc @nunocc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# group]]
++ Element:##blue| group##
+  
+  Defines a group of bands from which Wannier functions are calculated.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#projector projector]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attgroupcg cg]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupepsdis epsdis]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupepsmaxloc epsmaxloc]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupepsopf epsopf]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupfst fst]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupinnerwindow innerwindow]}}**[[/span]], [[span class="attributelink"]]**{{[#attgrouplambdaopf lambdaopf]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupls ls]}}**[[/span]], [[span class="attributelink"]]**{{[#attgrouplst lst]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupmaxit maxit]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupmethod method]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupminit minit]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupnproj nproj]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupnwf nwf]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupnwrite nwrite]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupouterwindow outerwindow]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupstep step]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupuncertainty uncertainty]}}**[[/span]], [[span class="attributelink"]]**{{[#attgroupwriteconv writeconv]}}**[[/span]]
+  [[# attcg]]
+    [[# attgroupcg]]
+  
+++ Attribute:  ##green|cg##  
+    Specifies which conjugate gradient update parameter is used for the minimization. The options are steepest descent ({{sd}}), Hestenes-Stiefel ({{hs}}), Fletcher-Reeves ({{fr}}), Polak-Ribiere ({{pr}}) and Hager-Zhang ({{hz}}).
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ sd  
+ hs  
+ fr  
+ pr  
+ hz  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"hs"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupcg @cg] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsdis]]
+    [[# attgroupepsdis]]
+  
+++ Attribute:  ##green|epsdis##  
+    Convergency cut-off for subspace disentanglement.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-4"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupepsdis @epsdis] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsmaxloc]]
+    [[# attgroupepsmaxloc]]
+  
+++ Attribute:  ##green|epsmaxloc##  
+    Convergency cut-off (gradient) for MLWFs. The minimization is stopped when the norm of the gradient of the spread functional is smaller than the given value.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-6"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupepsmaxloc @epsmaxloc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepsopf]]
+    [[# attgroupepsopf]]
+  
+++ Attribute:  ##green|epsopf##  
+    Convergency cut-off for OPFs. The minimization is stopped when the change in the spread functional between the last two sweeps is smaller than the given value.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-2"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupepsopf @epsopf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attfst]]
+    [[# attgroupfst]]
+  
+++ Attribute:  ##green|fst##  
+    Lowest state from which Wannier functions are constructed.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupfst @fst] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attinnerwindow]]
+    [[# attgroupinnerwindow]]
+  
+++ Attribute:  ##green|innerwindow##  
+    Inner energy-window for band-disentanglement.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupinnerwindow @innerwindow] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlambdaopf]]
+    [[# attgrouplambdaopf]]
+  
+++ Attribute:  ##green|lambdaopf##  
+    Lambda in the Lagrangian of the optimized projection functions (OPF).
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgrouplambdaopf @lambdaopf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attls]]
+    [[# attgroupls]]
+  
+++ Attribute:  ##green|ls##  
+    If true, a line-search is made in the minimization.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"true"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupls @ls] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlst]]
+    [[# attgrouplst]]
+  
+++ Attribute:  ##green|lst##  
+    Highest state from which Wannier functions are constructed.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgrouplst @lst] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmaxit]]
+    [[# attgroupmaxit]]
+  
+++ Attribute:  ##green|maxit##  
+    Maximum number of interations for minimization.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"2000"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupmaxit @maxit] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attmethod]]
+    [[# attgroupmethod]]
+  
+++ Attribute:  ##green|method##  
+    Defines the method that is used for computing Wannier functions. The options are simple projection ({{pro}}), optimized projection functions (OPFs) ({{opf}}), maximal localization starting from simple projection ({{promax}}), maximal localization starting from OPFs ({{opfmax}}) and band-disentanglement ({{disentangle}}).
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] **choose from:**  
+ pro  
+ prowan  
+ opf  
+ promax  
+ prowanmax  
+ opfmax  
+ scdm  
+ scdmmax  
+ disentangle  
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"opfmax"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupmethod @method] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attminit]]
+    [[# attgroupminit]]
+  
+++ Attribute:  ##green|minit##  
+    Minimum number of interations for minimization.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupminit @minit] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnproj]]
+    [[# attgroupnproj]]
+  
+++ Attribute:  ##green|nproj##  
+    Number of local-orbitals used for the projection in this group
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupnproj @nproj] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnwf]]
+    [[# attgroupnwf]]
+  
+++ Attribute:  ##green|nwf##  
+    Number of Wannier functions to be created from the given energy windows.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupnwf @nwf] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attnwrite]]
+    [[# attgroupnwrite]]
+  
+++ Attribute:  ##green|nwrite##  
+    Number of iterations after which the transformation matrices are written to file.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupnwrite @nwrite] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attouterwindow]]
+    [[# attgroupouterwindow]]
+  
+++ Attribute:  ##green|outerwindow##  
+    Outer energy-window for band-disentanglement.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#vect2d|vect2d]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0 0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupouterwindow @outerwindow] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstep]]
+    [[# attgroupstep]]
+  
+++ Attribute:  ##green|step##  
+    Step-length used for minimization if no line-search is done.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.5d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupstep @step] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attuncertainty]]
+    [[# attgroupuncertainty]]
+  
+++ Attribute:  ##green|uncertainty##  
+    Convergency cut-off (uncertainty) for MLWFs. The minimization is stopped when the uncertainty of the spread functional is smaller than the given value.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#fortrandouble|fortrandouble]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0.0d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupuncertainty @uncertainty] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attwriteconv]]
+    [[# attgroupwriteconv]]
+  
+++ Attribute:  ##green|writeconv##  
+    Write convergence behaviour to file.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#attgroupwriteconv @writeconv] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# projector]]
++ Element:##blue| projector##
+  
+  Defines a local-orbital to be used as projection function.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#projector projector] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attprojectornr nr]}}**[[/span]] ##red|(required)##
+  [[# attnr]]
+    [[# attprojectornr]]
+  
+++ Attribute:  ##green|nr##  
+    Number of the local-orbital.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannier wannier]/[#group group]/[#projector projector]/[#attprojectornr @nr] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# wannierplot]]
++ Element:##blue| wannierplot##
+  
+  Wannier function plot.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[[[ref:common#plot1d|plot1d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot2d|plot2d]]]}}**[[/span]] (optional)  
+[[span class="elementlink"]]**{{[[[ref:common#plot3d|plot3d]]]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannierplot wannierplot] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwannierplotfst fst]}}**[[/span]], [[span class="attributelink"]]**{{[#attwannierplotlst lst]}}**[[/span]]
+  [[# attfst]]
+    [[# attwannierplotfst]]
+  
+++ Attribute:  ##green|fst##  
+    First Wannier function.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannierplot wannierplot]/[#attwannierplotfst @fst] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlst]]
+    [[# attwannierplotlst]]
+  
+++ Attribute:  ##green|lst##  
+    Last Wannier function.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wannierplot wannierplot]/[#attwannierplotlst @lst] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# wanniergap]]
++ Element:##blue| wanniergap##
+  
+  Finds VBM and CBM and determines gap using Wannier interpolation.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wanniergap wanniergap] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwanniergapngridkint ngridkint]}}**[[/span]]
+  [[# attngridkint]]
+    [[# attwanniergapngridkint]]
+  
+++ Attribute:  ##green|ngridkint##  
+    Interpolation grid used for extrema search.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][[[ref:common#integertriple|integertriple]]]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"0 0 0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[ref:/input|/input]]]/[#properties properties]/[#wanniergap wanniergap]/[#attwanniergapngridkint @ngridkint] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[ref:common| listed separately]]].
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[ref:common| are described here]]].
+  

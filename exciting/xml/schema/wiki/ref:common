@@ -1,0 +1,510 @@
+
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[ref:common| listed separately]]].
+  
+[[# origin]]
++ Element:##blue| origin##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#origin origin] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{./[#plot2d plot2d]/[#parallelogram parallelogram]
+./[#plot3d plot3d]/[#box box]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attorigincoord coord]}}**[[/span]]
+  [[# attcoord]]
+    [[# attorigincoord]]
+  
+++ Attribute:  ##green|coord##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#vect3d vect3d]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#origin origin]/[#attorigincoord @coord] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# point]]
++ Element:##blue| point##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#point point] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{./[#plot1d plot1d]/[#path path]
+./[#plot2d plot2d]/[#parallelogram parallelogram]
+./[#plot3d plot3d]/[#box box]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attpointcoord coord]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attpointlabel label]}}**[[/span]]
+  [[# attcoord]]
+    [[# attpointcoord]]
+  
+++ Attribute:  ##green|coord##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#vect3d vect3d]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#point point]/[#attpointcoord @coord] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attlabel]]
+    [[# attpointlabel]]
+  
+++ Attribute:  ##green|label##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{""}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#point point]/[#attpointlabel @label] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# plot1d]]
++ Element:##blue| plot1d##
+  
+   The element plot1d specifies sample points along a path. The coordinate space (lattice or cartesian)is chosen in the context of the parent.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#path path]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot1d plot1d] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:phonons#phonons|phonons]]]/[[[ref:phonons#phonondispplot|phonondispplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#bandstructure|bandstructure]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#wfplot|wfplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#chargedensityplot|chargedensityplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#exccplot|exccplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#elfplot|elfplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#gradmvecfield|gradmvecfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#wannierplot|wannierplot]]]
+/[[[ref:input|input]]]/[[[ref:xs#xs|xs]]]/[[[ref:xs#excitonPlot|excitonPlot]]]/[[[ref:xs#hole|hole]]]
+/[[[ref:input|input]]]/[[[ref:xs#xs|xs]]]/[[[ref:xs#excitonPlot|excitonPlot]]]/[[[ref:xs#electron|electron]]]
+/[[[ref:input|input]]]/[[[ref:gw#gw|gw]]]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+[[# path]]
++ Element:##blue| path##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#point point]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot1d plot1d]/[#path path] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attpathsteps steps]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attpathoutfileprefix outfileprefix]}}**[[/span]]
+  [[# attoutfileprefix]]
+    [[# attpathoutfileprefix]]
+  
+++ Attribute:  ##green|outfileprefix##  
+        A prefix to be prepended to the output files.    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot1d plot1d]/[#path path]/[#attpathoutfileprefix @outfileprefix] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attsteps]]
+    [[# attpathsteps]]
+  
+++ Attribute:  ##green|steps##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot1d plot1d]/[#path path]/[#attpathsteps @steps] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# plot2d]]
++ Element:##blue| plot2d##
+  
+  Defines a 2d plot domain.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#parallelogram parallelogram]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot2d plot2d] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#stm|stm]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#wfplot|wfplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#chargedensityplot|chargedensityplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#exccplot|exccplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#elfplot|elfplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#mvecfield|mvecfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#xcmvecfield|xcmvecfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#electricfield|electricfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#gradmvecfield|gradmvecfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#fermisurfaceplot|fermisurfaceplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#wannierplot|wannierplot]]]
+/[[[ref:input|input]]]/[[[ref:xs#xs|xs]]]/[[[ref:xs#excitonPlot|excitonPlot]]]/[[[ref:xs#hole|hole]]]
+/[[[ref:input|input]]]/[[[ref:xs#xs|xs]]]/[[[ref:xs#excitonPlot|excitonPlot]]]/[[[ref:xs#electron|electron]]]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+[[# parallelogram]]
++ Element:##blue| parallelogram##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#origin origin]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#point point]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot2d plot2d]/[#parallelogram parallelogram] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attparallelogramgrid grid]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attparallelogramoutfileprefix outfileprefix]}}**[[/span]]
+  [[# attgrid]]
+    [[# attparallelogramgrid]]
+  
+++ Attribute:  ##green|grid##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#integerpair integerpair]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot2d plot2d]/[#parallelogram parallelogram]/[#attparallelogramgrid @grid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attoutfileprefix]]
+    [[# attparallelogramoutfileprefix]]
+  
+++ Attribute:  ##green|outfileprefix##  
+        A prefix to be prepended to the output files.    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot2d plot2d]/[#parallelogram parallelogram]/[#attparallelogramoutfileprefix @outfileprefix] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# plot3d]]
++ Element:##blue| plot3d##
+  
+  Defines a 3d plot domain.
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#box box]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot3d plot3d] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#wfplot|wfplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#chargedensityplot|chargedensityplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#exccplot|exccplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#elfplot|elfplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#mvecfield|mvecfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#xcmvecfield|xcmvecfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#electricfield|electricfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#gradmvecfield|gradmvecfield]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#fermisurfaceplot|fermisurfaceplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#wannierplot|wannierplot]]]
+/[[[ref:input|input]]]/[[[ref:xs#xs|xs]]]/[[[ref:xs#excitonPlot|excitonPlot]]]/[[[ref:xs#hole|hole]]]
+/[[[ref:input|input]]]/[[[ref:xs#xs|xs]]]/[[[ref:xs#excitonPlot|excitonPlot]]]/[[[ref:xs#electron|electron]]]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attplot3dusesym usesym]}}**[[/span]]
+  [[# attusesym]]
+    [[# attplot3dusesym]]
+  
+++ Attribute:  ##green|usesym##  
+     When set to {{"true"}}, crystal symmetries are used in the determination of the 3D spatial grid. Also, in that case the whole unit cell is sampled. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot3d plot3d]/[#attplot3dusesym @usesym] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# box]]
++ Element:##blue| box##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#origin origin]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#point point]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot3d plot3d]/[#box box] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attboxgrid grid]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attboxoutfileprefix outfileprefix]}}**[[/span]]
+  [[# attgrid]]
+    [[# attboxgrid]]
+  
+++ Attribute:  ##green|grid##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#integertriple integertriple]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot3d plot3d]/[#box box]/[#attboxgrid @grid] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attoutfileprefix]]
+    [[# attboxoutfileprefix]]
+  
+++ Attribute:  ##green|outfileprefix##  
+        A prefix to be prepended to the output files.    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#plot3d plot3d]/[#box box]/[#attboxoutfileprefix @outfileprefix] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# kstlist]]
++ Element:##blue| kstlist##
+  
+   The kstlist element is used in the LSJ and wavefunction plot element This is a user-defined list of [[$ { \bf k} $]]-point and state index pairs which are those used for plotting wavefunctions and writing [[$ { \bf L} $]], [[$ { \bf S} $]] and [[$ { \bf J}  $]] expectation values. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#pointstatepair pointstatepair]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#kstlist kstlist] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#wfplot|wfplot]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#LSJ|LSJ]]]
+/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#expiqr|expiqr]]]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+[[# pointstatepair]]
++ Element:##blue| pointstatepair##
+  
+   The element {{pointstatepair}} defines a [[$ { \bf k} $]]-point and state index pair. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#integerpair integerpair]
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#kstlist kstlist]/[#pointstatepair pointstatepair] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# energywindow]]
++ Element:##blue| energywindow##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#energywindow energywindow] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:properties#properties|properties]]]/[[[ref:properties#raman|raman]]]
+/[[[ref:input|input]]]/[[[ref:xs#xs|xs]]]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attenergywindowintv intv]}}**[[/span]], [[span class="attributelink"]]**{{[#attenergywindowpoints points]}}**[[/span]]
+  [[# attintv]]
+    [[# attenergywindowintv]]
+  
+++ Attribute:  ##green|intv##  
+    energy interval lower and upper limits.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#vect2d vect2d]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"-0.5d0 0.5d0"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#energywindow energywindow]/[#attenergywindowintv @intv] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attpoints]]
+    [[# attenergywindowpoints]]
+  
+++ Attribute:  ##green|points##  
+    number of points to be sampled linearly inside the energy interval including the lower limit.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]integer
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"500"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#energywindow energywindow]/[#attenergywindowpoints @points] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# qpointset]]
++ Element:##blue| qpointset##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#qpoint qpoint]}}**[[/span]] (required)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#qpointset qpointset] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:phonons#phonons|phonons]]]
+/[[[ref:input|input]]]/[[[ref:xs#xs|xs]]]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+[[# qpoint]]
++ Element:##blue| qpoint##
+  
+   a q-point is given in reciprocal space coordinates
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#vect3d vect3d]
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{./[#qpointset qpointset]/[#qpoint qpoint] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# parts]]
++ Element:##blue| parts##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#dopart dopart]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:phonons#phonons|phonons]]]/[#parts parts] }}[[/cell]] [[/row]]
+  [[row]] [[cell style=" vertical-align:top;" ]] **Parent:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:phonons#phonons|phonons]]]
+ }}[[/cell]] [[/row]]
+[[/table]]
+  
+[[# dopart]]
++ Element:##blue| dopart##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:phonons#phonons|phonons]]]/[#parts parts]/[#dopart dopart] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attdopartid id]}}**[[/span]] ##red|(required)##
+  [[# attid]]
+    [[# attdopartid]]
+  
+++ Attribute:  ##green|id##  
+     This attribute is used to trigger lower-level tasks and is mainly used for testing, debugging, and the testing of new features. Do not use it unless you know what you are doing.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{/[[[ref:input|input]]]/[[[ref:phonons#phonons|phonons]]]/[#parts parts]/[#dopart dopart]/[#attdopartid @id] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[ref:common| are described here]]].
+  
+  [[# fortrandouble]]
+++ Type   fortrandouble
+  
+   The type {{fortrandouble}} allows to use the letters {{"eEdDqQ"}} for exponent operators. This alters in what precision the number is parsed. 
+  [[# booleanlist]]
+++ Type   booleanlist
+  
+   List of space separated booleans.
+  [[# booleantriple]]
+++ Type   booleantriple
+  
+   Space separated list of three booleans. 
+  
+  Example: {{ "true false true" }}  
+  [[# vector]]
+++ Type   vector
+  
+   A vector is a space separated list of floating point numbers. 
+  
+   Example: {{ "1.3 2.3e4 3 90"}}    
+  [[# integerlist]]
+++ Type   integerlist
+  
+   List of space separated integers.
+  [[# vect3d]]
+++ Type   vect3d
+  
+   Three dimensional vector as three space separated floating point numbers.
+  [[# vect2d]]
+++ Type   vect2d
+  
+   Two dimensional vector as two space separated floating point numbers.
+  [[# integertriple]]
+++ Type   integertriple
+  
+   Space separated list of three integers. 
+  
+   Example: {{ "1 2 3" }}    
+  [[# integerquadrupel]]
+++ Type   integerquadrupel
+  
+   Space separated list of three integers. 
+  
+   Example: {{ "1 2 3 4" }}    
+  [[# integerpair]]
+++ Type   integerpair
+  
+   Space separated list of two integers 
+  
+   Example: {{ "1 2" }}    

@@ -1,0 +1,389 @@
+
+[[# symmetries]]
++ Element:##blue| symmetries##
+  
+  The symmetries file format used by the {{**spacegroup**}} tool to generate structures and supercells as defined by [[span class="elementlink"]]**{{[#lattice lattice]}}**[[/span]] from the knowledge of Wyckoff positions and the space group. The space group is specified by the attribute [[span class="attributelink"]]**{{[#attHermannMauguinSymbol HermannMauguinSymbol]}}**[[/span]]. The root element is [[span class="elementlink"]]**{{[#symmetries symmetries]}}**[[/span]]. 
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#title title]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#lattice lattice]}}**[[/span]] (required)  
+[[span class="elementlink"]]**{{[#WyckoffPositions WyckoffPositions]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attsymmetriesHermannMauguinSymbol HermannMauguinSymbol]}}**[[/span]] ##red|(required)##
+  [[# attHermannMauguinSymbol]]
+    [[# attsymmetriesHermannMauguinSymbol]]
+  
+++ Attribute:  ##green|HermannMauguinSymbol##  
+    The Herman Mauguin symbol specifies the spacegroup of the structure.  {{**[http://exciting-code.org/hermann-mauguin-symbol  The table of all the symbols ]**}} lists all possible inputs. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#attsymmetriesHermannMauguinSymbol @HermannMauguinSymbol] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# title]]
++ Element:##blue| title##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#title title] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# lattice]]
++ Element:##blue| lattice##
+  
+  The lattice element defines lattice from a,b,c, and angles.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attlatticea a]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlatticeab ab]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlatticeac ac]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlatticeb b]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlatticebc bc]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlatticec c]}}**[[/span]] ##red|(required)##, [[span class="attributelink"]]**{{[#attlatticeepslat epslat]}}**[[/span]], [[span class="attributelink"]]**{{[#attlatticencell ncell]}}**[[/span]], [[span class="attributelink"]]**{{[#attlatticeprimcell primcell]}}**[[/span]], [[span class="attributelink"]]**{{[#attlatticescale scale]}}**[[/span]], [[span class="attributelink"]]**{{[#attlatticespeciespath speciespath]}}**[[/span]], [[span class="attributelink"]]**{{[#attlatticestretch stretch]}}**[[/span]]
+  [[# atta]]
+    [[# attlatticea]]
+  
+++ Attribute:  ##green|a##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Bohr  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticea @a] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attab]]
+    [[# attlatticeab]]
+  
+++ Attribute:  ##green|ab##  
+     Angle between lattice vector a and b in degrees. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Degree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticeab @ab] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attac]]
+    [[# attlatticeac]]
+  
+++ Attribute:  ##green|ac##  
+     Angle between lattice vector a and c in degrees. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Degree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticeac @ac] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attb]]
+    [[# attlatticeb]]
+  
+++ Attribute:  ##green|b##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Bohr  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticeb @b] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attbc]]
+    [[# attlatticebc]]
+  
+++ Attribute:  ##green|bc##  
+     Angle between lattice vector b and c in degrees. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Degree  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticebc @bc] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attc]]
+    [[# attlatticec]]
+  
+++ Attribute:  ##green|c##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  required [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Unit:** [[/cell]][[cell]]Bohr  [[/cell]] [[/row]]
+  [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticec @c] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attepslat]]
+    [[# attlatticeepslat]]
+  
+++ Attribute:  ##green|epslat##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d-6"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticeepslat @epslat] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attncell]]
+    [[# attlatticencell]]
+  
+++ Attribute:  ##green|ncell##  
+    Number of repeated cells in each direction.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#integertriple integertriple]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1 1 1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticencell @ncell] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attprimcell]]
+    [[# attlatticeprimcell]]
+  
+++ Attribute:  ##green|primcell##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]boolean
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"false"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticeprimcell @primcell] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attscale]]
+    [[# attlatticescale]]
+  
+++ Attribute:  ##green|scale##  
+    Scales all the lattice vectors by the same factor. This is useful for varying the volume.
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#fortrandouble fortrandouble]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticescale @scale] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attspeciespath]]
+    [[# attlatticespeciespath]]
+  
+++ Attribute:  ##green|speciespath##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"http://xml.exciting-code.org/species/"}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticespeciespath @speciespath] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+  [[# attstretch]]
+    [[# attlatticestretch]]
+  
+++ Attribute:  ##green|stretch##  
+     Allows for an individual scaling of each lattice vector separately. {{"1 1 1"}} means no scaling. 
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#vect3d vect3d]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Default:** [[/cell]][[cell]] {{"1.0d0 1.0d0 1.0d0 "}} [[/cell]][[/row]]
+ 
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#lattice lattice]/[#attlatticestretch @stretch] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# WyckoffPositions]]
++ Element:##blue| WyckoffPositions##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wspecies wspecies]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#WyckoffPositions WyckoffPositions] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# wspecies]]
++ Element:##blue| wspecies##
+  
+  
+
+[[table ]]
+[[row]]
+ [[cell style=" vertical-align:top;" ]] **contains:** [[/cell]] [[cell]]  
+[[span class="elementlink"]]**{{[#wpos wpos]}}**[[/span]] (optional)  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#WyckoffPositions WyckoffPositions]/[#wspecies wspecies] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwspeciesspeciesfile speciesfile]}}**[[/span]]
+  [[# attspeciesfile]]
+    [[# attwspeciesspeciesfile]]
+  
+++ Attribute:  ##green|speciesfile##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]]string
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#WyckoffPositions WyckoffPositions]/[#wspecies wspecies]/[#attwspeciesspeciesfile @speciesfile] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+[[# wpos]]
++ Element:##blue| wpos##
+  
+  
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]] no  content  
+ [[/cell]][[/row]][[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#WyckoffPositions WyckoffPositions]/[#wspecies wspecies]/[#wpos wpos] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
+          This element allows for specification of the following attributes:  [[span class="attributelink"]]**{{[#attwposcoord coord]}}**[[/span]]
+  [[# attcoord]]
+    [[# attwposcoord]]
+  
+++ Attribute:  ##green|coord##  
+    
+
+[[table ]]
+[[row]]
+[[cell style=" vertical-align:top;" ]] **Type:** [[/cell]] [[cell]][#vect3d vect3d]
+ [[/cell]][[/row]]
+[[row]] [[cell]] **Use:** [[/cell]][[cell]]  optional [[/cell]][[/row]]
+ [[row]] [[cell]] **XPath:** [[/cell]][[cell]] {{[[[.|.]]]/[#symmetries symmetries]/[#WyckoffPositions WyckoffPositions]/[#wspecies wspecies]/[#wpos wpos]/[#attwposcoord @coord] }}[[/cell]] [[/row]]
+  
+[[/table]]
+  
++ Reused Elements
+    
+    The following elements can occur more than once in the input file. There for they are [[[common| listed separately]]].
+  
++ Data Types
+ 
+ The Input definition uses derived data types. These  [[[common| are described here]]].
+  
+  [[# fortrandouble]]
+++ Type   fortrandouble
+  
+   The type {{fortrandouble}} allows to use the letters {{"eEdDqQ"}} for exponent operators. This alters in what precision the number is parsed. 
+  [[# booleanlist]]
+++ Type   booleanlist
+  
+   List of space separated booleans.
+  [[# booleantriple]]
+++ Type   booleantriple
+  
+   Space separated list of three booleans. 
+  
+  Example: {{ "true false true" }}  
+  [[# vector]]
+++ Type   vector
+  
+   A vector is a space separated list of floating point numbers. 
+  
+   Example: {{ "1.3 2.3e4 3 90"}}    
+  [[# integerlist]]
+++ Type   integerlist
+  
+   List of space separated integers.
+  [[# vect3d]]
+++ Type   vect3d
+  
+   Three dimensional vector as three space separated floating point numbers.
+  [[# vect2d]]
+++ Type   vect2d
+  
+   Two dimensional vector as two space separated floating point numbers.
+  [[# integertriple]]
+++ Type   integertriple
+  
+   Space separated list of three integers. 
+  
+   Example: {{ "1 2 3" }}    
+  [[# integerquadrupel]]
+++ Type   integerquadrupel
+  
+   Space separated list of three integers. 
+  
+   Example: {{ "1 2 3 4" }}    
+  [[# integerpair]]
+++ Type   integerpair
+  
+   Space separated list of two integers 
+  
+   Example: {{ "1 2" }}    
